@@ -18,6 +18,8 @@
 
 **追加明确目标的独立开发任务已完成。** 把碗指定为“水槽右侧沥水架内倒扣的碗”后，原图/带宽/Kev各3次问答均正确，Kev比同轮带宽策略少23.04%字节且零卡顿；掩码检查空框4→0，但暂定像素覆盖率58.7%未达到预设80%门槛。毛巾6次均答blue，原green标注待人工复核。新任务不计入原EVQA得分，也不自动加入训练；见 [修订任务与操作](docs/evqa_disambiguation.md)、[运行结果](runs/evqa_disambiguation_v1/REPORT.md) 和 [三步系统检查](runs/evqa_disambiguation_analysis_v1/REPORT.md)。
 
+**定位几何审查与三个明确任务回归已完成。** 碗的低覆盖主要包含API框过小、9秒框错到手臂、12秒偏左；已检查的6个官方掩码基本贴合可见目标，原80%门槛仍未通过。衣服文字/首帧计时器/出租车车牌三例完整执行定位、真实编码、Kev与带宽选档及重复开放问答，27/27与参考答案匹配，418帧/策略完整核验，零卡顿；Kev合计少4.63%字节，节省仅来自衣服一例。数据均为已用开发案例，无新训练。见 [逐帧几何审查](runs/bowl_geometry_review_v1/REPORT.md)、[三例结果](runs/clear_task_regression3_analysis_v1/REPORT.md) 和 [验收口径](docs/region_validation_protocol_v1.md)。
+
 第二步保留 **全部 10 个视频 × 12 个原始候选，共 120 个真实编码候选**，见 [原始完整编码表](runs/roi_encoding_dev10_grid_v1/REVIEW.md)。另补 CRF 46／50 × ROI 偏移 0／-1/5，共40个低码率候选，见 [补充实测表](runs/roi_encoding_dev10_lowrate_v1/rate_size_quality.csv)。合计每视频16动作。这是按质量参数编码后测量实际码率，不是固定目标码率表。每个候选均完整解码，尺寸、帧数和帧率已核验。
 
 **2026-11-03 当前训练入口为 `datasets/semantic_kev_dev_v4`：候选约束与三块规划标签。** 复用原160个编码文件、v3 的网络分组和播放列表，不扩充视频或调用 API。v3 的 ABR 初始化100步训练及闭环评估已完成，平均每场景奖励9.99、卡顿13.91秒，低于带宽基线50.84／3.35秒，见 [v3 分析](runs/semantic_kev_v3_abr_baseline_trial100_v1_analysis/REVIEW.md)。v4 用历史带宽和缓冲筛选候选，并以三块累计预测收益及末端缓冲不足惩罚生成标签。
