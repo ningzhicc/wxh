@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/amora/wxh/jev/semantic_streaming/scripts/train_semantic_kev.py", line 106, in <module>
+    if __name__=='__main__': sys.exit(main())
+                                      ^^^^^^
+  File "/home/amora/wxh/jev/semantic_streaming/scripts/train_semantic_kev.py", line 65, in main
+    encoded=encode(tok,materialize(row),max_state=limits['max_state'],max_branch=limits['max_branch'],strict=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/wxh/jev/kev/kev/model.py", line 103, in encode
+    raise ContextOverflow(f"state exceeds {max_state} tokens: {len(state_tokens) + 1}", state_tokens=len(state_tokens) + 1, max_state=max_state)
+kev.model.ContextOverflow: state exceeds 512 tokens: 561

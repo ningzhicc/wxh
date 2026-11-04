@@ -1,0 +1,24 @@
+{
+  "model": "kev-latest",
+  "state": {
+    "throughput_mbps": [2.8, 2.6, 2.4, 2.5, 2.7],
+    "buffer_seconds": 12.0,
+    "previous_bitrate_kbps": 1850,
+    "next_chunk_duration_seconds": 4.0,
+    "remaining_chunks": 40
+  },
+  "questions": {
+    "bitrate": {
+      "type": "choice",
+      "instructions": "Select the bitrate for the next video chunk. Prefer high quality while avoiding rebuffering and large quality switches. Use the measured throughput and buffer to assess each candidate. Return one of the six available bitrates.",
+      "criteria": {
+        "300": "300 kbps: lowest quality, safest download",
+        "750": "750 kbps: low quality, conservative download",
+        "1200": "1200 kbps: medium quality, moderate download",
+        "1850": "1850 kbps: good quality, matches previous bitrate",
+        "2850": "2850 kbps: high quality, may exceed recent throughput",
+        "4300": "4300 kbps: highest quality, exceeds recent throughput"
+      }
+    }
+  }
+}

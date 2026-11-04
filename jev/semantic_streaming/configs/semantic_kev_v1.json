@@ -1,0 +1,17 @@
+{
+  "encoding_run": "roi_encoding_smoke_20261102_v3",
+  "case_ids": ["dev10_01", "dev10_07", "dev10_08"],
+  "trace_bundle": "../abr_compare/bundles/common_v1",
+  "trace_limits": {"train": 16, "valid": 4},
+  "trace_positions": [0.15, 0.35, 0.55, 0.75, 0.95],
+  "buffer_scenarios_s": [0, 0.05, 0.2, 0.5, 1, 4],
+  "rtt_s": 0.08,
+  "payload_fraction": 0.95,
+  "stall_weight": 4.3,
+  "switch_weight": 0.05,
+  "quality_proxy": "clip(sampled_api_visible_evidence_RGB_PSNR_dB / 40, 0, 1)",
+  "quality_scale_db": 40,
+  "learning_method": "Kev supervised imitation of one-step true trace replay argmax; not online RL or a long-horizon oracle.",
+  "dataset_role": "Development integration: network groups disjoint, same three development videos in train and valid; no video generalization claim.",
+  "output_dataset": "datasets/semantic_kev_dev_v1"
+}

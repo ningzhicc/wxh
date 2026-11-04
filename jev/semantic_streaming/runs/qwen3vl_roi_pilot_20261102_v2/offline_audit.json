@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-11-02T13:27:34.371771+00:00",
+  "case_results": [
+    {
+      "case_id": "dev10_01",
+      "question": "衣服上的文字是什么？",
+      "frames": 6,
+      "frames_with_regions": 3,
+      "empty_frames": 3,
+      "mean_box_area_fraction_when_nonempty": 0.026755642361111113,
+      "seed_diagnostics": [
+        {
+          "frame_id": "dev10_01_f04",
+          "seed_box": [
+            860,
+            390,
+            1060,
+            540
+          ],
+          "comparison": [
+            {
+              "model_box": [
+                866,
+                396,
+                1046,
+                535
+              ],
+              "seed_iou": 0.834,
+              "seed_area_covered_fraction": 0.834
+            }
+          ],
+          "not_ground_truth": true
+        }
+      ]
+    },
+    {
+      "case_id": "dev10_02",
+      "question": "镊子上印着哪个品牌？",
+      "frames": 6,
+      "frames_with_regions": 2,
+      "empty_frames": 4,
+      "mean_box_area_fraction_when_nonempty": 0.002055362654320988,
+      "seed_diagnostics": [
+        {
+          "frame_id": "dev10_02_f00",
+          "seed_box": [
+            1530,
+            382,
+            1665,
+            469
+          ],
+          "comparison": [
+            {
+              "model_box": [
+                1562,
+                384,
+                1646,
+                445
+              ],
+              "seed_iou": 0.43627075351213285,
+              "seed_area_covered_fraction": 0.43627075351213285
+            }
+          ],
+          "not_ground_truth": true
+        }
+      ]
+    },
+    {
+      "case_id": "dev10_03",
+      "question": "第一帧中，电子秤右侧的重量读数是多少？",
+      "frames": 6,
+      "frames_with_regions": 4,
+      "empty_frames": 2,
+      "mean_box_area_fraction_when_nonempty": 0.0024288676697530867,
+      "seed_diagnostics": [
+        {
+          "frame_id": "dev10_03_f00",
+          "seed_box": [
+            1125,
+            640,
+            1230,
+            714
+          ],
+          "comparison": [
+            {
+              "model_box": [
+                1136,
+                645,
+                1224,
+                700
+              ],
+              "seed_iou": 0.6229086229086229,
+              "seed_area_covered_fraction": 0.6229086229086229
+            }
+          ],
+          "not_ground_truth": true
+        }
+      ]
+    }
+  ],
+  "report_script_sha256": "730a38968f7f2cacf9e10369a7c3a6622715a758b4a91dd04d1aa52f6ffcbf3d",
+  "successful_frames": 18,
+  "usage": {
+    "prompt_tokens": 36432,
+    "completion_tokens": 522,
+    "total_tokens": 36954
+  },
+  "latency_s": {
+    "mean": 1.8841810679522395,
+    "min": 1.2898256269982085,
+    "max": 2.512576289009303,
+    "sum_request_durations": 33.91525922314031
+  },
+  "successful_request_list_price_estimate_cny": 0.041652,
+  "cost_note": "Not invoice; excludes failed pilot v1 request and account discounts/free quota.",
+  "model_version": "Service alias, not an immutable snapshot; actual response model is recorded per call.",
+  "seed_diagnostics_note": "Seeds are assistant visual annotations, not human gold. IoU is NOT accuracy.",
+  "annotation_sha256": "7f66a0ff47d2f36c48b2c5d09292dfa1f1114e0da8dd8d26b08c1283ef0e1567",
+  "pillow_version": "10.4.0",
+  "pixel_coordinate_note": {
+    "model_format": "normalized xyxy, integer range 0..999, top-left origin",
+    "scale_denominator": 1000,
+    "pixel_format": "absolute xyxy, half-open [x1,x2) and [y1,y2)",
+    "rounding": "floor left/top, ceil right/bottom; no ROI padding",
+    "note": "Official drawing example divides by 1000 despite documented range 0..999. Pixel conversion follows that scale, with conservative outward rounding."
+  },
+  "checks": [
+    "18 cached responses parse without schema errors",
+    "response hashes match receipts",
+    "all request payload hashes reconstruct from recorded inputs/code/config",
+    "all frame hashes and dimensions checked before inference",
+    "pixel boxes recompute exactly from raw normalized coordinates",
+    "flattened results match per-frame results",
+    "all overlays exist"
+  ]
+}

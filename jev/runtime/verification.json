@@ -1,0 +1,138 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090 D",
+  "torch_cuda": "12.8",
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "5.17.0",
+    "peft": "0.21.0",
+    "fastapi": "0.141.1",
+    "typesafe-sdk": "0.6.0",
+    "triton": "3.4.0"
+  },
+  "models": {
+    "models": [
+      {
+        "name": "kev-latest",
+        "description": "Kev pointer head on Qwen/Qwen3.5-4B-Base, serving /home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52 at temperature 2.41",
+        "release_date": "2026-10-13",
+        "run": "/home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+        "base": "Qwen/Qwen3.5-4B-Base",
+        "lora": 16,
+        "device": "cuda",
+        "backend": "torch",
+        "dtype": "bfloat16",
+        "temperature": 2.406050072164233,
+        "max_state_tokens": 65536,
+        "truncate_states": false,
+        "cuda_graphs": {
+          "captured": 0,
+          "kept": 0,
+          "pending": 0,
+          "failed": 0
+        },
+        "prefix_cache": {
+          "size": 4,
+          "min_state_tokens": 0,
+          "max_tokens": 65536,
+          "hits": 0,
+          "misses": 0,
+          "cached_states": 0,
+          "oom_retries": 0
+        },
+        "batches": {
+          "count": 0,
+          "requests": 0,
+          "queued": 0
+        }
+      },
+      {
+        "name": "jev-latest",
+        "description": "Kev pointer head on Qwen/Qwen3.5-4B-Base, serving /home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52 at temperature 2.41",
+        "release_date": "2026-10-13",
+        "run": "/home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+        "base": "Qwen/Qwen3.5-4B-Base",
+        "lora": 16,
+        "device": "cuda",
+        "backend": "torch",
+        "dtype": "bfloat16",
+        "temperature": 2.406050072164233,
+        "max_state_tokens": 65536,
+        "truncate_states": false,
+        "cuda_graphs": {
+          "captured": 0,
+          "kept": 0,
+          "pending": 0,
+          "failed": 0
+        },
+        "prefix_cache": {
+          "size": 4,
+          "min_state_tokens": 0,
+          "max_tokens": 65536,
+          "hits": 0,
+          "misses": 0,
+          "cached_states": 0,
+          "oom_retries": 0
+        },
+        "batches": {
+          "count": 0,
+          "requests": 0,
+          "queued": 0
+        }
+      }
+    ]
+  },
+  "abr": [
+    {
+      "model": "kev-latest",
+      "answers": {
+        "bitrate": {
+          "type": "choice",
+          "choice": "1850",
+          "confidence": 0.3743,
+          "probabilities": {
+            "300": 0.0357,
+            "750": 0.0867,
+            "1200": 0.1549,
+            "1850": 0.4786,
+            "2850": 0.1962,
+            "4300": 0.0478
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 243,
+        "output_tokens": 116
+      },
+      "latency_ms": 289.8,
+      "client_elapsed_ms": 299.95
+    },
+    {
+      "model": "kev-latest",
+      "answers": {
+        "bitrate": {
+          "type": "choice",
+          "choice": "1850",
+          "confidence": 0.3743,
+          "probabilities": {
+            "300": 0.0357,
+            "750": 0.0867,
+            "1200": 0.1549,
+            "1850": 0.4786,
+            "2850": 0.1962,
+            "4300": 0.0478
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 243,
+        "output_tokens": 116
+      },
+      "latency_ms": 41.6,
+      "client_elapsed_ms": 46.66
+    }
+  ],
+  "api_tests": {
+    "returncode": 0,
+    "output": "............s                                                            [100%]\n12 passed, 1 skipped in 1.72s\n"
+  }
+}

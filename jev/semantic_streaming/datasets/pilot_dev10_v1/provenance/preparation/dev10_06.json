@@ -1,0 +1,278 @@
+{
+  "case_id": "dev10_06",
+  "prepared_at_utc": "2026-11-02T10:37:43.026738+00:00",
+  "cases_sha256": "5fc0700704018a2b2d520238da415c5d575fcbb6e06bf1a8bf50eae22c8f9d4a",
+  "raw_sha256": "28880d8358869fe8b550d437b61d7e93ec1df92799253e480644729da7568ed1",
+  "ffmpeg_sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99",
+  "script_sha256": "fd6f237b205e43a38d817a75a5a6b852a84124f160df0d17112c1ffbe2f65b86",
+  "derivation": "accurate seek, lossless H.264 re-encode, no audio, original spatial resolution and frame cadence",
+  "clip_is_original_bitstream": false,
+  "source_window": {
+    "basis": "DeViBench start_time + 5 seconds per pinned upstream README",
+    "end_s": 115.0,
+    "start_s": 110.0
+  },
+  "source_window_decoded_frame_count": 125,
+  "encoder_nominal_frame_rate": "25/1",
+  "frame_requested_relative_times_s": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    4.8
+  ],
+  "frame_time_note": "FFmpeg selects the first decoded frame at/after each requested clip timestamp; inspect source/clip logs for native fps",
+  "commands": [
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-loglevel",
+      "error",
+      "-ss",
+      "110.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/media/raw/streamingbench/sample_4/video.mp4",
+      "-t",
+      "5",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-fps_mode",
+      "passthrough",
+      "-threads",
+      "2",
+      "-f",
+      "framemd5",
+      "-hash",
+      "sha256",
+      "-"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "110.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/media/raw/streamingbench/sample_4/video.mp4",
+      "-frames:v",
+      "125",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-vf",
+      "setpts=PTS-STARTPTS",
+      "-c:v",
+      "libx264",
+      "-qp",
+      "0",
+      "-preset",
+      "veryfast",
+      "-threads",
+      "2",
+      "-r",
+      "25/1",
+      "-fps_mode",
+      "cfr",
+      "-movflags",
+      "+faststart",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "0.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_00.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "1.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_01.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "2.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_02.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "3.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_03.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "4.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_04.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "4.8",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_05.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-framerate",
+      "1",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/frame_%02d.png",
+      "-vf",
+      "scale=640:-2,tile=3x2",
+      "-frames:v",
+      "1",
+      "-q:v",
+      "2",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_06/contact_sheet.jpg"
+    ]
+  ],
+  "files": [
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/clip.log",
+      "size_bytes": 3864,
+      "sha256": "4f45f5f70d55f98108291113a2c54fcfdb7f21b5b9146f148854fc05a715d0a8"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/contact_sheet.jpg",
+      "size_bytes": 328596,
+      "sha256": "b7a6296a481dc5b65296274cbca4c92313b59aa48ed4fc1207a564d8936f62a3"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/contact_sheet.log",
+      "size_bytes": 1467,
+      "sha256": "dee75704629729b7d72f3edebf97a54c54ac3dceb4d762b1d12328d18a2a0003"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_00.log",
+      "size_bytes": 1896,
+      "sha256": "11585b0338aa66d596db340083cc9705b57db5bc9f439b724359c134cdb3e920"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_00.png",
+      "size_bytes": 2032415,
+      "sha256": "e7745f8f9fa389631f52970ea6c2b1d991cba7f0750508f5360a48ccee6abb62"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_01.log",
+      "size_bytes": 1897,
+      "sha256": "a42703388267e655fe29d4eb6d03f2a58ca80c72ba03f9c4cf5d1abf470b00e6"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_01.png",
+      "size_bytes": 1715744,
+      "sha256": "eb12cab444944656cee8461fd1fe128b3dfc667aeacf2abbf418a325312fd625"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_02.log",
+      "size_bytes": 1897,
+      "sha256": "01b6c93fefe2842b55cece9bc47c3f44b0f21ca248dc106c7953137fe8c5fd39"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_02.png",
+      "size_bytes": 1965478,
+      "sha256": "af6ea89341edc8c174d01df45d9c4f5ba34cfabb0dd4d3f4abfcae491ccbab69"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_03.log",
+      "size_bytes": 1896,
+      "sha256": "fe15262d1b1d7033415f526da032844c9c865f8b752108ce282378de7435fdc0"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_03.png",
+      "size_bytes": 911961,
+      "sha256": "e8896c451939ed4c50a7e0025086573431697937be0fb7ffd58fb68f4f698806"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_04.log",
+      "size_bytes": 1893,
+      "sha256": "be81377fe81ae9f26ad57a37a9148f2acbdeff70d8e191a59413178c6c1ef814"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_04.png",
+      "size_bytes": 1046378,
+      "sha256": "9b918cae0e63de26a89125f5bd0646ab90a6f27c26cd664bcec21a37db28c081"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_05.log",
+      "size_bytes": 1895,
+      "sha256": "d9dd7a7a172b70b30a5206822c2af52c9c73a2f52c0c09c9a2771de167a6264c"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/frame_05.png",
+      "size_bytes": 939802,
+      "sha256": "fe82f0e90350b9789e954b70595d9826aa8d35ffba6623d51200db23e30e8bf4"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_06/reference_lossless.mp4",
+      "size_bytes": 42548590,
+      "sha256": "acd2637bfc67d3d25f0513f871312cff33a72b28a926d7549fab228da5b8d10a"
+    }
+  ]
+}

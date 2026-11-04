@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-02T15:05:21.297045+00:00",
+  "config": {
+    "encoding_run": "roi_encoding_smoke_20261102_v3",
+    "case_ids": [
+      "dev10_01",
+      "dev10_07",
+      "dev10_08"
+    ],
+    "trace_bundle": "../abr_compare/bundles/common_v1",
+    "trace_limits": {
+      "train": 16,
+      "valid": 4
+    },
+    "trace_positions": [
+      0.15,
+      0.35,
+      0.55,
+      0.75,
+      0.95
+    ],
+    "buffer_scenarios_s": [
+      0,
+      0.05,
+      0.2,
+      0.5,
+      1,
+      4
+    ],
+    "rtt_s": 0.08,
+    "payload_fraction": 0.95,
+    "stall_weight": 4.3,
+    "switch_weight": 0.05,
+    "quality_proxy": "clip(sampled_api_visible_evidence_RGB_PSNR_dB / 40, 0, 1)",
+    "quality_scale_db": 40,
+    "learning_method": "Kev supervised imitation of one-step true trace replay argmax; not online RL or a long-horizon oracle.",
+    "dataset_role": "Development integration: network groups disjoint, same three development videos in train and valid; no video generalization claim.",
+    "output_dataset": "datasets/semantic_kev_dev_v1"
+  },
+  "counts": {
+    "train": 1440,
+    "valid": 360
+  },
+  "action_counts": {
+    "dev10_01": 6,
+    "dev10_07": 2,
+    "dev10_08": 6
+  },
+  "label_counts": {
+    "dev10_01/a01": 365,
+    "dev10_01/a05": 165,
+    "dev10_07/a01": 600,
+    "dev10_08/a01": 506,
+    "dev10_08/a03": 39,
+    "dev10_08/a05": 55,
+    "dev10_01/a03": 65,
+    "dev10_01/a00": 5
+  },
+  "source_encoding_candidates_sha256": "5ee7fe3884ae9d0a49aa67930b0eae81c1d737cfc85d350ade20a48a93fe9561",
+  "source_comparison_report_sha256": "2662d6803108004eeed2b83b4534b15f538f6fac57436cd960a90377fd50991f",
+  "files_sha256": {
+    "actions.json": "b958df8a93b84dee1cf051a4dd52ea53bb6c279f1a5beebb67023f08c24f1fb0",
+    "config.json": "ce4062fe15b0b661977132bbc259ef2ef1d9ee594b9969770252a23273283aea",
+    "train.jsonl": "af19756ed9c4d7fb37390f3de586e7726f6d78fb51768b7ee24ae34b144aae22",
+    "traces.lock.json": "8de00b4309240884ef48341b73ba388d083f1429f0fdf2c4b36d7d3985c25249",
+    "valid.jsonl": "594ff80eca492932d8c2b56a4e17645f6e82c319b40d33820f55b3a80369c1d0"
+  },
+  "script_sha256": "6245d334f0c8410aafb67941e1baf3f82d3323d7f9fa62afe9dc7a47688cd874",
+  "training_started": false,
+  "reward_note": "Continuous pixel-quality proxy plus replayed stall/switch penalties; no repeated QA calls needed.",
+  "limitations": "Development integration: network groups disjoint, same three development videos in train and valid; no video generalization claim."
+}

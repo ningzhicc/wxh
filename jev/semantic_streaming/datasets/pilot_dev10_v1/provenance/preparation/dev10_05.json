@@ -1,0 +1,249 @@
+{
+  "case_id": "dev10_05",
+  "prepared_at_utc": "2026-11-02T09:29:46.076957+00:00",
+  "cases_sha256": "5fc0700704018a2b2d520238da415c5d575fcbb6e06bf1a8bf50eae22c8f9d4a",
+  "raw_sha256": "cb7b9f71ec341a3dde6109be83af46a33d01b9ec0c21e9b696e1c11bab819b50",
+  "ffmpeg_sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99",
+  "script_sha256": "eb515128d1bf787d055daa588ac825c213d9c43415f3b8a8a4a09e7b67c0ea88",
+  "derivation": "accurate seek, lossless H.264 re-encode, no audio, original spatial resolution and frame cadence",
+  "clip_is_original_bitstream": false,
+  "source_window": {
+    "basis": "DeViBench start_time + 5 seconds per pinned upstream README",
+    "end_s": 45.0,
+    "start_s": 40.0
+  },
+  "frame_requested_relative_times_s": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    4.8
+  ],
+  "frame_time_note": "FFmpeg selects the first decoded frame at/after each requested clip timestamp; inspect source/clip logs for native fps",
+  "commands": [
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "40.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/media/raw/streamingbench/sample_217/video.mp4",
+      "-t",
+      "5",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-vf",
+      "setpts=PTS-STARTPTS",
+      "-c:v",
+      "libx264",
+      "-qp",
+      "0",
+      "-preset",
+      "veryfast",
+      "-threads",
+      "2",
+      "-fps_mode",
+      "passthrough",
+      "-movflags",
+      "+faststart",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "0.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_00.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "1.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_01.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "2.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_02.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "3.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_03.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "4.0",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_04.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "4.8",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "-frames:v",
+      "1",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_05.png"
+    ],
+    [
+      "/home/amora/wxh/jev/semantic_streaming/.tools/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-n",
+      "-framerate",
+      "1",
+      "-i",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/frame_%02d.png",
+      "-vf",
+      "scale=640:-2,tile=3x2",
+      "-frames:v",
+      "1",
+      "-q:v",
+      "2",
+      "-threads",
+      "1",
+      "/home/amora/wxh/jev/semantic_streaming/artifacts/pilot_dev10_v1/dev10_05/contact_sheet.jpg"
+    ]
+  ],
+  "files": [
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/clip.log",
+      "size_bytes": 3625,
+      "sha256": "02592b2a6880fbf80d6c90621418f8e62be353a47f1459ac9cb72f0efdf72bdf"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/contact_sheet.jpg",
+      "size_bytes": 303980,
+      "sha256": "b71f38a064c4d6834138fd748cb228061140c9d5864709bef65994cc56c2092e"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/contact_sheet.log",
+      "size_bytes": 1466,
+      "sha256": "0439b854adbbe16fe49a30c9be0deccfb376cde0817524998f50a01a7cfb6bfb"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_00.log",
+      "size_bytes": 1904,
+      "sha256": "a6e01240c51c9f35c187a3c0980048ec544f9bc4ee27e7cda37cb3cda77e00d1"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_00.png",
+      "size_bytes": 336246,
+      "sha256": "6845648b35e6a15cc28683a21ed2ed4e4d50a9d76b0166786de5371d749eeb00"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_01.log",
+      "size_bytes": 1901,
+      "sha256": "e0b6fbc7edc54449a66d870f03a2d6e222f55140c7a19b1d5ebf34fd465d52af"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_01.png",
+      "size_bytes": 409279,
+      "sha256": "f0b81d5369564c98ddc76685ea6dddeb8a07fe15411a539689319098c9f650d9"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_02.log",
+      "size_bytes": 1901,
+      "sha256": "9c8f74e4161707342bd98dd1fa57756f774161ee00b6ad9176c17182cd48583a"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_02.png",
+      "size_bytes": 377669,
+      "sha256": "2f2d080157babb8fa3ea696535e65fa4af2cedd8ff0bf136a9f376f7270e27ca"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_03.log",
+      "size_bytes": 1904,
+      "sha256": "a34397c8f69930cda1eb862f2cd4a6a589622bd57a4046075f58c682e1e833ed"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_03.png",
+      "size_bytes": 353975,
+      "sha256": "e4e8a718757ab5f39559e5bc6e62bdaef2bbc3f2b649ce8e696d8dee3eec67b0"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_04.log",
+      "size_bytes": 1905,
+      "sha256": "d5f5c924000f0253e0c1f077f69c324af9fb49df606f416a89971866e7de55c4"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_04.png",
+      "size_bytes": 1534911,
+      "sha256": "e336a48411657b96d0bdda7f4af3d783e4d65f1001aaf5128de863eda093b9ae"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_05.log",
+      "size_bytes": 1902,
+      "sha256": "def965d2b3a24c738fbf67069526f35343a3917fe6b381021e3aa5b46e1e2aa7"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/frame_05.png",
+      "size_bytes": 1532638,
+      "sha256": "d445b395f30e398e05eab57d86a8df16cc9360427acd79af2d26e2bdde1610c2"
+    },
+    {
+      "path": "artifacts/pilot_dev10_v1/dev10_05/reference_lossless.mp4",
+      "size_bytes": 8761854,
+      "sha256": "087b65eefba23682c30d9b38c9a3ef544b078abedf802dad52c54aff5a56f7ba"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "config": {
+    "datasets": [
+      "fcc",
+      "hsr",
+      "oboe",
+      "norway3g"
+    ],
+    "methods": [
+      "kev",
+      "bba",
+      "throughput",
+      "robustmpc"
+    ],
+    "workers": 4,
+    "seed": 666,
+    "limit": 1,
+    "base_url": "http://127.0.0.1:8009",
+    "video": "video1/envivio_3g",
+    "chunks": 48,
+    "initial_bitrate_kbps": 300,
+    "skip_first_reward": true,
+    "charge_decision_latency": false,
+    "fixed_simulation": true,
+    "rebuffer_penalty": 4.3,
+    "smoothness_penalty": 1,
+    "prompt": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+    "criteria": {
+      "300": "300 kbps video bitrate",
+      "750": "750 kbps video bitrate",
+      "1200": "1200 kbps video bitrate",
+      "1850": "1850 kbps video bitrate",
+      "2850": "2850 kbps video bitrate",
+      "4300": "4300 kbps video bitrate"
+    },
+    "baselines": {
+      "bba": {
+        "reservoir_s": 5,
+        "cushion_s": 10
+      },
+      "throughput": {
+        "window": 5,
+        "safety_factor": 0.85
+      },
+      "robustmpc": {
+        "horizon": 5,
+        "full_six_actions": true,
+        "correct_next_chunk_index": true
+      }
+    }
+  },
+  "traces": [
+    {
+      "dataset": "fcc",
+      "trace": "000_trace_942154_http---www.ebay.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/000_trace_942154_http---www.ebay.com_0",
+      "start_pointer": 28,
+      "sha256": "b1286bba4313c495ce43a8525b2ed7578cf0264915ed8cd231886593fd933962",
+      "samples": 63,
+      "key": "fcc_0d3582bbc70d6fe9"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470329.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470329.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 116,
+      "sha256": "e395fdcbd8660411efc9634090b50a15d84e80d51fd411a99678903f75a27c90",
+      "samples": 183,
+      "key": "hsr_355b871943eff7cd"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_100.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_100.txt",
+      "start_pointer": 22,
+      "sha256": "af4bb85fb4ae58b4d23c91df1c65460c45f4379be41f5028ec2d1581526b00eb",
+      "samples": 98,
+      "key": "oboe_e104bdc412e7d8c1"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_0",
+      "start_pointer": 2451,
+      "sha256": "a16f9b7e21acdeeef4a9eeab3cc975caec7e7674605def27f3f246b386218bc0",
+      "samples": 3093,
+      "key": "norway3g_60686bd3b4135c3c"
+    }
+  ],
+  "repositories": {
+    "NetLLM": "105bcf070f2bec808f7b14f8f5a953de6e4e6e54",
+    "ABRBench": "6dad3acf72d5e37b593b14df9432a085193abce9"
+  },
+  "video_sha256": {
+    "video_size_0": "a9b2bd16b7f13327b5dae7a70bce6d086ff46cc0a18783c7a0e152a2bf604be0",
+    "video_size_1": "bd8b1edad5c4970da82c83fd4cdf65637b1d177b55b74868d2c7b1aec170a7ad",
+    "video_size_2": "bd20fb941f28473ed863064c87091dadb4dfd5d6f06d3dff4a9a9015d8448b0b",
+    "video_size_3": "6ff70f5356417df616005339980fc5a230726b52ce7f72fc3ef92aa02ed49970",
+    "video_size_4": "60635fedb2fec8d1ca27369b5f6e8143acddbe6c8ec1c3e60fc76d7687efdf5c",
+    "video_size_5": "f62b156795d47cb6faf34df6ac7d4b996bf9f6bc7390d29795ebc211514a675d"
+  },
+  "source_sha256": {
+    "benchmark.py": "16191db0ab3752aa9e117eef050f67950ed8e488a0a9e7803135eb37312c61c9",
+    "run_eval.py": "1fa7a8b2d5bc8301f5da8ac5bec4c6b472a80919ad3b128816072abca5068088",
+    "report.py": "2ab5229871e1d20428711485d26c5233f39532a119d970908144f0a087051660",
+    "protocol.md": "0b8e9d71c15d3f5420a6ba406c2b5cece42293aded78f846d5653f0bdcfa6dd6"
+  },
+  "model_deployment": {
+    "source": "https://github.com/jaredpalmer/kev",
+    "source_commit": "85ccf56a0afb952323c621055b02876e8498d60c",
+    "checkpoint": "jaredpalmer/kev-4b@v1.0",
+    "checkpoint_revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+    "checkpoint_path": "/home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+    "base": "Qwen/Qwen3.5-4B-Base",
+    "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+    "base_path": "/home/amora/wxh/jev/.cache/huggingface/hub/models--Qwen--Qwen3.5-4B-Base/snapshots/1001bb4d826a52d1f399e183466143f4da7b741b",
+    "temperature": 2.406050072164233,
+    "adapter_sha256": "90e817356246e7f18bfa7ca3d31794cd4fbeb3332a66a84cb51d9ceae925f2b2"
+  },
+  "model_files_sha256": {
+    "adapter_model.safetensors": "90e817356246e7f18bfa7ca3d31794cd4fbeb3332a66a84cb51d9ceae925f2b2",
+    "head.pt": "dd633435998ecc751ac538717a3742e32149500fabf7d7276287dbf0693f347c",
+    "adapter_config.json": "8a05dfd6c5e7f61a62e6db5d8de8093a8dbbd105aa7ee7b5e7b73f6249f45617"
+  },
+  "service": {
+    "run": "/home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+    "base": "Qwen/Qwen3.5-4B-Base",
+    "device": "cuda",
+    "backend": "torch",
+    "dtype": "bfloat16",
+    "temperature": 2.406050072164233
+  },
+  "fingerprint": "6c38dec22d187d1478f528ea8af2c5bc9eabbe77cae929e942741d33986a2b56",
+  "started_at": "2026-10-14T10:35:43.637430+08:00"
+}

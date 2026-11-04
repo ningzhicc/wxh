@@ -1,0 +1,46 @@
+{
+  "bundle_fingerprint": "7a21822ffc3be5b6618e58175d17813b31534a03f149492bced57a7d7cb06eec",
+  "policy": {
+    "type": "jev_http",
+    "model": "kev-latest",
+    "action_mode": "argmax",
+    "card": {
+      "name": "kev-latest",
+      "run": "/home/amora/wxh/jev/abr_finetune/checkpoints/sft_v3/epoch_02",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "temperature": 1.0,
+      "dtype": "bfloat16",
+      "backend": "torch",
+      "device": "cuda",
+      "truncate_states": false
+    },
+    "checkpoint_sha256": {
+      "adapter_config.json": "f3baf0df4a94e151a0e05346a076c2cc95bbe0528d64b51f02b238d2598253f5",
+      "adapter_model.safetensors": "1660b6c27798e2156f6996c90d8245fbb84f517f3393dbf0b16b37fd55a6e8e6",
+      "head.pt": "aaec3b59943e63da13eeeab570d0ee3f6007cca455bfb0406d25180455ce30a6",
+      "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "tokenizer_config.json": "e0792bce4d2d44981188cea9b75ceaa12ab0ae24a55473f032905fc6a782a771"
+    },
+    "prompt": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+    "state_builder": "legacy_six_observations"
+  },
+  "selection": [
+    {
+      "id": "valid/fcc/4b0cd6955c59dece",
+      "round": 0,
+      "start_pointer": 237,
+      "action_seed": 1496956130
+    }
+  ],
+  "selection_fingerprint": "d1f8b43be0c26d372f2cc2d14bce0864b202b7012d8bf0134360c704d56aad56",
+  "split": "valid",
+  "evaluation_scope": "diagnostic_existing_checkpoint",
+  "full_split": false,
+  "scoring": {
+    "primary": "mean(rewards[1:-1])",
+    "auxiliary": "mean(rewards[1:])"
+  },
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "fingerprint": "89306c8ea77c094dd7bc12ae0dc902751437cc4558b8ad84b604285f16e4ffaf"
+}

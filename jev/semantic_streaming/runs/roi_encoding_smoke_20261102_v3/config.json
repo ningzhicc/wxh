@@ -1,0 +1,57 @@
+{
+  "roi_run": "qwen3vl_roi_dev10_summary_20261102_v1",
+  "case_ids": [
+    "dev10_01",
+    "dev10_07",
+    "dev10_08"
+  ],
+  "selection_reason": "Distinct source groups and visually stable question evidence; soccer association failures excluded from first codec smoke test.",
+  "target_container_bytes": [
+    32768,
+    65536,
+    131072
+  ],
+  "size_tolerance_fraction": 0.01,
+  "max_rate_matching_attempts": 5,
+  "roi_policy": "Static bounding union of sampled API boxes, applied to every frame; offline noncausal VOD baseline, not tracking.",
+  "roi_padding_pixels": 8,
+  "macroblock_size": 16,
+  "roi_qoffset": "-1/5",
+  "codec": "libx264",
+  "preset": "fast",
+  "pixel_format": "yuv420p",
+  "threads": 2,
+  "sample_times_s": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    4.8
+  ],
+  "rate_control": "Two-pass ABR, adjusted to actual complete MP4 bytes; AQ mode 1 and mbtree off in both treatments.",
+  "qa_protocol": "One blind six-frame question-answering call per encoded candidate and per original reference; no ROI boxes or answers provided.",
+  "documentation": [
+    "https://ffmpeg.org/ffmpeg-filters.html#addroi",
+    "https://www.ffmpeg.org/doxygen/7.1/structAVRegionOfInterest.html",
+    "https://www.ffmpeg.org/doxygen/trunk/libx264_8c_source.html"
+  ],
+  "case_target_container_bytes": {
+    "dev10_01": [
+      32768,
+      65536,
+      131072
+    ],
+    "dev10_07": [
+      65536,
+      131072,
+      262144
+    ],
+    "dev10_08": [
+      131072,
+      262144,
+      524288
+    ]
+  },
+  "budget_selection_note": "Case-dependent feasibility ladder: 720p text 32/64/128 KiB, 1080p cooking 64/128/256 KiB, detailed 1080p street 128/256/512 KiB. Chosen before QA, not to maximize measured QA gains. Previous 32 KiB cooking target rejected by x264 minimum bitrate."
+}

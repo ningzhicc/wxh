@@ -1,0 +1,5594 @@
+{
+  "record_id": "test/norway3g/f9d1a13605edf417",
+  "split": "test",
+  "dataset": "norway3g",
+  "trace": "norway_tram_55",
+  "source_parent": "unresolved:norway3g:norway_tram_55",
+  "session": {
+    "round": 2,
+    "start_pointer": 108,
+    "action_seed": 1632031666
+  },
+  "rows": [
+    {
+      "chunk": 0,
+      "action": 0,
+      "bitrate_kbps": 300,
+      "buffer_s": 4.0,
+      "download_ms": 1054.6317197494889,
+      "rebuffer_s": 1.0546317197494888,
+      "size_bytes": 181801,
+      "throughput_mbps": 1.37906718787623,
+      "switch_mbps": 0.0,
+      "reward": -4.234916394922802,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 1.0546317197494888,
+      "decision_ms": 0.0,
+      "decision": {}
+    },
+    {
+      "chunk": 1,
+      "action": 2,
+      "bitrate_kbps": 1200,
+      "buffer_s": 4.049861247561301,
+      "download_ms": 3950.138752438699,
+      "rebuffer_s": 0.0,
+      "size_bytes": 611087,
+      "throughput_mbps": 1.2376010835016524,
+      "switch_mbps": 0.9,
+      "reward": 0.29999999999999993,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 5.004770472188188,
+      "decision_ms": 48.26751499786042,
+      "decision": {
+        "probabilities": {
+          "300": 0.1025,
+          "750": 0.127,
+          "1200": 0.2204,
+          "1850": 0.194,
+          "2850": 0.2159,
+          "4300": 0.1402
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3791
+          ],
+          "recent_download_seconds": [
+            1.0546
+          ],
+          "recent_bitrates_kbps": [
+            300
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 300,
+          "next_chunk_sizes_bytes": {
+            "300": 155580,
+            "750": 398865,
+            "1200": 611087,
+            "1850": 957685,
+            "2850": 1431809,
+            "4300": 2123065
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 47
+        },
+        "server_latency_ms": 45.6,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3791
+            ],
+            "recent_download_seconds": [
+              1.0546
+            ],
+            "recent_bitrates_kbps": [
+              300
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 300,
+            "next_chunk_sizes_bytes": {
+              "300": 155580,
+              "750": 398865,
+              "1200": 611087,
+              "1850": 957685,
+              "2850": 1431809,
+              "4300": 2123065
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 47
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 2,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 9858.406900433554,
+      "rebuffer_s": 5.808545652872254,
+      "size_bytes": 1300868,
+      "throughput_mbps": 1.0556415559944399,
+      "switch_mbps": 1.65,
+      "reward": -23.776746307350688,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 14.863177372621742,
+      "decision_ms": 49.67854300048202,
+      "decision": {
+        "probabilities": {
+          "300": 0.0292,
+          "750": 0.1367,
+          "1200": 0.1809,
+          "1850": 0.2382,
+          "2850": 0.2502,
+          "4300": 0.1647
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3791,
+            1.2376
+          ],
+          "recent_download_seconds": [
+            1.0546,
+            3.9501
+          ],
+          "recent_bitrates_kbps": [
+            300,
+            1200
+          ],
+          "buffer_seconds": 4.0499,
+          "previous_bitrate_kbps": 1200,
+          "next_chunk_sizes_bytes": {
+            "300": 139857,
+            "750": 350812,
+            "1200": 571051,
+            "1850": 877771,
+            "2850": 1300868,
+            "4300": 2177073
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 46
+        },
+        "server_latency_ms": 46.8,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3791,
+              1.2376
+            ],
+            "recent_download_seconds": [
+              1.0546,
+              3.9501
+            ],
+            "recent_bitrates_kbps": [
+              300,
+              1200
+            ],
+            "buffer_seconds": 4.0499,
+            "previous_bitrate_kbps": 1200,
+            "next_chunk_sizes_bytes": {
+              "300": 139857,
+              "750": 350812,
+              "1200": 571051,
+              "1850": 877771,
+              "2850": 1300868,
+              "4300": 2177073
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 46
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 3,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 14706.515371444491,
+      "rebuffer_s": 10.70651537144449,
+      "size_bytes": 1520281,
+      "throughput_mbps": 0.8269972656891468,
+      "switch_mbps": 0.0,
+      "reward": -43.18801609721131,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 29.56969274406623,
+      "decision_ms": 49.97550800908357,
+      "decision": {
+        "probabilities": {
+          "300": 0.0184,
+          "750": 0.0666,
+          "1200": 0.1534,
+          "1850": 0.2496,
+          "2850": 0.2653,
+          "4300": 0.2467
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3791,
+            1.2376,
+            1.0556
+          ],
+          "recent_download_seconds": [
+            1.0546,
+            3.9501,
+            9.8584
+          ],
+          "recent_bitrates_kbps": [
+            300,
+            1200,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 155432,
+            "750": 382355,
+            "1200": 617681,
+            "1850": 933276,
+            "2850": 1520281,
+            "4300": 2160877
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 45
+        },
+        "server_latency_ms": 47.2,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3791,
+              1.2376,
+              1.0556
+            ],
+            "recent_download_seconds": [
+              1.0546,
+              3.9501,
+              9.8584
+            ],
+            "recent_bitrates_kbps": [
+              300,
+              1200,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 155432,
+              "750": 382355,
+              "1200": 617681,
+              "1850": 933276,
+              "2850": 1520281,
+              "4300": 2160877
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 45
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 4,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 16233.026060520197,
+      "rebuffer_s": 12.233026060520196,
+      "size_bytes": 1472558,
+      "throughput_mbps": 0.7257096708943797,
+      "switch_mbps": 0.0,
+      "reward": -49.75201206023684,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 45.802718804586426,
+      "decision_ms": 59.33125701267272,
+      "decision": {
+        "probabilities": {
+          "300": 0.021,
+          "750": 0.0786,
+          "1200": 0.139,
+          "1850": 0.2391,
+          "2850": 0.3358,
+          "4300": 0.1863
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3791,
+            1.2376,
+            1.0556,
+            0.827
+          ],
+          "recent_download_seconds": [
+            1.0546,
+            3.9501,
+            9.8584,
+            14.7065
+          ],
+          "recent_bitrates_kbps": [
+            300,
+            1200,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 163442,
+            "750": 411561,
+            "1200": 652874,
+            "1850": 996749,
+            "2850": 1472558,
+            "4300": 2233056
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 44
+        },
+        "server_latency_ms": 56.3,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3791,
+              1.2376,
+              1.0556,
+              0.827
+            ],
+            "recent_download_seconds": [
+              1.0546,
+              3.9501,
+              9.8584,
+              14.7065
+            ],
+            "recent_bitrates_kbps": [
+              300,
+              1200,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 163442,
+              "750": 411561,
+              "1200": 652874,
+              "1850": 996749,
+              "2850": 1472558,
+              "4300": 2233056
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 44
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 5,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 23474.6179705113,
+      "rebuffer_s": 19.4746179705113,
+      "size_bytes": 1224260,
+      "throughput_mbps": 0.417219995328711,
+      "switch_mbps": 0.0,
+      "reward": -80.89085727319859,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 69.27733677509772,
+      "decision_ms": 60.25293399579823,
+      "decision": {
+        "probabilities": {
+          "300": 0.0217,
+          "750": 0.0748,
+          "1200": 0.1549,
+          "1850": 0.2365,
+          "2850": 0.2939,
+          "4300": 0.2182
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3791,
+            1.2376,
+            1.0556,
+            0.827,
+            0.7257
+          ],
+          "recent_download_seconds": [
+            1.0546,
+            3.9501,
+            9.8584,
+            14.7065,
+            16.233
+          ],
+          "recent_bitrates_kbps": [
+            300,
+            1200,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 126289,
+            "750": 318564,
+            "1200": 520315,
+            "1850": 801058,
+            "2850": 1224260,
+            "4300": 1941625
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 43
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3791,
+              1.2376,
+              1.0556,
+              0.827,
+              0.7257
+            ],
+            "recent_download_seconds": [
+              1.0546,
+              3.9501,
+              9.8584,
+              14.7065,
+              16.233
+            ],
+            "recent_bitrates_kbps": [
+              300,
+              1200,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 126289,
+              "750": 318564,
+              "1200": 520315,
+              "1850": 801058,
+              "2850": 1224260,
+              "4300": 1941625
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 43
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 6,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 13695.825379739154,
+      "rebuffer_s": 9.695825379739153,
+      "size_bytes": 1388403,
+      "throughput_mbps": 0.8109934006921126,
+      "switch_mbps": 0.0,
+      "reward": -38.84204913287836,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 82.97316215483687,
+      "decision_ms": 60.83019799552858,
+      "decision": {
+        "probabilities": {
+          "300": 0.0261,
+          "750": 0.0854,
+          "1200": 0.1645,
+          "1850": 0.2509,
+          "2850": 0.3172,
+          "4300": 0.1558
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3791,
+            1.2376,
+            1.0556,
+            0.827,
+            0.7257,
+            0.4172
+          ],
+          "recent_download_seconds": [
+            1.0546,
+            3.9501,
+            9.8584,
+            14.7065,
+            16.233,
+            23.4746
+          ],
+          "recent_bitrates_kbps": [
+            300,
+            1200,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 153295,
+            "750": 352642,
+            "1200": 561791,
+            "1850": 905515,
+            "2850": 1388403,
+            "4300": 2157535
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 42
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3791,
+              1.2376,
+              1.0556,
+              0.827,
+              0.7257,
+              0.4172
+            ],
+            "recent_download_seconds": [
+              1.0546,
+              3.9501,
+              9.8584,
+              14.7065,
+              16.233,
+              23.4746
+            ],
+            "recent_bitrates_kbps": [
+              300,
+              1200,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 153295,
+              "750": 352642,
+              "1200": 561791,
+              "1850": 905515,
+              "2850": 1388403,
+              "4300": 2157535
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 42
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 7,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 22655.52398280401,
+      "rebuffer_s": 18.65552398280401,
+      "size_bytes": 1638769,
+      "throughput_mbps": 0.5786735283611566,
+      "switch_mbps": 0.0,
+      "reward": -77.36875312605724,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 105.62868613764088,
+      "decision_ms": 60.98243800806813,
+      "decision": {
+        "probabilities": {
+          "300": 0.0314,
+          "750": 0.0642,
+          "1200": 0.1628,
+          "1850": 0.2266,
+          "2850": 0.3805,
+          "4300": 0.1345
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.2376,
+            1.0556,
+            0.827,
+            0.7257,
+            0.4172,
+            0.811
+          ],
+          "recent_download_seconds": [
+            3.9501,
+            9.8584,
+            14.7065,
+            16.233,
+            23.4746,
+            13.6958
+          ],
+          "recent_bitrates_kbps": [
+            1200,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 173849,
+            "750": 437162,
+            "1200": 709534,
+            "1850": 1060487,
+            "2850": 1638769,
+            "4300": 2290172
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 41
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.2376,
+              1.0556,
+              0.827,
+              0.7257,
+              0.4172,
+              0.811
+            ],
+            "recent_download_seconds": [
+              3.9501,
+              9.8584,
+              14.7065,
+              16.233,
+              23.4746,
+              13.6958
+            ],
+            "recent_bitrates_kbps": [
+              1200,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 173849,
+              "750": 437162,
+              "1200": 709534,
+              "1850": 1060487,
+              "2850": 1638769,
+              "4300": 2290172
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 41
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 8,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 14462.407934748997,
+      "rebuffer_s": 10.462407934748997,
+      "size_bytes": 1348011,
+      "throughput_mbps": 0.7456633811364805,
+      "switch_mbps": 0.0,
+      "reward": -42.13835411942068,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 120.09109407238988,
+      "decision_ms": 60.6016920064576,
+      "decision": {
+        "probabilities": {
+          "300": 0.0297,
+          "750": 0.0523,
+          "1200": 0.1739,
+          "1850": 0.25,
+          "2850": 0.3275,
+          "4300": 0.1665
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.0556,
+            0.827,
+            0.7257,
+            0.4172,
+            0.811,
+            0.5787
+          ],
+          "recent_download_seconds": [
+            9.8584,
+            14.7065,
+            16.233,
+            23.4746,
+            13.6958,
+            22.6555
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 150710,
+            "750": 374758,
+            "1200": 584846,
+            "1850": 852833,
+            "2850": 1348011,
+            "4300": 2055469
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 40
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.0556,
+              0.827,
+              0.7257,
+              0.4172,
+              0.811,
+              0.5787
+            ],
+            "recent_download_seconds": [
+              9.8584,
+              14.7065,
+              16.233,
+              23.4746,
+              13.6958,
+              22.6555
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 150710,
+              "750": 374758,
+              "1200": 584846,
+              "1850": 852833,
+              "2850": 1348011,
+              "4300": 2055469
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 40
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 9,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7134.18654357101,
+      "rebuffer_s": 3.1341865435710097,
+      "size_bytes": 1429765,
+      "throughput_mbps": 1.6032829994202338,
+      "switch_mbps": 0.0,
+      "reward": -10.627002137355342,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 127.22528061596088,
+      "decision_ms": 60.46716601122171,
+      "decision": {
+        "probabilities": {
+          "300": 0.0242,
+          "750": 0.0422,
+          "1200": 0.1236,
+          "1850": 0.1789,
+          "2850": 0.4461,
+          "4300": 0.185
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.827,
+            0.7257,
+            0.4172,
+            0.811,
+            0.5787,
+            0.7457
+          ],
+          "recent_download_seconds": [
+            14.7065,
+            16.233,
+            23.4746,
+            13.6958,
+            22.6555,
+            14.4624
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 139105,
+            "750": 362795,
+            "1200": 560821,
+            "1850": 913888,
+            "2850": 1429765,
+            "4300": 2169201
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 39
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.827,
+              0.7257,
+              0.4172,
+              0.811,
+              0.5787,
+              0.7457
+            ],
+            "recent_download_seconds": [
+              14.7065,
+              16.233,
+              23.4746,
+              13.6958,
+              22.6555,
+              14.4624
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 139105,
+              "750": 362795,
+              "1200": 560821,
+              "1850": 913888,
+              "2850": 1429765,
+              "4300": 2169201
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 39
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 10,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7742.419042272817,
+      "rebuffer_s": 3.742419042272817,
+      "size_bytes": 1354548,
+      "throughput_mbps": 1.3996121807453783,
+      "switch_mbps": 0.0,
+      "reward": -13.242401881773114,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 134.9676996582337,
+      "decision_ms": 60.33037998713553,
+      "decision": {
+        "probabilities": {
+          "300": 0.0221,
+          "750": 0.0404,
+          "1200": 0.1545,
+          "1850": 0.2193,
+          "2850": 0.3605,
+          "4300": 0.2032
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.7257,
+            0.4172,
+            0.811,
+            0.5787,
+            0.7457,
+            1.6033
+          ],
+          "recent_download_seconds": [
+            16.233,
+            23.4746,
+            13.6958,
+            22.6555,
+            14.4624,
+            7.1342
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 141840,
+            "750": 353220,
+            "1200": 607410,
+            "1850": 939819,
+            "2850": 1354548,
+            "4300": 2173522
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 38
+        },
+        "server_latency_ms": 56.7,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.7257,
+              0.4172,
+              0.811,
+              0.5787,
+              0.7457,
+              1.6033
+            ],
+            "recent_download_seconds": [
+              16.233,
+              23.4746,
+              13.6958,
+              22.6555,
+              14.4624,
+              7.1342
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 141840,
+              "750": 353220,
+              "1200": 607410,
+              "1850": 939819,
+              "2850": 1354548,
+              "4300": 2173522
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 38
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 11,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 8434.399089114739,
+      "rebuffer_s": 4.434399089114739,
+      "size_bytes": 1519951,
+      "throughput_mbps": 1.4416685612722475,
+      "switch_mbps": 0.0,
+      "reward": -16.217916083193373,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 143.40209874734845,
+      "decision_ms": 61.45981402369216,
+      "decision": {
+        "probabilities": {
+          "300": 0.0185,
+          "750": 0.037,
+          "1200": 0.1293,
+          "1850": 0.2285,
+          "2850": 0.3276,
+          "4300": 0.2591
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.4172,
+            0.811,
+            0.5787,
+            0.7457,
+            1.6033,
+            1.3996
+          ],
+          "recent_download_seconds": [
+            23.4746,
+            13.6958,
+            22.6555,
+            14.4624,
+            7.1342,
+            7.7424
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 156148,
+            "750": 405134,
+            "1200": 594078,
+            "1850": 917428,
+            "2850": 1519951,
+            "4300": 2102452
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 37
+        },
+        "server_latency_ms": 57.4,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.4172,
+              0.811,
+              0.5787,
+              0.7457,
+              1.6033,
+              1.3996
+            ],
+            "recent_download_seconds": [
+              23.4746,
+              13.6958,
+              22.6555,
+              14.4624,
+              7.1342,
+              7.7424
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 156148,
+              "750": 405134,
+              "1200": 594078,
+              "1850": 917428,
+              "2850": 1519951,
+              "4300": 2102452
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 37
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 12,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 9656.10451762059,
+      "rebuffer_s": 5.65610451762059,
+      "size_bytes": 1422919,
+      "throughput_mbps": 1.17887622065684,
+      "switch_mbps": 0.0,
+      "reward": -21.471249425768534,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 153.05820326496902,
+      "decision_ms": 60.16672600526363,
+      "decision": {
+        "probabilities": {
+          "300": 0.0194,
+          "750": 0.0258,
+          "1200": 0.1443,
+          "1850": 0.2419,
+          "2850": 0.3628,
+          "4300": 0.2058
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.811,
+            0.5787,
+            0.7457,
+            1.6033,
+            1.3996,
+            1.4417
+          ],
+          "recent_download_seconds": [
+            13.6958,
+            22.6555,
+            14.4624,
+            7.1342,
+            7.7424,
+            8.4344
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 160746,
+            "750": 386351,
+            "1200": 624282,
+            "1850": 946851,
+            "2850": 1422919,
+            "4300": 2209463
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 36
+        },
+        "server_latency_ms": 56.8,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.811,
+              0.5787,
+              0.7457,
+              1.6033,
+              1.3996,
+              1.4417
+            ],
+            "recent_download_seconds": [
+              13.6958,
+              22.6555,
+              14.4624,
+              7.1342,
+              7.7424,
+              8.4344
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 160746,
+              "750": 386351,
+              "1200": 624282,
+              "1850": 946851,
+              "2850": 1422919,
+              "4300": 2209463
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 36
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 13,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7735.258050294651,
+      "rebuffer_s": 3.735258050294651,
+      "size_bytes": 1578343,
+      "throughput_mbps": 1.6323623488577763,
+      "switch_mbps": 0.0,
+      "reward": -13.211609616267,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 160.79346131526367,
+      "decision_ms": 60.80535001819953,
+      "decision": {
+        "probabilities": {
+          "300": 0.0223,
+          "750": 0.0229,
+          "1200": 0.1747,
+          "1850": 0.2307,
+          "2850": 0.3657,
+          "4300": 0.1838
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.5787,
+            0.7457,
+            1.6033,
+            1.3996,
+            1.4417,
+            1.1789
+          ],
+          "recent_download_seconds": [
+            22.6555,
+            14.4624,
+            7.1342,
+            7.7424,
+            8.4344,
+            9.6561
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 179801,
+            "750": 434409,
+            "1200": 687371,
+            "1850": 1036454,
+            "2850": 1578343,
+            "4300": 2275376
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 35
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.5787,
+              0.7457,
+              1.6033,
+              1.3996,
+              1.4417,
+              1.1789
+            ],
+            "recent_download_seconds": [
+              22.6555,
+              14.4624,
+              7.1342,
+              7.7424,
+              8.4344,
+              9.6561
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 179801,
+              "750": 434409,
+              "1200": 687371,
+              "1850": 1036454,
+              "2850": 1578343,
+              "4300": 2275376
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 35
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 14,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 5312.402414545945,
+      "rebuffer_s": 1.3124024145459452,
+      "size_bytes": 1231445,
+      "throughput_mbps": 1.8544453584738496,
+      "switch_mbps": 0.0,
+      "reward": -2.793330382547564,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 166.1058637298096,
+      "decision_ms": 60.449117998359725,
+      "decision": {
+        "probabilities": {
+          "300": 0.0224,
+          "750": 0.0196,
+          "1200": 0.1522,
+          "1850": 0.2348,
+          "2850": 0.3539,
+          "4300": 0.217
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.7457,
+            1.6033,
+            1.3996,
+            1.4417,
+            1.1789,
+            1.6324
+          ],
+          "recent_download_seconds": [
+            14.4624,
+            7.1342,
+            7.7424,
+            8.4344,
+            9.6561,
+            7.7353
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 140051,
+            "750": 337059,
+            "1200": 526950,
+            "1850": 821631,
+            "2850": 1231445,
+            "4300": 2005399
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 34
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.7457,
+              1.6033,
+              1.3996,
+              1.4417,
+              1.1789,
+              1.6324
+            ],
+            "recent_download_seconds": [
+              14.4624,
+              7.1342,
+              7.7424,
+              8.4344,
+              9.6561,
+              7.7353
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 140051,
+              "750": 337059,
+              "1200": 526950,
+              "1850": 821631,
+              "2850": 1231445,
+              "4300": 2005399
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 34
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 15,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6568.849556705484,
+      "rebuffer_s": 2.568849556705484,
+      "size_bytes": 1471065,
+      "throughput_mbps": 1.7915648544556313,
+      "switch_mbps": 0.0,
+      "reward": -8.196053093833582,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 172.6747132865151,
+      "decision_ms": 60.649902996374294,
+      "decision": {
+        "probabilities": {
+          "300": 0.0206,
+          "750": 0.018,
+          "1200": 0.1018,
+          "1850": 0.2718,
+          "2850": 0.401,
+          "4300": 0.1867
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.6033,
+            1.3996,
+            1.4417,
+            1.1789,
+            1.6324,
+            1.8544
+          ],
+          "recent_download_seconds": [
+            7.1342,
+            7.7424,
+            8.4344,
+            9.6561,
+            7.7353,
+            5.3124
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 138313,
+            "750": 366214,
+            "1200": 587876,
+            "1850": 923170,
+            "2850": 1471065,
+            "4300": 2152483
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 33
+        },
+        "server_latency_ms": 57.0,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.6033,
+              1.3996,
+              1.4417,
+              1.1789,
+              1.6324,
+              1.8544
+            ],
+            "recent_download_seconds": [
+              7.1342,
+              7.7424,
+              8.4344,
+              9.6561,
+              7.7353,
+              5.3124
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 138313,
+              "750": 366214,
+              "1200": 587876,
+              "1850": 923170,
+              "2850": 1471065,
+              "4300": 2152483
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 33
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 16,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7011.530481372269,
+      "rebuffer_s": 3.0115304813722688,
+      "size_bytes": 1491626,
+      "throughput_mbps": 1.7019120193091595,
+      "switch_mbps": 0.0,
+      "reward": -10.099581069900756,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 179.68624376788736,
+      "decision_ms": 61.263720999704674,
+      "decision": {
+        "probabilities": {
+          "300": 0.0186,
+          "750": 0.0156,
+          "1200": 0.0844,
+          "1850": 0.3081,
+          "2850": 0.366,
+          "4300": 0.2072
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3996,
+            1.4417,
+            1.1789,
+            1.6324,
+            1.8544,
+            1.7916
+          ],
+          "recent_download_seconds": [
+            7.7424,
+            8.4344,
+            9.6561,
+            7.7353,
+            5.3124,
+            6.5688
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 143509,
+            "750": 360831,
+            "1200": 617242,
+            "1850": 966699,
+            "2850": 1491626,
+            "4300": 2289689
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 32
+        },
+        "server_latency_ms": 57.2,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3996,
+              1.4417,
+              1.1789,
+              1.6324,
+              1.8544,
+              1.7916
+            ],
+            "recent_download_seconds": [
+              7.7424,
+              8.4344,
+              9.6561,
+              7.7353,
+              5.3124,
+              6.5688
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 143509,
+              "750": 360831,
+              "1200": 617242,
+              "1850": 966699,
+              "2850": 1491626,
+              "4300": 2289689
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 32
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 17,
+      "action": 3,
+      "bitrate_kbps": 1850,
+      "buffer_s": 4.0,
+      "download_ms": 4179.037342891172,
+      "rebuffer_s": 0.17903734289117165,
+      "size_bytes": 885714,
+      "throughput_mbps": 1.6955368948911838,
+      "switch_mbps": 1.0,
+      "reward": 0.08013942556796216,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 183.86528111077854,
+      "decision_ms": 60.16072499915026,
+      "decision": {
+        "probabilities": {
+          "300": 0.0229,
+          "750": 0.017,
+          "1200": 0.1053,
+          "1850": 0.3403,
+          "2850": 0.3155,
+          "4300": 0.199
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.4417,
+            1.1789,
+            1.6324,
+            1.8544,
+            1.7916,
+            1.7019
+          ],
+          "recent_download_seconds": [
+            8.4344,
+            9.6561,
+            7.7353,
+            5.3124,
+            6.5688,
+            7.0115
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 150616,
+            "750": 372963,
+            "1200": 581493,
+            "1850": 885714,
+            "2850": 1358801,
+            "4300": 2059512
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 31
+        },
+        "server_latency_ms": 56.5,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.4417,
+              1.1789,
+              1.6324,
+              1.8544,
+              1.7916,
+              1.7019
+            ],
+            "recent_download_seconds": [
+              8.4344,
+              9.6561,
+              7.7353,
+              5.3124,
+              6.5688,
+              7.0115
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 150616,
+              "750": 372963,
+              "1200": 581493,
+              "1850": 885714,
+              "2850": 1358801,
+              "4300": 2059512
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 31
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 18,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6392.064777711671,
+      "rebuffer_s": 2.392064777711671,
+      "size_bytes": 1537156,
+      "throughput_mbps": 1.9238303158126562,
+      "switch_mbps": 1.0,
+      "reward": -8.435878544160186,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 190.25734588849022,
+      "decision_ms": 60.8049210277386,
+      "decision": {
+        "probabilities": {
+          "300": 0.0131,
+          "750": 0.0113,
+          "1200": 0.0591,
+          "1850": 0.0818,
+          "2850": 0.7381,
+          "4300": 0.0965
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.1789,
+            1.6324,
+            1.8544,
+            1.7916,
+            1.7019,
+            1.6955
+          ],
+          "recent_download_seconds": [
+            9.6561,
+            7.7353,
+            5.3124,
+            6.5688,
+            7.0115,
+            4.179
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            1850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 1850,
+          "next_chunk_sizes_bytes": {
+            "300": 165384,
+            "750": 405596,
+            "1200": 639204,
+            "1850": 987708,
+            "2850": 1537156,
+            "4300": 2220726
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 30
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.1789,
+              1.6324,
+              1.8544,
+              1.7916,
+              1.7019,
+              1.6955
+            ],
+            "recent_download_seconds": [
+              9.6561,
+              7.7353,
+              5.3124,
+              6.5688,
+              7.0115,
+              4.179
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              1850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 1850,
+            "next_chunk_sizes_bytes": {
+              "300": 165384,
+              "750": 405596,
+              "1200": 639204,
+              "1850": 987708,
+              "2850": 1537156,
+              "4300": 2220726
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 30
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 19,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 5430.348509873592,
+      "rebuffer_s": 1.430348509873592,
+      "size_bytes": 1336050,
+      "throughput_mbps": 1.9682714618713866,
+      "switch_mbps": 0.0,
+      "reward": -3.3004985924564454,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 195.68769439836382,
+      "decision_ms": 60.4481490154285,
+      "decision": {
+        "probabilities": {
+          "300": 0.0188,
+          "750": 0.0141,
+          "1200": 0.0845,
+          "1850": 0.2478,
+          "2850": 0.4838,
+          "4300": 0.1511
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.6324,
+            1.8544,
+            1.7916,
+            1.7019,
+            1.6955,
+            1.9238
+          ],
+          "recent_download_seconds": [
+            7.7353,
+            5.3124,
+            6.5688,
+            7.0115,
+            4.179,
+            6.3921
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            1850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 140881,
+            "750": 350713,
+            "1200": 586839,
+            "1850": 923755,
+            "2850": 1336050,
+            "4300": 2156729
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 29
+        },
+        "server_latency_ms": 57.0,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.6324,
+              1.8544,
+              1.7916,
+              1.7019,
+              1.6955,
+              1.9238
+            ],
+            "recent_download_seconds": [
+              7.7353,
+              5.3124,
+              6.5688,
+              7.0115,
+              4.179,
+              6.3921
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              1850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 140881,
+              "750": 350713,
+              "1200": 586839,
+              "1850": 923755,
+              "2850": 1336050,
+              "4300": 2156729
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 29
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 20,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 5947.934927804155,
+      "rebuffer_s": 1.9479349278041556,
+      "size_bytes": 1415116,
+      "throughput_mbps": 1.9033375679816715,
+      "switch_mbps": 0.0,
+      "reward": -5.526120189557869,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 201.635629326168,
+      "decision_ms": 59.82960300752893,
+      "decision": {
+        "probabilities": {
+          "300": 0.0185,
+          "750": 0.0174,
+          "1200": 0.0855,
+          "1850": 0.1575,
+          "2850": 0.5587,
+          "4300": 0.1624
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8544,
+            1.7916,
+            1.7019,
+            1.6955,
+            1.9238,
+            1.9683
+          ],
+          "recent_download_seconds": [
+            5.3124,
+            6.5688,
+            7.0115,
+            4.179,
+            6.3921,
+            5.4303
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            1850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 157671,
+            "750": 386472,
+            "1200": 601738,
+            "1850": 891604,
+            "2850": 1415116,
+            "4300": 2039773
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 28
+        },
+        "server_latency_ms": 56.6,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8544,
+              1.7916,
+              1.7019,
+              1.6955,
+              1.9238,
+              1.9683
+            ],
+            "recent_download_seconds": [
+              5.3124,
+              6.5688,
+              7.0115,
+              4.179,
+              6.3921,
+              5.4303
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              1850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 157671,
+              "750": 386472,
+              "1200": 601738,
+              "1850": 891604,
+              "2850": 1415116,
+              "4300": 2039773
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 28
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 21,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7511.730127324562,
+      "rebuffer_s": 3.511730127324562,
+      "size_bytes": 1468126,
+      "throughput_mbps": 1.5635556391032375,
+      "switch_mbps": 0.0,
+      "reward": -12.250439547495617,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 209.14735945349256,
+      "decision_ms": 59.84869098756462,
+      "decision": {
+        "probabilities": {
+          "300": 0.0191,
+          "750": 0.0192,
+          "1200": 0.0813,
+          "1850": 0.1556,
+          "2850": 0.5691,
+          "4300": 0.1557
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.7916,
+            1.7019,
+            1.6955,
+            1.9238,
+            1.9683,
+            1.9033
+          ],
+          "recent_download_seconds": [
+            6.5688,
+            7.0115,
+            4.179,
+            6.3921,
+            5.4303,
+            5.9479
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            1850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 157812,
+            "750": 399894,
+            "1200": 616206,
+            "1850": 955231,
+            "2850": 1468126,
+            "4300": 2176469
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 27
+        },
+        "server_latency_ms": 56.7,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.7916,
+              1.7019,
+              1.6955,
+              1.9238,
+              1.9683,
+              1.9033
+            ],
+            "recent_download_seconds": [
+              6.5688,
+              7.0115,
+              4.179,
+              6.3921,
+              5.4303,
+              5.9479
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              1850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 157812,
+              "750": 399894,
+              "1200": 616206,
+              "1850": 955231,
+              "2850": 1468126,
+              "4300": 2176469
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 27
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 22,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7428.501802875701,
+      "rebuffer_s": 3.4285018028757013,
+      "size_bytes": 1505760,
+      "throughput_mbps": 1.6216028910885845,
+      "switch_mbps": 0.0,
+      "reward": -11.892557752365516,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 216.57586125636826,
+      "decision_ms": 60.133633989607915,
+      "decision": {
+        "probabilities": {
+          "300": 0.0237,
+          "750": 0.0203,
+          "1200": 0.1022,
+          "1850": 0.1471,
+          "2850": 0.5453,
+          "4300": 0.1614
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.7019,
+            1.6955,
+            1.9238,
+            1.9683,
+            1.9033,
+            1.5636
+          ],
+          "recent_download_seconds": [
+            7.0115,
+            4.179,
+            6.3921,
+            5.4303,
+            5.9479,
+            7.5117
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            1850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 163927,
+            "750": 401853,
+            "1200": 656471,
+            "1850": 968026,
+            "2850": 1505760,
+            "4300": 2221506
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 26
+        },
+        "server_latency_ms": 56.6,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.7019,
+              1.6955,
+              1.9238,
+              1.9683,
+              1.9033,
+              1.5636
+            ],
+            "recent_download_seconds": [
+              7.0115,
+              4.179,
+              6.3921,
+              5.4303,
+              5.9479,
+              7.5117
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              1850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 163927,
+              "750": 401853,
+              "1200": 656471,
+              "1850": 968026,
+              "2850": 1505760,
+              "4300": 2221506
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 26
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 23,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6533.024753561467,
+      "rebuffer_s": 2.533024753561467,
+      "size_bytes": 1323990,
+      "throughput_mbps": 1.6212888209593623,
+      "switch_mbps": 0.0,
+      "reward": -8.042006440314308,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 223.10888600992973,
+      "decision_ms": 60.90362498071045,
+      "decision": {
+        "probabilities": {
+          "300": 0.0233,
+          "750": 0.0209,
+          "1200": 0.116,
+          "1850": 0.1897,
+          "2850": 0.5057,
+          "4300": 0.1443
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.6955,
+            1.9238,
+            1.9683,
+            1.9033,
+            1.5636,
+            1.6216
+          ],
+          "recent_download_seconds": [
+            4.179,
+            6.3921,
+            5.4303,
+            5.9479,
+            7.5117,
+            7.4285
+          ],
+          "recent_bitrates_kbps": [
+            1850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 137654,
+            "750": 343800,
+            "1200": 536667,
+            "1850": 874175,
+            "2850": 1323990,
+            "4300": 2044075
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 25
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.6955,
+              1.9238,
+              1.9683,
+              1.9033,
+              1.5636,
+              1.6216
+            ],
+            "recent_download_seconds": [
+              4.179,
+              6.3921,
+              5.4303,
+              5.9479,
+              7.5117,
+              7.4285
+            ],
+            "recent_bitrates_kbps": [
+              1850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 137654,
+              "750": 343800,
+              "1200": 536667,
+              "1850": 874175,
+              "2850": 1323990,
+              "4300": 2044075
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 25
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 24,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 5811.065566929197,
+      "rebuffer_s": 1.8110655669291973,
+      "size_bytes": 1383735,
+      "throughput_mbps": 1.9049655992523542,
+      "switch_mbps": 0.0,
+      "reward": -4.937581937795548,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 228.91995157685892,
+      "decision_ms": 60.907646984560415,
+      "decision": {
+        "probabilities": {
+          "300": 0.0236,
+          "750": 0.0145,
+          "1200": 0.0952,
+          "1850": 0.2182,
+          "2850": 0.4542,
+          "4300": 0.1943
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.9238,
+            1.9683,
+            1.9033,
+            1.5636,
+            1.6216,
+            1.6213
+          ],
+          "recent_download_seconds": [
+            6.3921,
+            5.4303,
+            5.9479,
+            7.5117,
+            7.4285,
+            6.533
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 146754,
+            "750": 359903,
+            "1200": 587236,
+            "1850": 897976,
+            "2850": 1383735,
+            "4300": 2186790
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 24
+        },
+        "server_latency_ms": 57.2,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.9238,
+              1.9683,
+              1.9033,
+              1.5636,
+              1.6216,
+              1.6213
+            ],
+            "recent_download_seconds": [
+              6.3921,
+              5.4303,
+              5.9479,
+              7.5117,
+              7.4285,
+              6.533
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 146754,
+              "750": 359903,
+              "1200": 587236,
+              "1850": 897976,
+              "2850": 1383735,
+              "4300": 2186790
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 24
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 25,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6380.228683892967,
+      "rebuffer_s": 2.380228683892967,
+      "size_bytes": 1480464,
+      "throughput_mbps": 1.8563146537207549,
+      "switch_mbps": 0.0,
+      "reward": -7.384983340739758,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 235.3001802607519,
+      "decision_ms": 60.95764599740505,
+      "decision": {
+        "probabilities": {
+          "300": 0.0278,
+          "750": 0.0229,
+          "1200": 0.1015,
+          "1850": 0.2224,
+          "2850": 0.4341,
+          "4300": 0.1913
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.9683,
+            1.9033,
+            1.5636,
+            1.6216,
+            1.6213,
+            1.905
+          ],
+          "recent_download_seconds": [
+            5.4303,
+            5.9479,
+            7.5117,
+            7.4285,
+            6.533,
+            5.8111
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 153938,
+            "750": 379700,
+            "1200": 590335,
+            "1850": 905935,
+            "2850": 1480464,
+            "4300": 2105231
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 23
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.9683,
+              1.9033,
+              1.5636,
+              1.6216,
+              1.6213,
+              1.905
+            ],
+            "recent_download_seconds": [
+              5.4303,
+              5.9479,
+              7.5117,
+              7.4285,
+              6.533,
+              5.8111
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 153938,
+              "750": 379700,
+              "1200": 590335,
+              "1850": 905935,
+              "2850": 1480464,
+              "4300": 2105231
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 23
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 26,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6672.823737628106,
+      "rebuffer_s": 2.672823737628106,
+      "size_bytes": 1547572,
+      "throughput_mbps": 1.8553728506547886,
+      "switch_mbps": 0.0,
+      "reward": -8.643142071800856,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 241.97300399838,
+      "decision_ms": 60.18708099145442,
+      "decision": {
+        "probabilities": {
+          "300": 0.0218,
+          "750": 0.0197,
+          "1200": 0.0851,
+          "1850": 0.1977,
+          "2850": 0.4612,
+          "4300": 0.2145
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.9033,
+            1.5636,
+            1.6216,
+            1.6213,
+            1.905,
+            1.8563
+          ],
+          "recent_download_seconds": [
+            5.9479,
+            7.5117,
+            7.4285,
+            6.533,
+            5.8111,
+            6.3802
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 181901,
+            "750": 425781,
+            "1200": 696376,
+            "1850": 1076599,
+            "2850": 1547572,
+            "4300": 2395588
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 22
+        },
+        "server_latency_ms": 56.7,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.9033,
+              1.5636,
+              1.6216,
+              1.6213,
+              1.905,
+              1.8563
+            ],
+            "recent_download_seconds": [
+              5.9479,
+              7.5117,
+              7.4285,
+              6.533,
+              5.8111,
+              6.3802
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 181901,
+              "750": 425781,
+              "1200": 696376,
+              "1850": 1076599,
+              "2850": 1547572,
+              "4300": 2395588
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 22
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 27,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6672.473232981238,
+      "rebuffer_s": 2.672473232981238,
+      "size_bytes": 1141971,
+      "throughput_mbps": 1.3691726712132752,
+      "switch_mbps": 0.0,
+      "reward": -8.641634901819323,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 248.64547723136124,
+      "decision_ms": 60.832996998215094,
+      "decision": {
+        "probabilities": {
+          "300": 0.0209,
+          "750": 0.0137,
+          "1200": 0.0649,
+          "1850": 0.1981,
+          "2850": 0.453,
+          "4300": 0.2494
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.5636,
+            1.6216,
+            1.6213,
+            1.905,
+            1.8563,
+            1.8554
+          ],
+          "recent_download_seconds": [
+            7.5117,
+            7.4285,
+            6.533,
+            5.8111,
+            6.3802,
+            6.6728
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 111155,
+            "750": 277716,
+            "1200": 487160,
+            "1850": 758197,
+            "2850": 1141971,
+            "4300": 1972048
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 21
+        },
+        "server_latency_ms": 57.2,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.5636,
+              1.6216,
+              1.6213,
+              1.905,
+              1.8563,
+              1.8554
+            ],
+            "recent_download_seconds": [
+              7.5117,
+              7.4285,
+              6.533,
+              5.8111,
+              6.3802,
+              6.6728
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 111155,
+              "750": 277716,
+              "1200": 487160,
+              "1850": 758197,
+              "2850": 1141971,
+              "4300": 1972048
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 21
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 28,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 9208.727939771285,
+      "rebuffer_s": 5.2087279397712845,
+      "size_bytes": 1498470,
+      "throughput_mbps": 1.3017824045193518,
+      "switch_mbps": 0.0,
+      "reward": -19.54753014101652,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 257.85420517113255,
+      "decision_ms": 60.248835012316704,
+      "decision": {
+        "probabilities": {
+          "300": 0.022,
+          "750": 0.021,
+          "1200": 0.0935,
+          "1850": 0.274,
+          "2850": 0.407,
+          "4300": 0.1824
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.6216,
+            1.6213,
+            1.905,
+            1.8563,
+            1.8554,
+            1.3692
+          ],
+          "recent_download_seconds": [
+            7.4285,
+            6.533,
+            5.8111,
+            6.3802,
+            6.6728,
+            6.6725
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 153605,
+            "750": 400396,
+            "1200": 622896,
+            "1850": 972798,
+            "2850": 1498470,
+            "4300": 2134614
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 20
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.6216,
+              1.6213,
+              1.905,
+              1.8563,
+              1.8554,
+              1.3692
+            ],
+            "recent_download_seconds": [
+              7.4285,
+              6.533,
+              5.8111,
+              6.3802,
+              6.6728,
+              6.6725
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 153605,
+              "750": 400396,
+              "1200": 622896,
+              "1850": 972798,
+              "2850": 1498470,
+              "4300": 2134614
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 20
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 29,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6658.293458440325,
+      "rebuffer_s": 2.658293458440325,
+      "size_bytes": 1561263,
+      "throughput_mbps": 1.8758716596017608,
+      "switch_mbps": 0.0,
+      "reward": -8.580661871293398,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 264.51249862957286,
+      "decision_ms": 60.17835400416516,
+      "decision": {
+        "probabilities": {
+          "300": 0.0218,
+          "750": 0.0186,
+          "1200": 0.109,
+          "1850": 0.3022,
+          "2850": 0.3748,
+          "4300": 0.1736
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.6213,
+            1.905,
+            1.8563,
+            1.8554,
+            1.3692,
+            1.3018
+          ],
+          "recent_download_seconds": [
+            6.533,
+            5.8111,
+            6.3802,
+            6.6728,
+            6.6725,
+            9.2087
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 149029,
+            "750": 400508,
+            "1200": 641447,
+            "1850": 975811,
+            "2850": 1561263,
+            "4300": 2164140
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 19
+        },
+        "server_latency_ms": 57.0,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.6213,
+              1.905,
+              1.8563,
+              1.8554,
+              1.3692,
+              1.3018
+            ],
+            "recent_download_seconds": [
+              6.533,
+              5.8111,
+              6.3802,
+              6.6728,
+              6.6725,
+              9.2087
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 149029,
+              "750": 400508,
+              "1200": 641447,
+              "1850": 975811,
+              "2850": 1561263,
+              "4300": 2164140
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 19
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 30,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 5820.64656071889,
+      "rebuffer_s": 1.8206465607188902,
+      "size_bytes": 1341201,
+      "throughput_mbps": 1.8433704723474602,
+      "switch_mbps": 0.0,
+      "reward": -4.978780211091227,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 270.33314519029176,
+      "decision_ms": 61.219964001793414,
+      "decision": {
+        "probabilities": {
+          "300": 0.022,
+          "750": 0.0173,
+          "1200": 0.1075,
+          "1850": 0.2391,
+          "2850": 0.4018,
+          "4300": 0.2123
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.905,
+            1.8563,
+            1.8554,
+            1.3692,
+            1.3018,
+            1.8759
+          ],
+          "recent_download_seconds": [
+            5.8111,
+            6.3802,
+            6.6728,
+            6.6725,
+            9.2087,
+            6.6583
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 157421,
+            "750": 358218,
+            "1200": 570392,
+            "1850": 873429,
+            "2850": 1341201,
+            "4300": 2113193
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 18
+        },
+        "server_latency_ms": 57.2,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.905,
+              1.8563,
+              1.8554,
+              1.3692,
+              1.3018,
+              1.8759
+            ],
+            "recent_download_seconds": [
+              5.8111,
+              6.3802,
+              6.6728,
+              6.6725,
+              9.2087,
+              6.6583
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 157421,
+              "750": 358218,
+              "1200": 570392,
+              "1850": 873429,
+              "2850": 1341201,
+              "4300": 2113193
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 18
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 31,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6337.153288035141,
+      "rebuffer_s": 2.3371532880351404,
+      "size_bytes": 1497683,
+      "throughput_mbps": 1.8906697464020001,
+      "switch_mbps": 0.0,
+      "reward": -7.199759138551103,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 276.6702984783269,
+      "decision_ms": 63.5363920009695,
+      "decision": {
+        "probabilities": {
+          "300": 0.0214,
+          "750": 0.0202,
+          "1200": 0.0941,
+          "1850": 0.3223,
+          "2850": 0.3795,
+          "4300": 0.1626
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8563,
+            1.8554,
+            1.3692,
+            1.3018,
+            1.8759,
+            1.8434
+          ],
+          "recent_download_seconds": [
+            6.3802,
+            6.6728,
+            6.6725,
+            9.2087,
+            6.6583,
+            5.8206
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 157488,
+            "750": 400322,
+            "1200": 620283,
+            "1850": 954453,
+            "2850": 1497683,
+            "4300": 2147852
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 17
+        },
+        "server_latency_ms": 57.3,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8563,
+              1.8554,
+              1.3692,
+              1.3018,
+              1.8759,
+              1.8434
+            ],
+            "recent_download_seconds": [
+              6.3802,
+              6.6728,
+              6.6725,
+              9.2087,
+              6.6583,
+              5.8206
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 157488,
+              "750": 400322,
+              "1200": 620283,
+              "1850": 954453,
+              "2850": 1497683,
+              "4300": 2147852
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 17
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 32,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 5870.793105184114,
+      "rebuffer_s": 1.8707931051841142,
+      "size_bytes": 1358081,
+      "throughput_mbps": 1.8506269605049,
+      "switch_mbps": 0.0,
+      "reward": -5.1944103522916905,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 282.54109158351105,
+      "decision_ms": 61.164023994933814,
+      "decision": {
+        "probabilities": {
+          "300": 0.0188,
+          "750": 0.015,
+          "1200": 0.0873,
+          "1850": 0.2656,
+          "2850": 0.4264,
+          "4300": 0.1869
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8554,
+            1.3692,
+            1.3018,
+            1.8759,
+            1.8434,
+            1.8907
+          ],
+          "recent_download_seconds": [
+            6.6728,
+            6.6725,
+            9.2087,
+            6.6583,
+            5.8206,
+            6.3372
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 143881,
+            "750": 369834,
+            "1200": 584349,
+            "1850": 885062,
+            "2850": 1358081,
+            "4300": 2191074
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 16
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8554,
+              1.3692,
+              1.3018,
+              1.8759,
+              1.8434,
+              1.8907
+            ],
+            "recent_download_seconds": [
+              6.6728,
+              6.6725,
+              9.2087,
+              6.6583,
+              5.8206,
+              6.3372
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 143881,
+              "750": 369834,
+              "1200": 584349,
+              "1850": 885062,
+              "2850": 1358081,
+              "4300": 2191074
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 16
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 33,
+      "action": 3,
+      "bitrate_kbps": 1850,
+      "buffer_s": 4.0,
+      "download_ms": 4694.8974300702075,
+      "rebuffer_s": 0.6948974300702075,
+      "size_bytes": 1035329,
+      "throughput_mbps": 1.7641774124714245,
+      "switch_mbps": 1.0,
+      "reward": -2.138058949301892,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 287.2359890135813,
+      "decision_ms": 60.766629001591355,
+      "decision": {
+        "probabilities": {
+          "300": 0.0164,
+          "750": 0.0125,
+          "1200": 0.0802,
+          "1850": 0.3629,
+          "2850": 0.348,
+          "4300": 0.18
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3692,
+            1.3018,
+            1.8759,
+            1.8434,
+            1.8907,
+            1.8506
+          ],
+          "recent_download_seconds": [
+            6.6725,
+            9.2087,
+            6.6583,
+            5.8206,
+            6.3372,
+            5.8708
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 163444,
+            "750": 412837,
+            "1200": 670129,
+            "1850": 1035329,
+            "2850": 1587293,
+            "4300": 2286761
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 15
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3692,
+              1.3018,
+              1.8759,
+              1.8434,
+              1.8907,
+              1.8506
+            ],
+            "recent_download_seconds": [
+              6.6725,
+              9.2087,
+              6.6583,
+              5.8206,
+              6.3372,
+              5.8708
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 163444,
+              "750": 412837,
+              "1200": 670129,
+              "1850": 1035329,
+              "2850": 1587293,
+              "4300": 2286761
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 15
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 34,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7340.649156369991,
+      "rebuffer_s": 3.340649156369991,
+      "size_bytes": 1492672,
+      "throughput_mbps": 1.6267465922462239,
+      "switch_mbps": 1.0,
+      "reward": -12.514791372390961,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 294.57663816995125,
+      "decision_ms": 60.118885012343526,
+      "decision": {
+        "probabilities": {
+          "300": 0.0122,
+          "750": 0.0095,
+          "1200": 0.0559,
+          "1850": 0.0724,
+          "2850": 0.7428,
+          "4300": 0.1071
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.3018,
+            1.8759,
+            1.8434,
+            1.8907,
+            1.8506,
+            1.7642
+          ],
+          "recent_download_seconds": [
+            9.2087,
+            6.6583,
+            5.8206,
+            6.3372,
+            5.8708,
+            4.6949
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            1850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 1850,
+          "next_chunk_sizes_bytes": {
+            "300": 179328,
+            "750": 401088,
+            "1200": 690253,
+            "1850": 1026056,
+            "2850": 1492672,
+            "4300": 2307787
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 14
+        },
+        "server_latency_ms": 56.8,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.3018,
+              1.8759,
+              1.8434,
+              1.8907,
+              1.8506,
+              1.7642
+            ],
+            "recent_download_seconds": [
+              9.2087,
+              6.6583,
+              5.8206,
+              6.3372,
+              5.8708,
+              4.6949
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              1850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 1850,
+            "next_chunk_sizes_bytes": {
+              "300": 179328,
+              "750": 401088,
+              "1200": 690253,
+              "1850": 1026056,
+              "2850": 1492672,
+              "4300": 2307787
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 14
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 35,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7446.686191402805,
+      "rebuffer_s": 3.446686191402805,
+      "size_bytes": 1439896,
+      "throughput_mbps": 1.5468851115679985,
+      "switch_mbps": 0.0,
+      "reward": -11.97075062303206,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 302.02332436135407,
+      "decision_ms": 59.71015497925691,
+      "decision": {
+        "probabilities": {
+          "300": 0.0248,
+          "750": 0.0268,
+          "1200": 0.1076,
+          "1850": 0.2223,
+          "2850": 0.4685,
+          "4300": 0.15
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8759,
+            1.8434,
+            1.8907,
+            1.8506,
+            1.7642,
+            1.6267
+          ],
+          "recent_download_seconds": [
+            6.6583,
+            5.8206,
+            6.3372,
+            5.8708,
+            4.6949,
+            7.3406
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            1850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 159914,
+            "750": 365161,
+            "1200": 598727,
+            "1850": 943942,
+            "2850": 1439896,
+            "4300": 2143948
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 13
+        },
+        "server_latency_ms": 56.5,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8759,
+              1.8434,
+              1.8907,
+              1.8506,
+              1.7642,
+              1.6267
+            ],
+            "recent_download_seconds": [
+              6.6583,
+              5.8206,
+              6.3372,
+              5.8708,
+              4.6949,
+              7.3406
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              1850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 159914,
+              "750": 365161,
+              "1200": 598727,
+              "1850": 943942,
+              "2850": 1439896,
+              "4300": 2143948
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 13
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 36,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 8692.289641259196,
+      "rebuffer_s": 4.692289641259197,
+      "size_bytes": 1139291,
+      "throughput_mbps": 1.0485531863477648,
+      "switch_mbps": 0.0,
+      "reward": -17.326845457414542,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 310.7156140026133,
+      "decision_ms": 60.328721010591835,
+      "decision": {
+        "probabilities": {
+          "300": 0.0246,
+          "750": 0.0221,
+          "1200": 0.0945,
+          "1850": 0.1892,
+          "2850": 0.5188,
+          "4300": 0.1508
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8434,
+            1.8907,
+            1.8506,
+            1.7642,
+            1.6267,
+            1.5469
+          ],
+          "recent_download_seconds": [
+            5.8206,
+            6.3372,
+            5.8708,
+            4.6949,
+            7.3406,
+            7.4467
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            1850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 131610,
+            "750": 321064,
+            "1200": 487812,
+            "1850": 728962,
+            "2850": 1139291,
+            "4300": 1919781
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 12
+        },
+        "server_latency_ms": 56.8,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8434,
+              1.8907,
+              1.8506,
+              1.7642,
+              1.6267,
+              1.5469
+            ],
+            "recent_download_seconds": [
+              5.8206,
+              6.3372,
+              5.8708,
+              4.6949,
+              7.3406,
+              7.4467
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              1850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 131610,
+              "750": 321064,
+              "1200": 487812,
+              "1850": 728962,
+              "2850": 1139291,
+              "4300": 1919781
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 12
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 37,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 11328.484128749513,
+      "rebuffer_s": 7.328484128749513,
+      "size_bytes": 1499009,
+      "throughput_mbps": 1.058576934363745,
+      "switch_mbps": 0.0,
+      "reward": -28.662481753622902,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 322.0440981313628,
+      "decision_ms": 60.84725301479921,
+      "decision": {
+        "probabilities": {
+          "300": 0.0283,
+          "750": 0.0299,
+          "1200": 0.1296,
+          "1850": 0.2112,
+          "2850": 0.4392,
+          "4300": 0.1618
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8907,
+            1.8506,
+            1.7642,
+            1.6267,
+            1.5469,
+            1.0486
+          ],
+          "recent_download_seconds": [
+            6.3372,
+            5.8708,
+            4.6949,
+            7.3406,
+            7.4467,
+            8.6923
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            1850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 124011,
+            "750": 361565,
+            "1200": 575591,
+            "1850": 938587,
+            "2850": 1499009,
+            "4300": 2147467
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 11
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8907,
+              1.8506,
+              1.7642,
+              1.6267,
+              1.5469,
+              1.0486
+            ],
+            "recent_download_seconds": [
+              6.3372,
+              5.8708,
+              4.6949,
+              7.3406,
+              7.4467,
+              8.6923
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              1850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 124011,
+              "750": 361565,
+              "1200": 575591,
+              "1850": 938587,
+              "2850": 1499009,
+              "4300": 2147467
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 11
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 38,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 14041.543081651667,
+      "rebuffer_s": 10.041543081651668,
+      "size_bytes": 1427478,
+      "throughput_mbps": 0.8132883924219473,
+      "switch_mbps": 0.0,
+      "reward": -40.32863525110217,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 336.08564121301447,
+      "decision_ms": 60.86555900401436,
+      "decision": {
+        "probabilities": {
+          "300": 0.0282,
+          "750": 0.0263,
+          "1200": 0.1081,
+          "1850": 0.3159,
+          "2850": 0.3845,
+          "4300": 0.1369
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.8506,
+            1.7642,
+            1.6267,
+            1.5469,
+            1.0486,
+            1.0586
+          ],
+          "recent_download_seconds": [
+            5.8708,
+            4.6949,
+            7.3406,
+            7.4467,
+            8.6923,
+            11.3285
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            1850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 144254,
+            "750": 378327,
+            "1200": 605884,
+            "1850": 908665,
+            "2850": 1427478,
+            "4300": 2133870
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 10
+        },
+        "server_latency_ms": 57.0,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.8506,
+              1.7642,
+              1.6267,
+              1.5469,
+              1.0486,
+              1.0586
+            ],
+            "recent_download_seconds": [
+              5.8708,
+              4.6949,
+              7.3406,
+              7.4467,
+              8.6923,
+              11.3285
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              1850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 144254,
+              "750": 378327,
+              "1200": 605884,
+              "1850": 908665,
+              "2850": 1427478,
+              "4300": 2133870
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 10
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 39,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 23205.75726352756,
+      "rebuffer_s": 19.205757263527563,
+      "size_bytes": 1402287,
+      "throughput_mbps": 0.483427275076766,
+      "switch_mbps": 0.0,
+      "reward": -79.73475623316853,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 359.29139847654204,
+      "decision_ms": 60.34358500619419,
+      "decision": {
+        "probabilities": {
+          "300": 0.0357,
+          "750": 0.0269,
+          "1200": 0.1366,
+          "1850": 0.2201,
+          "2850": 0.3977,
+          "4300": 0.183
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.7642,
+            1.6267,
+            1.5469,
+            1.0486,
+            1.0586,
+            0.8133
+          ],
+          "recent_download_seconds": [
+            4.6949,
+            7.3406,
+            7.4467,
+            8.6923,
+            11.3285,
+            14.0415
+          ],
+          "recent_bitrates_kbps": [
+            1850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 149991,
+            "750": 390680,
+            "1200": 587506,
+            "1850": 930577,
+            "2850": 1402287,
+            "4300": 2146120
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 9
+        },
+        "server_latency_ms": 56.6,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.7642,
+              1.6267,
+              1.5469,
+              1.0486,
+              1.0586,
+              0.8133
+            ],
+            "recent_download_seconds": [
+              4.6949,
+              7.3406,
+              7.4467,
+              8.6923,
+              11.3285,
+              14.0415
+            ],
+            "recent_bitrates_kbps": [
+              1850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 149991,
+              "750": 390680,
+              "1200": 587506,
+              "1850": 930577,
+              "2850": 1402287,
+              "4300": 2146120
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 9
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 40,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 20633.049857355607,
+      "rebuffer_s": 16.63304985735561,
+      "size_bytes": 1339500,
+      "throughput_mbps": 0.5193609318100778,
+      "switch_mbps": 0.0,
+      "reward": -68.67211438662912,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 379.92444833389766,
+      "decision_ms": 60.52177300443873,
+      "decision": {
+        "probabilities": {
+          "300": 0.0287,
+          "750": 0.0261,
+          "1200": 0.1315,
+          "1850": 0.2327,
+          "2850": 0.3794,
+          "4300": 0.2016
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.6267,
+            1.5469,
+            1.0486,
+            1.0586,
+            0.8133,
+            0.4834
+          ],
+          "recent_download_seconds": [
+            7.3406,
+            7.4467,
+            8.6923,
+            11.3285,
+            14.0415,
+            23.2058
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 147968,
+            "750": 345516,
+            "1200": 566904,
+            "1850": 858450,
+            "2850": 1339500,
+            "4300": 2108491
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 8
+        },
+        "server_latency_ms": 56.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.6267,
+              1.5469,
+              1.0486,
+              1.0586,
+              0.8133,
+              0.4834
+            ],
+            "recent_download_seconds": [
+              7.3406,
+              7.4467,
+              8.6923,
+              11.3285,
+              14.0415,
+              23.2058
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 147968,
+              "750": 345516,
+              "1200": 566904,
+              "1850": 858450,
+              "2850": 1339500,
+              "4300": 2108491
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 8
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 41,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 15963.448933233012,
+      "rebuffer_s": 11.963448933233012,
+      "size_bytes": 1527299,
+      "throughput_mbps": 0.7653980071038107,
+      "switch_mbps": 0.0,
+      "reward": -48.59283041290195,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 395.88789726713065,
+      "decision_ms": 60.97245099954307,
+      "decision": {
+        "probabilities": {
+          "300": 0.0262,
+          "750": 0.0343,
+          "1200": 0.1778,
+          "1850": 0.2328,
+          "2850": 0.3455,
+          "4300": 0.1834
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.5469,
+            1.0486,
+            1.0586,
+            0.8133,
+            0.4834,
+            0.5194
+          ],
+          "recent_download_seconds": [
+            7.4467,
+            8.6923,
+            11.3285,
+            14.0415,
+            23.2058,
+            20.633
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 161857,
+            "750": 384505,
+            "1200": 641452,
+            "1850": 1025005,
+            "2850": 1527299,
+            "4300": 2184571
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 7
+        },
+        "server_latency_ms": 57.3,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.5469,
+              1.0486,
+              1.0586,
+              0.8133,
+              0.4834,
+              0.5194
+            ],
+            "recent_download_seconds": [
+              7.4467,
+              8.6923,
+              11.3285,
+              14.0415,
+              23.2058,
+              20.633
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 161857,
+              "750": 384505,
+              "1200": 641452,
+              "1850": 1025005,
+              "2850": 1527299,
+              "4300": 2184571
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 7
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 42,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 16566.86146172176,
+      "rebuffer_s": 12.56686146172176,
+      "size_bytes": 1343002,
+      "throughput_mbps": 0.6485245274021502,
+      "switch_mbps": 0.0,
+      "reward": -51.18750428540357,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 412.4547587288524,
+      "decision_ms": 60.62408900470473,
+      "decision": {
+        "probabilities": {
+          "300": 0.0265,
+          "750": 0.0358,
+          "1200": 0.1538,
+          "1850": 0.2329,
+          "2850": 0.3587,
+          "4300": 0.1923
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.0486,
+            1.0586,
+            0.8133,
+            0.4834,
+            0.5194,
+            0.7654
+          ],
+          "recent_download_seconds": [
+            8.6923,
+            11.3285,
+            14.0415,
+            23.2058,
+            20.633,
+            15.9634
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 145210,
+            "750": 372093,
+            "1200": 599477,
+            "1850": 886255,
+            "2850": 1343002,
+            "4300": 2121928
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 6
+        },
+        "server_latency_ms": 57.0,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.0486,
+              1.0586,
+              0.8133,
+              0.4834,
+              0.5194,
+              0.7654
+            ],
+            "recent_download_seconds": [
+              8.6923,
+              11.3285,
+              14.0415,
+              23.2058,
+              20.633,
+              15.9634
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 145210,
+              "750": 372093,
+              "1200": 599477,
+              "1850": 886255,
+              "2850": 1343002,
+              "4300": 2121928
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 6
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 43,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 12220.31308650973,
+      "rebuffer_s": 8.22031308650973,
+      "size_bytes": 1587250,
+      "throughput_mbps": 1.0390895806112856,
+      "switch_mbps": 0.0,
+      "reward": -32.49734627199184,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 424.6750718153622,
+      "decision_ms": 64.98262798413634,
+      "decision": {
+        "probabilities": {
+          "300": 0.0239,
+          "750": 0.0514,
+          "1200": 0.1612,
+          "1850": 0.2134,
+          "2850": 0.3698,
+          "4300": 0.1803
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            1.0586,
+            0.8133,
+            0.4834,
+            0.5194,
+            0.7654,
+            0.6485
+          ],
+          "recent_download_seconds": [
+            11.3285,
+            14.0415,
+            23.2058,
+            20.633,
+            15.9634,
+            16.5669
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 172312,
+            "750": 438281,
+            "1200": 634861,
+            "1850": 973972,
+            "2850": 1587250,
+            "4300": 2219102
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 5
+        },
+        "server_latency_ms": 61.3,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              1.0586,
+              0.8133,
+              0.4834,
+              0.5194,
+              0.7654,
+              0.6485
+            ],
+            "recent_download_seconds": [
+              11.3285,
+              14.0415,
+              23.2058,
+              20.633,
+              15.9634,
+              16.5669
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 172312,
+              "750": 438281,
+              "1200": 634861,
+              "1850": 973972,
+              "2850": 1587250,
+              "4300": 2219102
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 5
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 44,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 7971.672036773618,
+      "rebuffer_s": 3.971672036773618,
+      "size_bytes": 1464921,
+      "throughput_mbps": 1.4701267119292065,
+      "switch_mbps": 0.0,
+      "reward": -14.228189758126556,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 432.6467438521358,
+      "decision_ms": 65.89073900249787,
+      "decision": {
+        "probabilities": {
+          "300": 0.0222,
+          "750": 0.0562,
+          "1200": 0.1883,
+          "1850": 0.2362,
+          "2850": 0.3115,
+          "4300": 0.1856
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.8133,
+            0.4834,
+            0.5194,
+            0.7654,
+            0.6485,
+            1.0391
+          ],
+          "recent_download_seconds": [
+            14.0415,
+            23.2058,
+            20.633,
+            15.9634,
+            16.5669,
+            12.2203
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 167025,
+            "750": 398987,
+            "1200": 630203,
+            "1850": 958994,
+            "2850": 1464921,
+            "4300": 2124950
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 4
+        },
+        "server_latency_ms": 61.9,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.8133,
+              0.4834,
+              0.5194,
+              0.7654,
+              0.6485,
+              1.0391
+            ],
+            "recent_download_seconds": [
+              14.0415,
+              23.2058,
+              20.633,
+              15.9634,
+              16.5669,
+              12.2203
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 167025,
+              "750": 398987,
+              "1200": 630203,
+              "1850": 958994,
+              "2850": 1464921,
+              "4300": 2124950
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 4
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 45,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 8619.894367811554,
+      "rebuffer_s": 4.619894367811554,
+      "size_bytes": 1483527,
+      "throughput_mbps": 1.3768400740870264,
+      "switch_mbps": 0.0,
+      "reward": -17.01554578158968,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 441.26663821994737,
+      "decision_ms": 61.194921989226714,
+      "decision": {
+        "probabilities": {
+          "300": 0.0175,
+          "750": 0.0396,
+          "1200": 0.1648,
+          "1850": 0.2452,
+          "2850": 0.2779,
+          "4300": 0.2551
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.4834,
+            0.5194,
+            0.7654,
+            0.6485,
+            1.0391,
+            1.4701
+          ],
+          "recent_download_seconds": [
+            23.2058,
+            20.633,
+            15.9634,
+            16.5669,
+            12.2203,
+            7.9717
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 160064,
+            "750": 393804,
+            "1200": 638661,
+            "1850": 982064,
+            "2850": 1483527,
+            "4300": 2246506
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 3
+        },
+        "server_latency_ms": 57.1,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.4834,
+              0.5194,
+              0.7654,
+              0.6485,
+              1.0391,
+              1.4701
+            ],
+            "recent_download_seconds": [
+              23.2058,
+              20.633,
+              15.9634,
+              16.5669,
+              12.2203,
+              7.9717
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 160064,
+              "750": 393804,
+              "1200": 638661,
+              "1850": 982064,
+              "2850": 1483527,
+              "4300": 2246506
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 3
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 46,
+      "action": 5,
+      "bitrate_kbps": 4300,
+      "buffer_s": 4.0,
+      "download_ms": 12351.674268964913,
+      "rebuffer_s": 8.351674268964913,
+      "size_bytes": 1961140,
+      "throughput_mbps": 1.2702018899106517,
+      "switch_mbps": 1.45,
+      "reward": -33.06219935654912,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 453.6183124889123,
+      "decision_ms": 60.30346098123118,
+      "decision": {
+        "probabilities": {
+          "300": 0.019,
+          "750": 0.0194,
+          "1200": 0.1403,
+          "1850": 0.2495,
+          "2850": 0.2794,
+          "4300": 0.2924
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.5194,
+            0.7654,
+            0.6485,
+            1.0391,
+            1.4701,
+            1.3768
+          ],
+          "recent_download_seconds": [
+            20.633,
+            15.9634,
+            16.5669,
+            12.2203,
+            7.9717,
+            8.6199
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            2850
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 2850,
+          "next_chunk_sizes_bytes": {
+            "300": 137507,
+            "750": 331053,
+            "1200": 538612,
+            "1850": 830730,
+            "2850": 1231456,
+            "4300": 1961140
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 2
+        },
+        "server_latency_ms": 56.7,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.5194,
+              0.7654,
+              0.6485,
+              1.0391,
+              1.4701,
+              1.3768
+            ],
+            "recent_download_seconds": [
+              20.633,
+              15.9634,
+              16.5669,
+              12.2203,
+              7.9717,
+              8.6199
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              2850
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 2850,
+            "next_chunk_sizes_bytes": {
+              "300": 137507,
+              "750": 331053,
+              "1200": 538612,
+              "1850": 830730,
+              "2850": 1231456,
+              "4300": 1961140
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 2
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "chunk": 47,
+      "action": 4,
+      "bitrate_kbps": 2850,
+      "buffer_s": 4.0,
+      "download_ms": 6892.783486004475,
+      "rebuffer_s": 2.892783486004475,
+      "size_bytes": 1364537,
+      "throughput_mbps": 1.5837282604574927,
+      "switch_mbps": 1.45,
+      "reward": -11.038968989819242,
+      "sleep_ms": 0,
+      "upstream_returned_sleep_ms": 0.0,
+      "elapsed_s": 460.51109597491677,
+      "decision_ms": 60.247900983085856,
+      "decision": {
+        "probabilities": {
+          "300": 0.0266,
+          "750": 0.019,
+          "1200": 0.1461,
+          "1850": 0.2414,
+          "2850": 0.3008,
+          "4300": 0.2661
+        },
+        "state": {
+          "recent_throughput_mbps": [
+            0.7654,
+            0.6485,
+            1.0391,
+            1.4701,
+            1.3768,
+            1.2702
+          ],
+          "recent_download_seconds": [
+            15.9634,
+            16.5669,
+            12.2203,
+            7.9717,
+            8.6199,
+            12.3517
+          ],
+          "recent_bitrates_kbps": [
+            2850,
+            2850,
+            2850,
+            2850,
+            2850,
+            4300
+          ],
+          "buffer_seconds": 4.0,
+          "previous_bitrate_kbps": 4300,
+          "next_chunk_sizes_bytes": {
+            "300": 118421,
+            "750": 314107,
+            "1200": 550906,
+            "1850": 846370,
+            "2850": 1364537,
+            "4300": 2155012
+          },
+          "chunk_duration_seconds": 4,
+          "chunks_remaining": 1
+        },
+        "server_latency_ms": 56.5,
+        "candidate_request": {
+          "model": "kev-latest",
+          "state": {
+            "recent_throughput_mbps": [
+              0.7654,
+              0.6485,
+              1.0391,
+              1.4701,
+              1.3768,
+              1.2702
+            ],
+            "recent_download_seconds": [
+              15.9634,
+              16.5669,
+              12.2203,
+              7.9717,
+              8.6199,
+              12.3517
+            ],
+            "recent_bitrates_kbps": [
+              2850,
+              2850,
+              2850,
+              2850,
+              2850,
+              4300
+            ],
+            "buffer_seconds": 4.0,
+            "previous_bitrate_kbps": 4300,
+            "next_chunk_sizes_bytes": {
+              "300": 118421,
+              "750": 314107,
+              "1200": 550906,
+              "1850": 846370,
+              "2850": 1364537,
+              "4300": 2155012
+            },
+            "chunk_duration_seconds": 4,
+            "chunks_remaining": 1
+          },
+          "questions": {
+            "bitrate": {
+              "type": "choice",
+              "instructions": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+              "criteria": {
+                "300": "300 kbps video bitrate",
+                "750": "750 kbps video bitrate",
+                "1200": "1200 kbps video bitrate",
+                "1850": "1850 kbps video bitrate",
+                "2850": "2850 kbps video bitrate",
+                "4300": "4300 kbps video bitrate"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "qoe_primary": -22.4766049414652,
+    "qoe_skip_first": -22.233250985047203,
+    "qoe_all": -21.858285681086276,
+    "scored_chunks_primary": 46,
+    "mean_bitrate_mbps": 2.802173913043478,
+    "rebuffer_s_primary": 268.5636807691626,
+    "rebuffer_s_after_startup": 271.4564642551671,
+    "smoothness_mbps_primary": 0.17391304347826086,
+    "decision_latency_mean_ms": 60.097729830576625,
+    "decision_latency_p95_ms": 62.91341860778629
+  },
+  "run_fingerprint": "dd7dee45389743159d60a56aaef6c97c47a7da8c95f0517502b3e78144c790f0"
+}

@@ -1,0 +1,446 @@
+{
+  "created_at": "2026-11-03T05:59:32.434401+00:00",
+  "evaluation": "runs/semantic_kev_v3_abr_baseline_trial100_v1_closed_loop",
+  "dataset": "datasets/semantic_kev_dev_v3",
+  "metrics": {
+    "cheapest": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 36.24016857948739,
+      "mean_reward_per_chunk": 1.8120084289743696,
+      "mean_episode_rebuffer_s": 0.45495671673603405,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 23.34711943285016,
+      "rebuffer_ratio": 0.004536801060584415,
+      "mean_episode_bytes": 4572978.0,
+      "mean_one_step_oracle_regret": 1.9946246300428556
+    },
+    "bandwidth": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 50.84370042432833,
+      "mean_reward_per_chunk": 2.542185021216417,
+      "mean_episode_rebuffer_s": 3.3540906455021977,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 37.00687937148732,
+      "rebuffer_ratio": 0.03250701310830901,
+      "mean_episode_bytes": 14972327.85,
+      "mean_one_step_oracle_regret": 1.0430812701084355
+    },
+    "model": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 9.992314904753014,
+      "mean_reward_per_chunk": 0.49961574523765073,
+      "mean_episode_rebuffer_s": 13.912956181846578,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 39.6582655601394,
+      "rebuffer_ratio": 0.12232311287366042,
+      "mean_episode_bytes": 23922962.5,
+      "mean_one_step_oracle_regret": 2.5569640295621805
+    }
+  },
+  "diagnostics": {
+    "cheapest": {
+      "decision_count_excluding_common_startup": 380,
+      "one_step_optimal_choices": 4,
+      "estimated_unsafe_choices_with_estimated_safe_alternative": 0,
+      "actual_download_exceeds_chunk_duration": 37,
+      "stalled_choices": 4,
+      "stalled_choices_with_actual_nonstall_alternative": 0,
+      "global_crf_counts": {
+        "50": 380
+      },
+      "roi_offset_counts": {
+        "0": 380
+      },
+      "buffer_p10_p50_p90_s": [
+        9.177199729755333,
+        28.132799016250814,
+        30.0
+      ]
+    },
+    "bandwidth": {
+      "decision_count_excluding_common_startup": 380,
+      "one_step_optimal_choices": 110,
+      "estimated_unsafe_choices_with_estimated_safe_alternative": 0,
+      "actual_download_exceeds_chunk_duration": 53,
+      "stalled_choices": 20,
+      "stalled_choices_with_actual_nonstall_alternative": 13,
+      "global_crf_counts": {
+        "50": 79,
+        "40": 76,
+        "46": 50,
+        "24": 99,
+        "32": 76
+      },
+      "roi_offset_counts": {
+        "-1/5": 74,
+        "-3/10": 218,
+        "0": 78,
+        "-1/10": 10
+      },
+      "buffer_p10_p50_p90_s": [
+        5.005,
+        13.772901505293706,
+        30.0
+      ]
+    },
+    "model": {
+      "decision_count_excluding_common_startup": 380,
+      "one_step_optimal_choices": 221,
+      "stalled_choices": 77,
+      "stalled_choices_with_actual_nonstall_alternative": 52,
+      "estimated_unsafe_choices_with_estimated_safe_alternative": 25,
+      "actual_download_exceeds_chunk_duration": 167,
+      "global_crf_counts": {
+        "46": 28,
+        "50": 56,
+        "40": 62,
+        "24": 162,
+        "32": 72
+      },
+      "roi_offset_counts": {
+        "-1/5": 96,
+        "-3/10": 232,
+        "-1/10": 30,
+        "0": 22
+      },
+      "buffer_p10_p50_p90_s": [
+        5.0,
+        6.69272903888764,
+        15.46091165232918
+      ]
+    }
+  },
+  "paired_scenarios": {
+    "cheapest": {
+      "model_wins": 8,
+      "model_losses": 12,
+      "mean_episode_reward_difference": -26.247853674734376
+    },
+    "bandwidth": {
+      "model_wins": 6,
+      "model_losses": 14,
+      "mean_episode_reward_difference": -40.851385519575324
+    }
+  },
+  "training": {
+    "optimizer_steps": 100,
+    "records_seen": 800,
+    "wall_seconds": 573.6065227985382,
+    "truncated_records": 0,
+    "rejected_records": 0,
+    "grad_norm": [
+      {
+        "epoch": 0,
+        "steps": 100,
+        "mean": 24.82978123,
+        "max": 84.261665,
+        "clipped_steps": 100
+      }
+    ]
+  },
+  "train_record_count": 4560,
+  "train_labels_download_slower_than_playback": 3364,
+  "train_labels_download_slower_than_playback_fraction": 0.737719298245614,
+  "worst_model_choices": [
+    {
+      "scenario_id": "valid/fcc/101ef6c3156cb3a7/position2",
+      "step": 14,
+      "case_id": "dev10_03",
+      "buffer_s": 5.938368075555102,
+      "selected_candidate": "dev10_03_crf32_roi3",
+      "estimated_download_s": 6.0548894725824525,
+      "actual_download_s": 39.24692926808744,
+      "rebuffer_s": 33.30856119253234,
+      "best_one_step_candidate": "dev10_03_crf50_roi0",
+      "best_one_step_download_s": 7.269009831815601,
+      "one_step_regret": 135.62601135407667,
+      "probability": 0.305492639541626
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position4",
+      "step": 16,
+      "case_id": "dev10_03",
+      "buffer_s": 12.7938532491367,
+      "selected_candidate": "dev10_03_crf24_roi1",
+      "estimated_download_s": 10.331795493739234,
+      "actual_download_s": 42.711955108631884,
+      "rebuffer_s": 29.918101859495184,
+      "best_one_step_candidate": "dev10_03_crf32_roi2",
+      "best_one_step_download_s": 11.480848021353617,
+      "one_step_regret": 128.25770030723106,
+      "probability": 0.2994277775287628
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position0",
+      "step": 4,
+      "case_id": "dev10_03",
+      "buffer_s": 10.640577116842739,
+      "selected_candidate": "dev10_03_crf32_roi3",
+      "estimated_download_s": 6.009745778921758,
+      "actual_download_s": 32.04632534825435,
+      "rebuffer_s": 21.40574823141161,
+      "best_one_step_candidate": "dev10_03_crf40_roi1",
+      "best_one_step_download_s": 9.69613354060256,
+      "one_step_regret": 90.99109428037511,
+      "probability": 0.49442940950393677
+    },
+    {
+      "scenario_id": "valid/fcc/101ef6c3156cb3a7/position3",
+      "step": 1,
+      "case_id": "dev10_09",
+      "buffer_s": 5.005,
+      "selected_candidate": "dev10_09_crf32_roi2",
+      "estimated_download_s": 5.0784611528822055,
+      "actual_download_s": 23.140414369256472,
+      "rebuffer_s": 18.135414369256473,
+      "best_one_step_candidate": "dev10_09_crf46_roi1",
+      "best_one_step_download_s": 1.3998356389193625,
+      "one_step_regret": 76.9257869312362,
+      "probability": 0.2242143154144287
+    },
+    {
+      "scenario_id": "valid/fcc/7bb61e2898815108/position1",
+      "step": 16,
+      "case_id": "dev10_07",
+      "buffer_s": 15.219062294455654,
+      "selected_candidate": "dev10_07_crf24_roi3",
+      "estimated_download_s": 5.5374309157599155,
+      "actual_download_s": 25.84208521303258,
+      "rebuffer_s": 10.623022918576925,
+      "best_one_step_candidate": "dev10_07_crf32_roi3",
+      "best_one_step_download_s": 8.217055565743626,
+      "one_step_regret": 45.13381330672695,
+      "probability": 0.5690760016441345
+    },
+    {
+      "scenario_id": "valid/fcc/4b0cd6955c59dece/position3",
+      "step": 15,
+      "case_id": "dev10_06",
+      "buffer_s": 11.664762765178157,
+      "selected_candidate": "dev10_06_crf24_roi1",
+      "estimated_download_s": 9.394245105287442,
+      "actual_download_s": 20.476590888280803,
+      "rebuffer_s": 8.811828123102647,
+      "best_one_step_candidate": "dev10_06_crf32_roi3",
+      "best_one_step_download_s": 6.538958693233386,
+      "one_step_regret": 37.9496755978314,
+      "probability": 0.40091273188591003
+    },
+    {
+      "scenario_id": "valid/fcc/4b0cd6955c59dece/position4",
+      "step": 3,
+      "case_id": "dev10_10",
+      "buffer_s": 8.263326251702313,
+      "selected_candidate": "dev10_10_crf24_roi3",
+      "estimated_download_s": 3.852899840238005,
+      "actual_download_s": 17.1190162746335,
+      "rebuffer_s": 8.855690022931185,
+      "best_one_step_candidate": "dev10_10_crf32_roi3",
+      "best_one_step_download_s": 7.029390921653448,
+      "one_step_regret": 37.54740828879382,
+      "probability": 0.4855290651321411
+    },
+    {
+      "scenario_id": "valid/fcc/101ef6c3156cb3a7/position3",
+      "step": 2,
+      "case_id": "dev10_08",
+      "buffer_s": 5.0,
+      "selected_candidate": "dev10_08_crf32_roi3",
+      "estimated_download_s": 4.949847306882482,
+      "actual_download_s": 11.395202399939242,
+      "rebuffer_s": 6.395202399939242,
+      "best_one_step_candidate": "dev10_08_crf40_roi3",
+      "best_one_step_download_s": 4.825754308251248,
+      "one_step_regret": 27.029896985163585,
+      "probability": 0.36123692989349365
+    },
+    {
+      "scenario_id": "valid/fcc/101ef6c3156cb3a7/position2",
+      "step": 16,
+      "case_id": "dev10_08",
+      "buffer_s": 5.005,
+      "selected_candidate": "dev10_08_crf32_roi3",
+      "estimated_download_s": 5.3303686128840235,
+      "actual_download_s": 11.075757575757576,
+      "rebuffer_s": 6.070757575757576,
+      "best_one_step_candidate": "dev10_08_crf40_roi3",
+      "best_one_step_download_s": 4.637719298245615,
+      "one_step_regret": 25.67479498265571,
+      "probability": 0.33662673830986023
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position4",
+      "step": 17,
+      "case_id": "dev10_08",
+      "buffer_s": 5.005,
+      "selected_candidate": "dev10_08_crf32_roi1",
+      "estimated_download_s": 2.739446962321718,
+      "actual_download_s": 10.694499528121174,
+      "rebuffer_s": 5.689499528121174,
+      "best_one_step_candidate": "dev10_08_crf40_roi3",
+      "best_one_step_download_s": 4.439557589626239,
+      "one_step_regret": 24.544563026586186,
+      "probability": 0.3347650468349457
+    },
+    {
+      "scenario_id": "valid/fcc/7bb61e2898815108/position2",
+      "step": 2,
+      "case_id": "dev10_05",
+      "buffer_s": 5.935159184064606,
+      "selected_candidate": "dev10_05_crf24_roi3",
+      "estimated_download_s": 1.8612615235558767,
+      "actual_download_s": 11.691211750305998,
+      "rebuffer_s": 5.756052566241392,
+      "best_one_step_candidate": "dev10_05_crf32_roi3",
+      "best_one_step_download_s": 5.811305291021087,
+      "one_step_regret": 24.105546478351005,
+      "probability": 0.2653370201587677
+    },
+    {
+      "scenario_id": "valid/fcc/4b0cd6955c59dece/position4",
+      "step": 4,
+      "case_id": "dev10_09",
+      "buffer_s": 4.963291666666667,
+      "selected_candidate": "dev10_09_crf40_roi1",
+      "estimated_download_s": 4.1378722271958805,
+      "actual_download_s": 9.771831561500564,
+      "rebuffer_s": 4.808539894833897,
+      "best_one_step_candidate": "dev10_09_crf50_roi1",
+      "best_one_step_download_s": 4.189913245985128,
+      "one_step_regret": 20.253146141378704,
+      "probability": 0.316448450088501
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position0",
+      "step": 5,
+      "case_id": "dev10_02",
+      "buffer_s": 5.005,
+      "selected_candidate": "dev10_02_crf40_roi1",
+      "estimated_download_s": 2.768690122706881,
+      "actual_download_s": 9.653451567776631,
+      "rebuffer_s": 4.648451567776632,
+      "best_one_step_candidate": "dev10_02_crf50_roi1",
+      "best_one_step_download_s": 3.914034763763317,
+      "one_step_regret": 19.593621882476288,
+      "probability": 0.3717420995235443
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position4",
+      "step": 18,
+      "case_id": "dev10_04",
+      "buffer_s": 4.971633333333333,
+      "selected_candidate": "dev10_04_crf32_roi2",
+      "estimated_download_s": 3.8711103836332508,
+      "actual_download_s": 9.333046251993622,
+      "rebuffer_s": 4.361412918660289,
+      "best_one_step_candidate": "dev10_04_crf40_roi2",
+      "best_one_step_download_s": 4.834413691474909,
+      "one_step_regret": 18.251759839818654,
+      "probability": 0.35655057430267334
+    },
+    {
+      "scenario_id": "valid/fcc/7bb61e2898815108/position1",
+      "step": 18,
+      "case_id": "dev10_06",
+      "buffer_s": 5.005,
+      "selected_candidate": "dev10_06_crf46_roi1",
+      "estimated_download_s": 4.246306434854297,
+      "actual_download_s": 9.508914456684346,
+      "rebuffer_s": 4.503914456684346,
+      "best_one_step_candidate": "dev10_06_crf50_roi0",
+      "best_one_step_download_s": 5.158721728487042,
+      "one_step_regret": 18.192563657222763,
+      "probability": 0.3829360604286194
+    },
+    {
+      "scenario_id": "valid/fcc/7bb61e2898815108/position1",
+      "step": 19,
+      "case_id": "dev10_03",
+      "buffer_s": 5.0,
+      "selected_candidate": "dev10_03_crf46_roi1",
+      "estimated_download_s": 7.498784002612656,
+      "actual_download_s": 12.276142477405635,
+      "rebuffer_s": 7.276142477405635,
+      "best_one_step_candidate": "dev10_03_crf50_roi0",
+      "best_one_step_download_s": 8.580895268474217,
+      "one_step_regret": 15.336566090196103,
+      "probability": 0.5052130818367004
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position0",
+      "step": 12,
+      "case_id": "dev10_03",
+      "buffer_s": 5.766458573109315,
+      "selected_candidate": "dev10_03_crf46_roi1",
+      "estimated_download_s": 12.505016991786515,
+      "actual_download_s": 12.20917052933978,
+      "rebuffer_s": 6.442711956230465,
+      "best_one_step_candidate": "dev10_03_crf50_roi0",
+      "best_one_step_download_s": 8.674174172301209,
+      "one_step_regret": 14.657338964799118,
+      "probability": 0.508996307849884
+    },
+    {
+      "scenario_id": "valid/fcc/29938e04ee883c33/position3",
+      "step": 12,
+      "case_id": "dev10_04",
+      "buffer_s": 7.020543075815924,
+      "selected_candidate": "dev10_04_crf32_roi3",
+      "estimated_download_s": 10.643002032402388,
+      "actual_download_s": 10.406330996624755,
+      "rebuffer_s": 3.3857879208088306,
+      "best_one_step_candidate": "dev10_04_crf40_roi3",
+      "best_one_step_download_s": 5.2143381180223285,
+      "one_step_regret": 14.141723143968694,
+      "probability": 0.28374603390693665
+    },
+    {
+      "scenario_id": "valid/fcc/101ef6c3156cb3a7/position1",
+      "step": 3,
+      "case_id": "dev10_03",
+      "buffer_s": 10.659946515119348,
+      "selected_candidate": "dev10_03_crf24_roi1",
+      "estimated_download_s": 10.04078354336729,
+      "actual_download_s": 13.455951326126765,
+      "rebuffer_s": 2.7960048110074176,
+      "best_one_step_candidate": "dev10_03_crf32_roi3",
+      "best_one_step_download_s": 9.065390074512882,
+      "one_step_regret": 12.223605828186447,
+      "probability": 0.31358882784843445
+    },
+    {
+      "scenario_id": "valid/fcc/4b0cd6955c59dece/position3",
+      "step": 16,
+      "case_id": "dev10_05",
+      "buffer_s": 5.0,
+      "selected_candidate": "dev10_05_crf24_roi2",
+      "estimated_download_s": 2.105154744034639,
+      "actual_download_s": 7.581539713232562,
+      "rebuffer_s": 2.581539713232562,
+      "best_one_step_candidate": "dev10_05_crf32_roi3",
+      "best_one_step_download_s": 3.9609872767812178,
+      "one_step_regret": 10.85428017872788,
+      "probability": 0.3269701302051544
+    }
+  ],
+  "limitations": [
+    "Only 100 optimizer updates / 800 record exposures; no convergence claim.",
+    "20 scenarios are 5 starts on each of 4 network traces; no claim of 20 independent traces.",
+    "Counterfactual avoidability uses privileged future replay and is diagnostic, not online knowledge.",
+    "A single slower-than-playback download can legitimately consume buffer; repeated choices can deplete it.",
+    "No v3 pre-training checkpoint evaluation; cannot attribute the aggregate result solely to fine-tuning.",
+    "Synthetic playlist of shared development videos; PSNR is not semantic QA accuracy."
+  ],
+  "gpu_used_for_analysis": false,
+  "new_training_started": false,
+  "api_calls": 0,
+  "source_hashes": {
+    "dataset_manifest": "df2c5b54582293efaf053a7667e4555a2d3dda5af40fff4774ea50cb5fbe9c3e",
+    "evaluation_manifest": "e71c8b546cb3a94c4de373b11234de55959018f61151227ad041c79974f7b6a2",
+    "training_metrics": "a2b3a6a6de2461646a02392193bd98d8cc2aac9339c1029dadbf23c122847784",
+    "training_config": "45198a7b76c41d7d8d846d941f85b6193b84a3f9cb490c9dc3953596f7128549"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "complete": true,
+  "created_at": "2026-11-03T14:26:48.300498+00:00",
+  "question": "What color is the towel?",
+  "policy": "kev",
+  "chunk_count": 3,
+  "frames": 90,
+  "duration_s": 15.0,
+  "catalog_slots": 48,
+  "encoded_files": 37,
+  "roi": {
+    "cached_frames": 18,
+    "new_api_calls": 0,
+    "temporal_filter_frames": 0,
+    "frames": 18,
+    "frames_with_regions": 3,
+    "usage": {},
+    "model_alias_is_immutable_snapshot": false,
+    "automatic_retries": false,
+    "inherited_from": "evqa_accept5_v1_evqa_02_bandwidth"
+  },
+  "selected_bytes": 572973,
+  "rebuffer_s": 0.0,
+  "startup_delay_s": 0.9005614035087719,
+  "reward_sum": 8.688118397486084,
+  "model_calls": 2,
+  "forced_chunks": 1,
+  "prediction_fallbacks": 0,
+  "playback": {
+    "path": "artifacts/evqa_accept5_v1_evqa_02_kev/received/playback.mp4",
+    "sha256": "6945bf29def5ebc50f84fb0c71df6c27549f5f9c07e946d6e3326d75797785c8",
+    "frames": 90,
+    "fps": "6",
+    "duration_s": 15.0,
+    "selected_frame_sequence_verified": true
+  },
+  "receiver_all_frames_verified": true,
+  "continuous_source_partition_verified": true,
+  "gpu_inference_used": true,
+  "model_environment": {
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "5.17.0",
+      "peft": "0.21.0",
+      "flash-linear-attention": null,
+      "triton": "3.4.0",
+      "causal-conv1d": null,
+      "mlx": null,
+      "mlx-lm": null
+    },
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5090 D",
+    "backend": "torch",
+    "dtype": "bfloat16",
+    "triton_f32_default": null,
+    "attention": "sdpa",
+    "deltanet": {
+      "forward": "transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward",
+      "causal_conv1d_fn": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_fn",
+      "torch_chunk_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule"
+    }
+  },
+  "training_started": false,
+  "network_mode": "trace_replay_with_verified_local_file_delivery",
+  "inference_latency_in_replay_clock": false,
+  "limitations": [
+    "Offline VOD preparation; all candidate sizes and next-two-chunk catalogs are available before selection.",
+    "No socket/network throughput measurement; transport time is trace replay and received bytes are real local copies.",
+    "Per-chunk ROI is a static union of sampled API boxes, not object tracking.",
+    "No QA scoring or semantic correctness claim; empty-ROI quality uses full-frame PSNR."
+  ],
+  "reused_encodings_from": "evqa_accept5_v1_evqa_02_bandwidth",
+  "new_encoding_files": 0,
+  "localization_api_calls": 0
+}

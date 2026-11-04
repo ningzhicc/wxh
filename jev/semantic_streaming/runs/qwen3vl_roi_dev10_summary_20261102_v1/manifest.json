@@ -1,0 +1,44 @@
+{
+  "kind": "aggregate_no_new_inference",
+  "created_at": "2026-11-02T14:00:26.069130+00:00",
+  "sources": [
+    {
+      "run": "qwen3vl_roi_pilot_20261102_v2",
+      "manifest_sha256": "94af9e4fe9772fa4943f5cc9bf2a3773900b3dfe3f100488b93602ab6ca75cd7",
+      "results_sha256": "4c6509bc06b724040275f2b3180f99d2fbb15bdeaaaa0eacda7cd810335f81b4"
+    },
+    {
+      "run": "qwen3vl_roi_remaining_20261102_v1",
+      "manifest_sha256": "18e64e59985ed5f9e07610a03ee164a73ca342df6daac57453aba6d22672590d",
+      "results_sha256": "04ea5a98d1862c7a01d0eab15c16902da358b24ccdb2a4d492d9a993956a6d97"
+    }
+  ],
+  "common_inference_settings": {
+    "model": "qwen3-vl-plus",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "request_parameters": {
+      "temperature": 0,
+      "enable_thinking": false,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "max_tokens": 1024,
+      "vl_high_resolution_images": false
+    },
+    "image_parameters": {
+      "min_pixels": 65536,
+      "max_pixels": 2621440
+    },
+    "coordinate_contract": {
+      "model_format": "normalized xyxy, integer range 0..999, top-left origin",
+      "scale_denominator": 1000,
+      "pixel_format": "absolute xyxy, half-open [x1,x2) and [y1,y2)",
+      "rounding": "floor left/top, ceil right/bottom; no ROI padding",
+      "note": "Official drawing example divides by 1000 despite documented range 0..999. Pixel conversion follows that scale, with conservative outward rounding."
+    },
+    "prompt_sha256": "e0a2542d879881da812151b47ff0ff7fd67d5375b2cd36e6ddd2971ae7ea1d1f"
+  },
+  "frames": 60,
+  "cases": 10
+}

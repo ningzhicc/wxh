@@ -1,0 +1,81 @@
+{
+  "requested_base": "/home/amora/wxh/jev/models/Llama-3.2-1B",
+  "resolved_base": "/home/amora/wxh/jev/models/Llama-3.2-1B",
+  "requested_revision": null,
+  "config_sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2",
+  "train_sha256": "e0a154e4fa57274f3755f8e3980a1bd3055035699277cccfc29f5b1c41b8e47a",
+  "base_weights_sha256": {
+    "model.safetensors": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+  },
+  "records": 7224,
+  "encoding": {
+    "version": 1,
+    "tokens": [
+      "<|reserved_special_token_0|>",
+      "<|reserved_special_token_1|>",
+      "<|reserved_special_token_2|>",
+      "<|reserved_special_token_3|>",
+      "<|reserved_special_token_4|>"
+    ],
+    "ids": [
+      128002,
+      128003,
+      128005,
+      128011,
+      128012
+    ]
+  },
+  "max_tokens": {
+    "state": 240,
+    "packed": 390
+  },
+  "initialization": "original Llama backbone; fresh LoRA and pointer head; no Kev checkpoint",
+  "epochs": 2,
+  "command": [
+    "/home/amora/wxh/jev/kev/.venv/bin/python",
+    "/home/amora/wxh/jev/abr_llama/train.py",
+    "--epoch-checkpoints",
+    "/home/amora/wxh/jev/abr_llama/checkpoints/llama_1b_v1",
+    "--base",
+    "/home/amora/wxh/jev/models/Llama-3.2-1B",
+    "--data",
+    "/home/amora/wxh/jev/abr_finetune/data/train.jsonl",
+    "--out",
+    "/home/amora/wxh/jev/abr_llama/runs/llama_1b_v1",
+    "--epochs",
+    "2",
+    "--lr",
+    "2e-5",
+    "--head_lr",
+    "1e-4",
+    "--lora",
+    "16",
+    "--head_dim",
+    "256",
+    "--batch",
+    "2",
+    "--accum",
+    "8",
+    "--device",
+    "cuda",
+    "--dtype",
+    "bf16",
+    "--weights_dtype",
+    "fp32",
+    "--checkpointing",
+    "1",
+    "--max_state",
+    "512",
+    "--p_none",
+    "0",
+    "--p_none_distract",
+    "0",
+    "--p_distract",
+    "0",
+    "--p_none_pair",
+    "0",
+    "--seed",
+    "666"
+  ],
+  "note": "Fresh head uses a separate 1e-4 learning rate; this is a proposed initial setting, not a validated optimum."
+}

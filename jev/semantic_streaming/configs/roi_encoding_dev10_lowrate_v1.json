@@ -1,0 +1,49 @@
+{
+  "roi_run": "qwen3vl_roi_dev10_summary_20261102_v1",
+  "case_ids": [
+    "dev10_01",
+    "dev10_02",
+    "dev10_03",
+    "dev10_04",
+    "dev10_05",
+    "dev10_06",
+    "dev10_07",
+    "dev10_08",
+    "dev10_09",
+    "dev10_10"
+  ],
+  "global_crf_levels": [
+    46,
+    50
+  ],
+  "roi_qoffsets": [
+    "0",
+    "-1/5"
+  ],
+  "roi_padding_pixels": 8,
+  "macroblock_size": 16,
+  "roi_policy": "Static bounding union of sampled API boxes, applied to every frame; offline VOD baseline, not tracking.",
+  "codec": "libx264",
+  "preset": "fast",
+  "pixel_format": "yuv420p",
+  "encoder_threads": 2,
+  "workers": 2,
+  "aq_mode": 1,
+  "mbtree": 0,
+  "sample_times_s": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    4.8
+  ],
+  "rate_definition": "8 * complete MP4 bytes / decoded CFR duration, in kbps; includes container overhead.",
+  "rate_control_note": "CRF quality grid, not fixed-target-bitrate or matched-byte comparison. CRF is not a constant background QP. Actual bitrate is measured per candidate.",
+  "roi_review_flags": {
+    "dev10_04": "Last sampled shot changes; side-text box needs review.",
+    "dev10_06": "Known single-frame player-association errors and oversized box; source API boxes preserved.",
+    "dev10_09": "Later small sign requires temporal/object association review."
+  },
+  "extension_note": "Additional low-rate choices for continuous semantic decision v3. Original 120 candidates remain unchanged. No fixed bitrate guarantee; real complete MP4 size is measured."
+}

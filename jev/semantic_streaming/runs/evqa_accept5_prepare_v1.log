@@ -1,0 +1,76 @@
+Traceback (most recent call last):
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/amora/anaconda3/lib/python3.12/http/client.py", line 1336, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/amora/anaconda3/lib/python3.12/http/client.py", line 1382, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/amora/anaconda3/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/amora/anaconda3/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/home/amora/anaconda3/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/amora/anaconda3/lib/python3.12/http/client.py", line 1477, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "/home/amora/anaconda3/lib/python3.12/ssl.py", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/amora/wxh/jev/semantic_streaming/scripts/prepare_evqa_acceptance.py", line 163, in <module>
+    cases = prepare()
+            ^^^^^^^^^
+  File "/home/amora/wxh/jev/semantic_streaming/scripts/prepare_evqa_acceptance.py", line 87, in prepare
+    csv_path = metadata_file(dataset, 'st_evidence_gen.csv', BASE + '/st_evidence_gen/st_evidence_gen.csv')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/wxh/jev/semantic_streaming/scripts/prepare_evqa_acceptance.py", line 62, in metadata_file
+    with urllib.request.urlopen(url, timeout=45) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amora/anaconda3/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+Prepared evqa_01: What color was the bowl I saw? (15.000s at 6 fps)
+Prepared evqa_02: What color is the towel? (15.000s at 6 fps)
+Prepared evqa_03: What colour was the socks did I pick from the bag? (15.000s at 6 fps)
+Prepared evqa_04: What object does the person in the blue shirt catch with his left hand after spinning it? (9.000s at 6 fps)
+Prepared evqa_05: Which object did the person put down before they sat on the bed? (15.000s at 6 fps)
+{"prepared_cases": 5, "dataset": "datasets/evqa_accept5_v1", "api_calls": 0, "gpu_used": false}

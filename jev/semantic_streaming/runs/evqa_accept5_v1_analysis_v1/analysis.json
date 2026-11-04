@@ -1,0 +1,168 @@
+{
+  "complete": true,
+  "study": "evqa_accept5_v1",
+  "summary": {
+    "complete": true,
+    "case_count": 5,
+    "local_finetuning_video_sha_overlap": false,
+    "same_real_candidate_files_for_both_policies": true,
+    "reference_QA_correct": 3,
+    "QA_correct": {
+      "reference": 3,
+      "bandwidth": 4,
+      "kev": 3
+    },
+    "QA_retained_given_reference_correct": {
+      "bandwidth": 1.0,
+      "kev": 1.0
+    },
+    "policy_totals": {
+      "bandwidth": {
+        "selected_bytes": 2299694,
+        "rebuffer_s": 0.0,
+        "startup_delay_s": 3.01106432748538,
+        "reward_sum": 37.1279322850163
+      },
+      "kev": {
+        "selected_bytes": 2099495,
+        "rebuffer_s": 0.0,
+        "startup_delay_s": 3.01106432748538,
+        "reward_sum": 37.44405981241751
+      }
+    },
+    "ROI_calls_completed_in_study": 82,
+    "QA_calls_completed_in_study": 15,
+    "training_started": false,
+    "limits": "Five published 6fps clips, 2/4-choice QA, one fixed network trace, same Qwen provider for localization and QA; not full EVQA accuracy or proof of pretraining/source-family disjointness."
+  },
+  "cases": [
+    {
+      "case_id": "evqa_01",
+      "question": "What color was the bowl I saw?",
+      "reference_answer": "light blue",
+      "answers": {
+        "reference": {
+          "predicted": "pink",
+          "correct": false
+        },
+        "bandwidth": {
+          "predicted": "light blue",
+          "correct": true
+        },
+        "kev": {
+          "predicted": "pink",
+          "correct": false
+        }
+      },
+      "bandwidth_bytes": 663998,
+      "kev_bytes": 518792,
+      "identical_received_video": false,
+      "identical_QA_sample_frames": 8
+    },
+    {
+      "case_id": "evqa_02",
+      "question": "What color is the towel?",
+      "reference_answer": "green",
+      "answers": {
+        "reference": {
+          "predicted": "blue",
+          "correct": false
+        },
+        "bandwidth": {
+          "predicted": "blue",
+          "correct": false
+        },
+        "kev": {
+          "predicted": "blue",
+          "correct": false
+        }
+      },
+      "bandwidth_bytes": 627966,
+      "kev_bytes": 572973,
+      "identical_received_video": false,
+      "identical_QA_sample_frames": 8
+    },
+    {
+      "case_id": "evqa_03",
+      "question": "What colour was the socks did I pick from the bag?",
+      "reference_answer": "gray",
+      "answers": {
+        "reference": {
+          "predicted": "gray",
+          "correct": true
+        },
+        "bandwidth": {
+          "predicted": "gray",
+          "correct": true
+        },
+        "kev": {
+          "predicted": "gray",
+          "correct": true
+        }
+      },
+      "bandwidth_bytes": 530695,
+      "kev_bytes": 530695,
+      "identical_received_video": true,
+      "identical_QA_sample_frames": 12
+    },
+    {
+      "case_id": "evqa_04",
+      "question": "What object does the person in the blue shirt catch with his left hand after spinning it?",
+      "reference_answer": "A blue plate",
+      "answers": {
+        "reference": {
+          "predicted": "A blue plate",
+          "correct": true
+        },
+        "bandwidth": {
+          "predicted": "A blue plate",
+          "correct": true
+        },
+        "kev": {
+          "predicted": "A blue plate",
+          "correct": true
+        }
+      },
+      "bandwidth_bytes": 217749,
+      "kev_bytes": 217749,
+      "identical_received_video": true,
+      "identical_QA_sample_frames": 12
+    },
+    {
+      "case_id": "evqa_05",
+      "question": "Which object did the person put down before they sat on the bed?",
+      "reference_answer": "The shoe.",
+      "answers": {
+        "reference": {
+          "predicted": "The shoe.",
+          "correct": true
+        },
+        "bandwidth": {
+          "predicted": "The shoe.",
+          "correct": true
+        },
+        "kev": {
+          "predicted": "The shoe.",
+          "correct": true
+        }
+      },
+      "bandwidth_bytes": 259286,
+      "kev_bytes": 259286,
+      "identical_received_video": true,
+      "identical_QA_sample_frames": 12
+    }
+  ],
+  "byte_saving": 200199,
+  "byte_saving_fraction": 0.0870546255284399,
+  "all_reference_correct_cases_have_identical_policy_playback": true,
+  "local_visual_review": {
+    "reviewer": "assistant, not human gold; reference labels and scores unchanged",
+    "bowl": "At 8s a light-blue bowl is visible on the dish rack, while API result chunk_0001_frame000048 has no regions. Multiple bowls occur in the window; target association and sampled evidence need review.",
+    "towel": "All variants answer blue against the upstream green label. A dark towel under warm illumination is visible; label/evidence/evaluator disagreement is unresolved."
+  },
+  "source_seals_verified": true,
+  "source_files_seal_sha256": "be3c0f15117815f5976260fa167d009341a93c130c30b756cc751e096daf3cbb",
+  "new_API_calls": 0,
+  "new_GPU_inference": false,
+  "new_training_started": false
+}

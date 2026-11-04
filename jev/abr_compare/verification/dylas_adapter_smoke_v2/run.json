@@ -1,0 +1,54 @@
+{
+  "bundle_fingerprint": "63e37c1f60eea922d81f8fe222b102d38f767992bcc7bd716842829d6342c18d",
+  "policy": {
+    "type": "dylas",
+    "implementation": "existing_legacy_v4_sample_API",
+    "action_mode": "sample",
+    "repo": "/home/amora/NetLLM/adaptive_bitrate_streaming",
+    "checkpoint": "/home/amora/NetLLM/adaptive_bitrate_streaming/data/ft_plms/llama_base/artifacts_exp_pools_ss_15/abrllm_v4_rank_128_w_20_gamma_1.0_sfd_512_sattn_True_sahd_2048_fusion_weighted_sum_loss_ce_bwvae_ld16_beta_0.4_klw_0.01_bwf_residual_lr_5e-05_wd_0.0001_warm_300_epochs_70_seed_42/best_model",
+    "pool": "/home/amora/NetLLM/adaptive_bitrate_streaming/artifacts/exp_pools/merina_merged_logits.pkl",
+    "pool_sha256": "e5d1caef67d4f338d8e49b0b9e07b3326d12b4603a4b04cb171e9846fe302ca1",
+    "rank": 128,
+    "history": 20,
+    "source_sha256": {
+      "ABRLLM_v4.py": "9d11ef79ad16af2865bb96b27d2a21866d64e9c5681cdffb33a7d1ba614eceda",
+      "config.py": "f04e26a790bb3bd7190ddc1ec4c36c44a148fdb3375419960b00d338cd59b4c6",
+      "run/benchmark_dylas_inference_memory.py": "90e776ad65ba059b9391b2ede57b364da17416629c7c805d72f19038685327d1",
+      "plm_special/data/dataset.py": "69f694915803ceac11d4fe389840899419bb9c16817710f058886cdaec54c07d",
+      "plm_special/data/exp_pool.py": "a791021e8437b1565ebc85725bf55aaf44ebbf0fc2deff11a42669ed3e9cbba8"
+    },
+    "checkpoint_sha256": {
+      "adapter_config.json": "9e3bc6173d9c74f8910594b91f13f065c6160adb920ed0eac5f44bcba5391688",
+      "adapter_model.safetensors": "320280c8ff31a6bc424fcb02042a1771f625150df7891f59d20b38dfc45f593b",
+      "modules_except_plm.bin": "339ca2d4c11f65bdbc0384a1ef4ef825cb396f89d3d5f24aaf5bd8b4c7ff4a22"
+    },
+    "conditioning": {
+      "target_return": 0.046778927646650356,
+      "min_reward": -40.481718971175255,
+      "max_reward": 4.3,
+      "update": "clipped_minmax_reward_div1000_after_first_chunk"
+    },
+    "torch": "2.9.1+cu128",
+    "device": "cuda:0",
+    "selection_status": "historical_checkpoint_provenance_not_certified_by_this_adapter"
+  },
+  "selection": [
+    {
+      "id": "valid/fcc/4b0cd6955c59dece",
+      "round": 0,
+      "start_pointer": 237,
+      "action_seed": 1496956130
+    }
+  ],
+  "selection_fingerprint": "d1f8b43be0c26d372f2cc2d14bce0864b202b7012d8bf0134360c704d56aad56",
+  "split": "valid",
+  "evaluation_scope": "diagnostic_existing_checkpoint",
+  "full_split": false,
+  "scoring": {
+    "primary": "mean(rewards[1:-1])",
+    "auxiliary": "mean(rewards[1:])"
+  },
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "fingerprint": "78cbc5344b004fbc82278a88c72387f8f96a854b0207a737dd083a1720172ae0"
+}

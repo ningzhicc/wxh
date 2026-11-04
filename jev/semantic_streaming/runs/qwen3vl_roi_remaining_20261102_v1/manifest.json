@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-11-02T13:54:29.072044+00:00",
+  "fingerprint": {
+    "config_sha256": "352859dc3962e6ad89b148d25c91b44f97e7022742fac73b117870abf036697a",
+    "prompt_sha256": "e0a2542d879881da812151b47ff0ff7fd67d5375b2cd36e6ddd2971ae7ea1d1f",
+    "inputs_sha256": "747f760a1a3bfc9916a4f393adc1cffe0ce71fef696a209f9b5f3282713416fc",
+    "script_sha256": "88ef99f0f76856465ded0a1eba2daad1614dc4a0cc16a54f89f24e5a221091bf",
+    "plan_sha256": "ae880f41aa1e6311a9b77887d6e73d27d48998958503392fed000ec5bbfe591a"
+  },
+  "config": {
+    "provider": "aliyun_bailian",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "region": "cn-beijing",
+    "region_selection": "Mainland-China default; no cross-region fallback",
+    "model": "qwen3-vl-plus",
+    "model_version_note": "Service alias, not an immutable snapshot; actual response model is recorded per call.",
+    "case_ids": [
+      "dev10_04",
+      "dev10_05",
+      "dev10_06",
+      "dev10_07",
+      "dev10_08",
+      "dev10_09",
+      "dev10_10"
+    ],
+    "inputs": "datasets/pilot_dev10_v1/reports/inference_inputs_zh.jsonl",
+    "prompt": "configs/qwen_roi_prompt_v1.txt",
+    "request_parameters": {
+      "temperature": 0,
+      "enable_thinking": false,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "max_tokens": 1024,
+      "vl_high_resolution_images": false
+    },
+    "image_parameters": {
+      "min_pixels": 65536,
+      "max_pixels": 2621440
+    },
+    "coordinate_contract": {
+      "model_format": "normalized xyxy, integer range 0..999, top-left origin",
+      "scale_denominator": 1000,
+      "pixel_format": "absolute xyxy, half-open [x1,x2) and [y1,y2)",
+      "rounding": "floor left/top, ceil right/bottom; no ROI padding",
+      "note": "Official drawing example divides by 1000 despite documented range 0..999. Pixel conversion follows that scale, with conservative outward rounding."
+    },
+    "documentation": [
+      "https://help.aliyun.com/zh/model-studio/qwen3-vl-plus",
+      "https://help.aliyun.com/zh/model-studio/vision/",
+      "https://help.aliyun.com/en/model-studio/base-url",
+      "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20251031/eamyrc/qwen3-vl-2d.py"
+    ],
+    "price_reference": {
+      "currency": "CNY",
+      "input_per_million_tokens": 1,
+      "output_per_million_tokens": 10,
+      "condition": "Beijing, individual requests <=32k input tokens; list-price estimate, not actual billed amount",
+      "verified_date": "2026-11-02"
+    },
+    "experiment_role": "Expansion of first three cases using identical prompt and request settings",
+    "previous_run": "runs/qwen3vl_roi_pilot_20261102_v2"
+  },
+  "label_files_read_for_inference": false,
+  "credential_storage": "Neither credential nor headers are logged",
+  "retry_policy": "No automatic retries; ambiguous/interrupted requests require manual review",
+  "input_timestamps": "Requested relative sampling times, not source presentation timestamps",
+  "python_version": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+  "planned_frames": 42
+}

@@ -1,0 +1,18 @@
+{
+  "source_dataset": "datasets/semantic_kev_dev_v3",
+  "output_dataset": "datasets/semantic_kev_dev_v4",
+  "planning_horizon_chunks": 3,
+  "planning_discount": 0.95,
+  "terminal_buffer_weight": 0.25,
+  "target_buffer_s": 10,
+  "buffer_margin_s": 1,
+  "buffer_spend_fraction": 0.25,
+  "forecast_bandwidth_factor": 0.85,
+  "minimum_forecast_mbps": 0.000001,
+  "preview_grid_legend": "CRF24/32/40 x ROI0,-1/10,-1/5,-3/10; CRF46/50 x ROI0,-1/5",
+  "behavior_policies": ["cheapest", "bandwidth", "epsilon_bandwidth"],
+  "collect_startup_records": false,
+  "collect_forced_records": false,
+  "learning_method": "Kev supervised imitation of constrained three-chunk forecast-return teacher; frozen conservative bandwidth derived only from past completed transfers, offline PSNR utilities and a terminal buffer-deficit penalty. Not online RL or true future-bandwidth supervision.",
+  "dataset_role": "Same frozen v3 synthetic playlists, videos, network splits and reward scale. New candidate guard and planning labels are separately versioned. Future chunk sizes are available VOD metadata; future network samples, measured quality and answers never enter Kev input."
+}

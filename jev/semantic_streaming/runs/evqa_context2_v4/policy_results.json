@@ -1,0 +1,282 @@
+{
+  "evqa_01": {
+    "bandwidth": {
+      "complete": true,
+      "created_at": "2026-11-03T16:15:16.033997+00:00",
+      "question": "What color was the bowl I saw?",
+      "policy": "bandwidth",
+      "chunk_count": 3,
+      "frames": 90,
+      "duration_s": 15.0,
+      "catalog_slots": 48,
+      "encoded_files": 48,
+      "roi": {
+        "cached_frames": 0,
+        "new_api_calls": 18,
+        "temporal_filter_frames": 0,
+        "frames": 18,
+        "frames_with_regions": 11,
+        "usage": {
+          "prompt_tokens": 51102,
+          "completion_tokens": 665,
+          "total_tokens": 51767
+        },
+        "model_alias_is_immutable_snapshot": false,
+        "automatic_retries": false,
+        "strategy": "chunk_context_single_target_v4",
+        "maximum_context_frames": 6,
+        "offline_chunk_context": true
+      },
+      "selected_bytes": 652320,
+      "rebuffer_s": 0.0,
+      "startup_delay_s": 0.6048888888888888,
+      "reward_sum": 5.5131186044747515,
+      "model_calls": 0,
+      "forced_chunks": 1,
+      "prediction_fallbacks": 0,
+      "playback": {
+        "path": "artifacts/evqa_context2_v4_evqa_01_bandwidth/received/playback.mp4",
+        "sha256": "462bf197b02e96855194d02a692af33328b95070aec3bfb3112c201bdfc4929f",
+        "frames": 90,
+        "fps": "6",
+        "duration_s": 15.0,
+        "selected_frame_sequence_verified": true
+      },
+      "receiver_all_frames_verified": true,
+      "continuous_source_partition_verified": true,
+      "gpu_inference_used": false,
+      "model_environment": null,
+      "training_started": false,
+      "network_mode": "trace_replay_with_verified_local_file_delivery",
+      "inference_latency_in_replay_clock": false,
+      "limitations": [
+        "Offline VOD preparation; all candidate sizes and next-two-chunk catalogs are available before selection.",
+        "No socket/network throughput measurement; transport time is trace replay and received bytes are real local copies.",
+        "Per-chunk ROI is a static union of sampled API boxes, not object tracking.",
+        "No QA scoring or semantic correctness claim; empty-ROI quality uses full-frame PSNR."
+      ]
+    },
+    "kev": {
+      "complete": true,
+      "created_at": "2026-11-03T16:15:37.739712+00:00",
+      "question": "What color was the bowl I saw?",
+      "policy": "kev",
+      "chunk_count": 3,
+      "frames": 90,
+      "duration_s": 15.0,
+      "catalog_slots": 48,
+      "encoded_files": 48,
+      "roi": {
+        "cached_frames": 18,
+        "new_api_calls": 0,
+        "temporal_filter_frames": 0,
+        "frames": 18,
+        "frames_with_regions": 11,
+        "usage": {},
+        "model_alias_is_immutable_snapshot": false,
+        "automatic_retries": false,
+        "strategy": "chunk_context_single_target_v4",
+        "maximum_context_frames": 6,
+        "offline_chunk_context": true,
+        "inherited_from": "evqa_context2_v4_evqa_01_bandwidth"
+      },
+      "selected_bytes": 572676,
+      "rebuffer_s": 0.0,
+      "startup_delay_s": 0.6048888888888888,
+      "reward_sum": 5.761618991809652,
+      "model_calls": 2,
+      "forced_chunks": 1,
+      "prediction_fallbacks": 0,
+      "playback": {
+        "path": "artifacts/evqa_context2_v4_evqa_01_kev/received/playback.mp4",
+        "sha256": "24e7245d02bf000a16cab2a37c01fba5af01a82a0f2c9294c88bdaedb860a848",
+        "frames": 90,
+        "fps": "6",
+        "duration_s": 15.0,
+        "selected_frame_sequence_verified": true
+      },
+      "receiver_all_frames_verified": true,
+      "continuous_source_partition_verified": true,
+      "gpu_inference_used": true,
+      "model_environment": {
+        "packages": {
+          "torch": "2.8.0+cu128",
+          "transformers": "5.17.0",
+          "peft": "0.21.0",
+          "flash-linear-attention": null,
+          "triton": "3.4.0",
+          "causal-conv1d": null,
+          "mlx": null,
+          "mlx-lm": null
+        },
+        "device": "cuda",
+        "gpu": "NVIDIA GeForce RTX 5090 D",
+        "backend": "torch",
+        "dtype": "bfloat16",
+        "triton_f32_default": null,
+        "attention": "sdpa",
+        "deltanet": {
+          "forward": "transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward",
+          "causal_conv1d_fn": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_fn",
+          "torch_chunk_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule"
+        }
+      },
+      "training_started": false,
+      "network_mode": "trace_replay_with_verified_local_file_delivery",
+      "inference_latency_in_replay_clock": false,
+      "limitations": [
+        "Offline VOD preparation; all candidate sizes and next-two-chunk catalogs are available before selection.",
+        "No socket/network throughput measurement; transport time is trace replay and received bytes are real local copies.",
+        "Per-chunk ROI is a static union of sampled API boxes, not object tracking.",
+        "No QA scoring or semantic correctness claim; empty-ROI quality uses full-frame PSNR."
+      ],
+      "reused_encodings_from": "evqa_context2_v4_evqa_01_bandwidth",
+      "new_encoding_files": 0,
+      "localization_api_calls": 0
+    },
+    "source_run": "evqa_context2_v4_evqa_01_bandwidth",
+    "kev_run": "evqa_context2_v4_evqa_01_kev",
+    "source_run_seal_sha256": "9b4606a17b844793289dbae1b87d1cf9b9be55f50e67946c014bbbef3ba203c6",
+    "kev_run_seal_sha256": "796cf03e88475a348545bc76e9f9e04a62fb86888341a086c01f1b384c60a602"
+  },
+  "evqa_02": {
+    "bandwidth": {
+      "complete": true,
+      "created_at": "2026-11-03T16:16:29.628630+00:00",
+      "question": "What color is the towel?",
+      "policy": "bandwidth",
+      "chunk_count": 3,
+      "frames": 90,
+      "duration_s": 15.0,
+      "catalog_slots": 48,
+      "encoded_files": 37,
+      "roi": {
+        "cached_frames": 0,
+        "new_api_calls": 18,
+        "temporal_filter_frames": 0,
+        "frames": 18,
+        "frames_with_regions": 4,
+        "usage": {
+          "prompt_tokens": 65754,
+          "completion_tokens": 500,
+          "total_tokens": 66254
+        },
+        "model_alias_is_immutable_snapshot": false,
+        "automatic_retries": false,
+        "strategy": "chunk_context_single_target_v4",
+        "maximum_context_frames": 6,
+        "offline_chunk_context": true
+      },
+      "selected_bytes": 638701,
+      "rebuffer_s": 0.0,
+      "startup_delay_s": 0.9005614035087719,
+      "reward_sum": 8.415291789868109,
+      "model_calls": 0,
+      "forced_chunks": 1,
+      "prediction_fallbacks": 0,
+      "playback": {
+        "path": "artifacts/evqa_context2_v4_evqa_02_bandwidth/received/playback.mp4",
+        "sha256": "ce9496e35eecd7ed7d712d8b37e2496e1e5d073d0359407793add6dbfd98e0b2",
+        "frames": 90,
+        "fps": "6",
+        "duration_s": 15.0,
+        "selected_frame_sequence_verified": true
+      },
+      "receiver_all_frames_verified": true,
+      "continuous_source_partition_verified": true,
+      "gpu_inference_used": false,
+      "model_environment": null,
+      "training_started": false,
+      "network_mode": "trace_replay_with_verified_local_file_delivery",
+      "inference_latency_in_replay_clock": false,
+      "limitations": [
+        "Offline VOD preparation; all candidate sizes and next-two-chunk catalogs are available before selection.",
+        "No socket/network throughput measurement; transport time is trace replay and received bytes are real local copies.",
+        "Per-chunk ROI is a static union of sampled API boxes, not object tracking.",
+        "No QA scoring or semantic correctness claim; empty-ROI quality uses full-frame PSNR."
+      ]
+    },
+    "kev": {
+      "complete": true,
+      "created_at": "2026-11-03T16:16:36.653860+00:00",
+      "question": "What color is the towel?",
+      "policy": "kev",
+      "chunk_count": 3,
+      "frames": 90,
+      "duration_s": 15.0,
+      "catalog_slots": 48,
+      "encoded_files": 37,
+      "roi": {
+        "cached_frames": 18,
+        "new_api_calls": 0,
+        "temporal_filter_frames": 0,
+        "frames": 18,
+        "frames_with_regions": 4,
+        "usage": {},
+        "model_alias_is_immutable_snapshot": false,
+        "automatic_retries": false,
+        "strategy": "chunk_context_single_target_v4",
+        "maximum_context_frames": 6,
+        "offline_chunk_context": true,
+        "inherited_from": "evqa_context2_v4_evqa_02_bandwidth"
+      },
+      "selected_bytes": 588440,
+      "rebuffer_s": 0.0,
+      "startup_delay_s": 0.9005614035087719,
+      "reward_sum": 8.599576945451037,
+      "model_calls": 2,
+      "forced_chunks": 1,
+      "prediction_fallbacks": 0,
+      "playback": {
+        "path": "artifacts/evqa_context2_v4_evqa_02_kev/received/playback.mp4",
+        "sha256": "538d488d9b77b6a5fcc17734eaa3ed8f9ba428a6e0a5358a0ca1945f42ebfd36",
+        "frames": 90,
+        "fps": "6",
+        "duration_s": 15.0,
+        "selected_frame_sequence_verified": true
+      },
+      "receiver_all_frames_verified": true,
+      "continuous_source_partition_verified": true,
+      "gpu_inference_used": true,
+      "model_environment": {
+        "packages": {
+          "torch": "2.8.0+cu128",
+          "transformers": "5.17.0",
+          "peft": "0.21.0",
+          "flash-linear-attention": null,
+          "triton": "3.4.0",
+          "causal-conv1d": null,
+          "mlx": null,
+          "mlx-lm": null
+        },
+        "device": "cuda",
+        "gpu": "NVIDIA GeForce RTX 5090 D",
+        "backend": "torch",
+        "dtype": "bfloat16",
+        "triton_f32_default": null,
+        "attention": "sdpa",
+        "deltanet": {
+          "forward": "transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward",
+          "causal_conv1d_fn": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_fn",
+          "torch_chunk_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule"
+        }
+      },
+      "training_started": false,
+      "network_mode": "trace_replay_with_verified_local_file_delivery",
+      "inference_latency_in_replay_clock": false,
+      "limitations": [
+        "Offline VOD preparation; all candidate sizes and next-two-chunk catalogs are available before selection.",
+        "No socket/network throughput measurement; transport time is trace replay and received bytes are real local copies.",
+        "Per-chunk ROI is a static union of sampled API boxes, not object tracking.",
+        "No QA scoring or semantic correctness claim; empty-ROI quality uses full-frame PSNR."
+      ],
+      "reused_encodings_from": "evqa_context2_v4_evqa_02_bandwidth",
+      "new_encoding_files": 0,
+      "localization_api_calls": 0
+    },
+    "source_run": "evqa_context2_v4_evqa_02_bandwidth",
+    "kev_run": "evqa_context2_v4_evqa_02_kev",
+    "source_run_seal_sha256": "d1c3c8a5ee1dc26840cf50c71f8ae12d4fadf179e7d1d2761f33dff407be076b",
+    "kev_run_seal_sha256": "7cc19ef74851fc7638d8d027f697ba002e166e8420faf67eeb9af30cb5db38a4"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-11-03T07:51:32.962304+00:00",
+  "dataset": "datasets/semantic_kev_dev_v4",
+  "scenario_count": 20,
+  "metrics": {
+    "cheapest": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 36.24016857948739,
+      "mean_reward_per_chunk": 1.8120084289743696,
+      "mean_episode_rebuffer_s": 0.45495671673603405,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 23.34711943285016,
+      "rebuffer_ratio": 0.004536801060584415,
+      "mean_episode_bytes": 4572978.0,
+      "mean_one_step_oracle_regret": 1.9946246300428556
+    },
+    "bandwidth": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 50.84370042432833,
+      "mean_reward_per_chunk": 2.542185021216417,
+      "mean_episode_rebuffer_s": 3.3540906455021977,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 37.00687937148732,
+      "rebuffer_ratio": 0.03250701310830901,
+      "mean_episode_bytes": 14972327.85,
+      "mean_one_step_oracle_regret": 1.0430812701084355
+    },
+    "guarded_bandwidth": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 58.936512071693755,
+      "mean_reward_per_chunk": 2.9468256035846876,
+      "mean_episode_rebuffer_s": 1.7930103432759776,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 37.79631026196862,
+      "rebuffer_ratio": 0.017644362913282623,
+      "mean_episode_bytes": 18117166.7,
+      "mean_one_step_oracle_regret": 0.7101777330706993
+    },
+    "offline_quality_myopic": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 61.6936117885035,
+      "mean_reward_per_chunk": 3.0846805894251754,
+      "mean_episode_rebuffer_s": 1.1966911378204919,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 37.88348058185658,
+      "rebuffer_ratio": 0.011845714969568138,
+      "mean_episode_bytes": 17825927.05,
+      "mean_one_step_oracle_regret": 0.5765601767914911
+    },
+    "offline_quality_teacher": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 61.63551317849253,
+      "mean_reward_per_chunk": 3.081775658924627,
+      "mean_episode_rebuffer_s": 1.1966911378204919,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 37.85384231954795,
+      "rebuffer_ratio": 0.011845714969568138,
+      "mean_episode_bytes": 17810988.95,
+      "mean_one_step_oracle_regret": 0.5912491031596003
+    },
+    "guarded_model": {
+      "episodes": 20,
+      "chunks": 400,
+      "mean_episode_reward": 61.78482821836858,
+      "mean_reward_per_chunk": 3.089241410918429,
+      "mean_episode_rebuffer_s": 1.1966911378204919,
+      "mean_startup_delay_s": 1.9137445553775543,
+      "mean_evidence_psnr_db": 37.931885740707415,
+      "rebuffer_ratio": 0.011845714969568138,
+      "mean_episode_bytes": 17750458.45,
+      "mean_one_step_oracle_regret": 0.5799583930841256
+    }
+  },
+  "guard_counts": {
+    "cheapest": {},
+    "bandwidth": {},
+    "guarded_bandwidth": {
+      "guarded_chunks": 400,
+      "forced_chunks": 77,
+      "no_candidate_within_budget": 55,
+      "invalid_action_fallback": 0,
+      "model_prediction_fallback": 0
+    },
+    "offline_quality_myopic": {
+      "guarded_chunks": 400,
+      "forced_chunks": 76,
+      "no_candidate_within_budget": 54,
+      "invalid_action_fallback": 0,
+      "model_prediction_fallback": 0
+    },
+    "offline_quality_teacher": {
+      "guarded_chunks": 400,
+      "forced_chunks": 77,
+      "no_candidate_within_budget": 55,
+      "invalid_action_fallback": 0,
+      "model_prediction_fallback": 0
+    },
+    "guarded_model": {
+      "guarded_chunks": 400,
+      "forced_chunks": 75,
+      "no_candidate_within_budget": 53,
+      "invalid_action_fallback": 0,
+      "model_prediction_fallback": 0
+    }
+  },
+  "gpu_used": true,
+  "training_started": false,
+  "api_calls": 0,
+  "model_environment": {
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "5.17.0",
+      "peft": "0.21.0",
+      "flash-linear-attention": null,
+      "triton": "3.4.0",
+      "causal-conv1d": null,
+      "mlx": null,
+      "mlx-lm": null
+    },
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5090 D",
+    "backend": "torch",
+    "dtype": "bfloat16",
+    "triton_f32_default": null,
+    "attention": "sdpa",
+    "deltanet": {
+      "forward": "transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward",
+      "causal_conv1d_fn": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_fn",
+      "torch_chunk_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule"
+    }
+  },
+  "checkpoint": "/home/amora/wxh/jev/semantic_streaming/runs/semantic_kev_v4_abr_baseline_trial400_v1",
+  "checkpoint_sha256": {
+    "head.pt": "9395409365d2d63bfc8de747dd909c1535bec1fb7badf26426f14d39a0187e0a",
+    "adapter_model.safetensors": "02bd56d717dacd4822f5ea4a5770463604ac898ad06a1dd34659571b8f43c6e9",
+    "adapter_config.json": "ccf4070f0e3cc0cb2b84f70bf9ad60feb79999b114ca48fc87a4e385f543e581"
+  },
+  "dataset_manifest_sha256": "8c0926a741923bf9e391b022bf98a95f711eeeee638defdf380c2a9b3cc35331",
+  "information_policy": {
+    "cheapest": "public size only",
+    "bandwidth": "past transfer observations and public catalog",
+    "guarded_bandwidth": "public online guard; no measured PSNR",
+    "offline_quality_myopic": "PRIVILEGED measured PSNR, same guard and historical forecast, one-step reward without terminal reserve; not a learned model",
+    "offline_quality_teacher": "PRIVILEGED measured PSNR for all planning chunks; historical network forecast only; not a learned model",
+    "guarded_model": "filtered candidates, public upcoming size arrays and past transfers; no PSNR or future network"
+  },
+  "note": "Same v3 physical reward, trace scenarios and playlists. Guarded policies evolve independent states. Forecast planning objective is supervision-only; reported reward excludes terminal planning penalty. No semantic QA or measured network playback claim."
+}

@@ -1,0 +1,2539 @@
+{
+  "config": {
+    "datasets": [
+      "fcc",
+      "hsr",
+      "oboe",
+      "norway3g"
+    ],
+    "methods": [
+      "kev"
+    ],
+    "workers": 4,
+    "seed": 666,
+    "limit": null,
+    "scope": "test",
+    "prompt": "Choose the next video chunk bitrate to maximize long-run streaming quality of experience. Each chunk reward is bitrate_Mbps minus 4.3 times rebuffer_seconds minus the absolute bitrate change in Mbps. Chunks last 4 seconds. Use the measured throughput history, buffer and candidate chunk sizes to balance quality, rebuffering and quality changes. Future network bandwidth is unknown. Select exactly one available bitrate.",
+    "criteria": {
+      "300": "300 kbps video bitrate",
+      "750": "750 kbps video bitrate",
+      "1200": "1200 kbps video bitrate",
+      "1850": "1850 kbps video bitrate",
+      "2850": "2850 kbps video bitrate",
+      "4300": "4300 kbps video bitrate"
+    },
+    "charge_decision_latency": false,
+    "skip_first_reward": true
+  },
+  "traces": [
+    {
+      "dataset": "fcc",
+      "trace": "000_trace_942154_http---www.ebay.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/000_trace_942154_http---www.ebay.com_0",
+      "start_pointer": 28,
+      "sha256": "b1286bba4313c495ce43a8525b2ed7578cf0264915ed8cd231886593fd933962",
+      "samples": 63,
+      "key": "fcc_0d3582bbc70d6fe9"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "001_test_fcc_trace_215364_http---www.ebay.com_600_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/001_test_fcc_trace_215364_http---www.ebay.com_600_0",
+      "start_pointer": 99,
+      "sha256": "d646b19044cdc2cf0c2a00617b51fd0120ffaf062ecec1f6efdaa00f7e35502b",
+      "samples": 320,
+      "key": "fcc_86746f9d14f90713"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "002_trace_939592_http---www.facebook.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/002_trace_939592_http---www.facebook.com_640",
+      "start_pointer": 32,
+      "sha256": "22abfbd6979c7444b5f88e1cd8591875cb445023eb4d83cbaf140c3ef51b0403",
+      "samples": 65,
+      "key": "fcc_b06fbfd9a63b3d10"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "003_trace_215252_http---www.msn.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/003_trace_215252_http---www.msn.com_640",
+      "start_pointer": 27,
+      "sha256": "d8e87e7f464cfe3da0fc00fb4411eb1f59f145ff696a70afc46ed398f1842100",
+      "samples": 65,
+      "key": "fcc_9a6da66d41cdb85b"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "004_trace_901648_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/004_trace_901648_http---www.amazon.com_960",
+      "start_pointer": 26,
+      "sha256": "459120254128db3ce9e2f1c1138da7545d0cdbb0f9654c64a663a6a3b57a5190",
+      "samples": 65,
+      "key": "fcc_980ab18eb0c9794b"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "005_trace_13562_http---www.facebook.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/005_trace_13562_http---www.facebook.com_320",
+      "start_pointer": 30,
+      "sha256": "29dd39f9a58d1bb7ffea671122df7d4353f33dc75ef3318edda5093cdc5c45ec",
+      "samples": 65,
+      "key": "fcc_319d6ee2ed9bd88b"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "006_trace_7256_http---www.facebook.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/006_trace_7256_http---www.facebook.com_640",
+      "start_pointer": 35,
+      "sha256": "1b947b4178590346c5552ef88d7c2b0f31080537f76a317afcd891d13bce720d",
+      "samples": 65,
+      "key": "fcc_984fee5554d38da7"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "007_test_fcc_trace_14731_http---www.facebook.com_1080_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/007_test_fcc_trace_14731_http---www.facebook.com_1080_0",
+      "start_pointer": 93,
+      "sha256": "b2e759761d4c1aafe6075f61bbdfa49bc47c29e48f60820ad8caca2b1ab762de",
+      "samples": 319,
+      "key": "fcc_f6ccb4dd6de066b3"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "008_test_fcc_trace_27175_http---www.amazon.com_480_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/008_test_fcc_trace_27175_http---www.amazon.com_480_0",
+      "start_pointer": 187,
+      "sha256": "e4712a95695abf2035fb5c4a1983a5ff07659577e3d3fea3a1effc5ef79f3d12",
+      "samples": 320,
+      "key": "fcc_f5e70822fea2855a"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "009_test_fcc_trace_27175_http---www.amazon.com_420_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/009_test_fcc_trace_27175_http---www.amazon.com_420_0",
+      "start_pointer": 294,
+      "sha256": "232fd4037c620247febad82b86ff64b2d3e70791080c0eb20144f5cf0bf75daf",
+      "samples": 320,
+      "key": "fcc_73364b4633587905"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "010_test_fcc_trace_14731_http---www.facebook.com_1140_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/010_test_fcc_trace_14731_http---www.facebook.com_1140_0",
+      "start_pointer": 164,
+      "sha256": "e58f371ec085cccee9d6ed119e3f5c7d60b5d1f3e9f920745b9bb7f018bb60af",
+      "samples": 319,
+      "key": "fcc_f0379339f3aca651"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "011_test_fcc_trace_5554_http---www.amazon.com_360_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/011_test_fcc_trace_5554_http---www.amazon.com_360_0",
+      "start_pointer": 163,
+      "sha256": "34fedcd923ec4f90c3fce1498ebac39b36c26947c4a52ea5b4fcecfea7b60d62",
+      "samples": 320,
+      "key": "fcc_d33cddbb83636fca"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "012_trace_939562_http---www.google.com-mobile-_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/012_trace_939562_http---www.google.com-mobile-_0",
+      "start_pointer": 64,
+      "sha256": "5f7fbb8d8ed0d5725872ab03354ffb6f90fda7c647fe85f1066481a7756b7ec4",
+      "samples": 65,
+      "key": "fcc_6d76eca327ed6a23"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "013_trace_8299_http---www.amazon.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/013_trace_8299_http---www.amazon.com_1280",
+      "start_pointer": 38,
+      "sha256": "2d21f4a1b70bb44affc80fc8bd99373a6603d2c94f938a0877b5c2d9dd5552fe",
+      "samples": 65,
+      "key": "fcc_16d4341d0efb76c0"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "014_trace_849842_http---www.facebook.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/014_trace_849842_http---www.facebook.com_960",
+      "start_pointer": 59,
+      "sha256": "f09b8d96dbb1bf118f79b3932d04973265840163d057d53fc418357df036a987",
+      "samples": 65,
+      "key": "fcc_6511aa0c584375f6"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "015_test_fcc_trace_805712_http---www.facebook.com_720_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/015_test_fcc_trace_805712_http---www.facebook.com_720_0",
+      "start_pointer": 278,
+      "sha256": "34b276a26ba63cb5c192fa62c1884001c52b33fed046ed66d28ba48b1d34c97c",
+      "samples": 319,
+      "key": "fcc_db71ce588b161561"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "016_trace_11332_http---www.facebook.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/016_trace_11332_http---www.facebook.com_640",
+      "start_pointer": 40,
+      "sha256": "7be67a7fa4eaa6e93d67f518fccd869638ef2c6036299aa319d1834210f3584a",
+      "samples": 65,
+      "key": "fcc_20f37a26b7125da3"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "017_trace_7451_http---www.yahoo.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/017_trace_7451_http---www.yahoo.com_320",
+      "start_pointer": 52,
+      "sha256": "b437c59b56ef8c7712eb5c596cc2d377d592ff68307d5e0bf9868ce2c683778d",
+      "samples": 65,
+      "key": "fcc_8e8ffa2bbde6e606"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "018_trace_806172_http---www.amazon.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/018_trace_806172_http---www.amazon.com_320",
+      "start_pointer": 15,
+      "sha256": "5d01efbf3b6cb833b36ba12b10064c074aae767899fb63b4e8d3f59330a98b3f",
+      "samples": 65,
+      "key": "fcc_6711b0afe5c81baa"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "019_trace_7540_http---www.yahoo.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/019_trace_7540_http---www.yahoo.com_0",
+      "start_pointer": 51,
+      "sha256": "7e12598e63afc24981afefd7c6e4ebb72ebff3abcb83ec464d6a7327115ea498",
+      "samples": 65,
+      "key": "fcc_feaf0495fcfbd721"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "020_trace_28838_http---www.amazon.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/020_trace_28838_http---www.amazon.com_1280",
+      "start_pointer": 55,
+      "sha256": "c399709204cea4452cc24d2fe7ab2e1c33a1f3d0bf553e3d02118e5f33a37f5c",
+      "samples": 65,
+      "key": "fcc_8dcf67be64f5aeb4"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "021_test_fcc_trace_14731_http---www.facebook.com_300_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/021_test_fcc_trace_14731_http---www.facebook.com_300_0",
+      "start_pointer": 190,
+      "sha256": "833be7ed69a8e150a116c239daf853efab47a9a6954ce7c8fc7417f2fb272268",
+      "samples": 320,
+      "key": "fcc_29ec74dd8ba3f691"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "022_trace_7451_http---www.yahoo.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/022_trace_7451_http---www.yahoo.com_960",
+      "start_pointer": 29,
+      "sha256": "66968180d9d30c83c1813059df692146888487f6bd1a111b57612e4f97e65006",
+      "samples": 65,
+      "key": "fcc_705c139ec2a09448"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "023_trace_942092_http---www.facebook.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/023_trace_942092_http---www.facebook.com_0",
+      "start_pointer": 41,
+      "sha256": "a99c6d1f62187899703cdd74a147e2bb83a0ec082d25aace1a733496632c9e79",
+      "samples": 65,
+      "key": "fcc_8c071b29fe98351c"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "024_test_fcc_trace_216810_http---www.facebook.com_1140_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/024_test_fcc_trace_216810_http---www.facebook.com_1140_0",
+      "start_pointer": 54,
+      "sha256": "16476ce5388d7a15e0310ee179db0d9c362ae5dc43fd920ad0bb36bd48b014ab",
+      "samples": 320,
+      "key": "fcc_a1ee430eb0a4ad61"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "025_test_fcc_trace_215364_http---www.ebay.com_1020_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/025_test_fcc_trace_215364_http---www.ebay.com_1020_0",
+      "start_pointer": 125,
+      "sha256": "a7da76b606e725c0c586ab83a3fa86e23debae93fcc3cf3b3d75e480baa22083",
+      "samples": 319,
+      "key": "fcc_157139a0817f0c60"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "026_trace_665192_http---www.facebook.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/026_trace_665192_http---www.facebook.com_640",
+      "start_pointer": 16,
+      "sha256": "fa6b9e87960d8f14147a6f3a92cb378ee7071d43a64b951694f12179468e08bc",
+      "samples": 65,
+      "key": "fcc_9a46b743e1477452"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "027_test_fcc_trace_27175_http---www.amazon.com_660_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/027_test_fcc_trace_27175_http---www.amazon.com_660_0",
+      "start_pointer": 273,
+      "sha256": "e2e454f166cd21e08de6df9cee396ff33431d06f952fcd0390b1928637ec5b65",
+      "samples": 320,
+      "key": "fcc_467e543ba7d34275"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "028_trace_663494_http---www.facebook.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/028_trace_663494_http---www.facebook.com_960",
+      "start_pointer": 37,
+      "sha256": "207fe149b850a104cfc6da46e271660608068111a32af8ca14bc830263a89e32",
+      "samples": 65,
+      "key": "fcc_349769e5300d1f84"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "029_test_fcc_trace_5554_http---www.amazon.com_1080_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/029_test_fcc_trace_5554_http---www.amazon.com_1080_0",
+      "start_pointer": 205,
+      "sha256": "23c7192addab81ee4ae4861352743e274d9950ab60565043081a6bcecd721677",
+      "samples": 319,
+      "key": "fcc_387d80f1576399d1"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "030_test_fcc_trace_216810_http---www.facebook.com_120_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/030_test_fcc_trace_216810_http---www.facebook.com_120_0",
+      "start_pointer": 141,
+      "sha256": "db8b845a05ab7f7ed47d7499bcc4d4ddb0b538ed571dfcf1791139c15675fcc4",
+      "samples": 320,
+      "key": "fcc_5645081dc6d54892"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "031_trace_849842_http---www.facebook.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/031_trace_849842_http---www.facebook.com_640",
+      "start_pointer": 27,
+      "sha256": "5df2d11c46a639c00ac47efc1b817cc1e93878f6f3e0abfc1e28603bb909cfd9",
+      "samples": 65,
+      "key": "fcc_b63c34c485819289"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "032_test_fcc_trace_805712_http---www.facebook.com_60_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/032_test_fcc_trace_805712_http---www.facebook.com_60_0",
+      "start_pointer": 145,
+      "sha256": "f5486ef8194c26dfb5a7d387504d615501f7631cb6f2948dae73573c1dec510c",
+      "samples": 320,
+      "key": "fcc_c83df4664cac4da1"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "033_test_fcc_trace_216810_http---www.facebook.com_480_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/033_test_fcc_trace_216810_http---www.facebook.com_480_0",
+      "start_pointer": 198,
+      "sha256": "cb641cfb63c919cf16d59803ddaada68012ddc797203ea5e738b945413781904",
+      "samples": 320,
+      "key": "fcc_381ab5c5363307e4"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "034_trace_797466_http---www.amazon.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/034_trace_797466_http---www.amazon.com_320",
+      "start_pointer": 46,
+      "sha256": "f9df690dea9d015c1b7b3cdcd02dbd31647573208e9e163fa44edd34062d3844",
+      "samples": 65,
+      "key": "fcc_cd13013ea15d6d05"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "035_trace_7289_http---www.yahoo.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/035_trace_7289_http---www.yahoo.com_320",
+      "start_pointer": 45,
+      "sha256": "512cca1c598feb88498bb6860ed1ec4bad2dee45dcfa4b2b8668a2ecadf254bb",
+      "samples": 65,
+      "key": "fcc_2b16d61d0a46f9ad"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "036_trace_216826_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/036_trace_216826_http---www.amazon.com_960",
+      "start_pointer": 26,
+      "sha256": "88491c859afcbcf7504b4eb10287b3d851dcd49eb2de721ecbdb63b2e459ff07",
+      "samples": 65,
+      "key": "fcc_6870c675f0e4f5f7"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "037_test_fcc_trace_215364_http---www.ebay.com_840_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/037_test_fcc_trace_215364_http---www.ebay.com_840_0",
+      "start_pointer": 287,
+      "sha256": "776c49f5b20eef0e180244c8f1f1ca004252a002f914621124cdeb834b09e79e",
+      "samples": 319,
+      "key": "fcc_4d769a1bd65051a8"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "038_trace_216826_http---www.amazon.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/038_trace_216826_http---www.amazon.com_640",
+      "start_pointer": 51,
+      "sha256": "4ecbd6546a8858397f834e5f8c076a5ac5e10b03895fa46d881ccbeabdf20889",
+      "samples": 65,
+      "key": "fcc_76889b6a296da940"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "039_trace_866_http---www.amazon.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/039_trace_866_http---www.amazon.com_1280",
+      "start_pointer": 32,
+      "sha256": "ecfb05b42a1027a5819a84c1e5c74a7373738ab84de589d9c3c09048b989af62",
+      "samples": 65,
+      "key": "fcc_e5ea8c8be326a3bb"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "040_trace_799448_http---www.facebook.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/040_trace_799448_http---www.facebook.com_1280",
+      "start_pointer": 62,
+      "sha256": "4ce4eb88385266942082619b2415afbca5fe2e32933dd3b9ae38ca425039cbc0",
+      "samples": 65,
+      "key": "fcc_3c72281d5c0cb740"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "041_test_fcc_trace_5554_http---www.amazon.com_1200_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/041_test_fcc_trace_5554_http---www.amazon.com_1200_0",
+      "start_pointer": 284,
+      "sha256": "d01c4d43284535d4282468dc41b5cf49dca9197d44bb95a638c4a733af250660",
+      "samples": 319,
+      "key": "fcc_c3ca38874851809c"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "042_trace_14679_http---www.facebook.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/042_trace_14679_http---www.facebook.com_0",
+      "start_pointer": 22,
+      "sha256": "72e97d867e32ab0e1161678a00c09633789dcc9f9c59dfa6e12ca33438ae0668",
+      "samples": 65,
+      "key": "fcc_47c010d81346dacd"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "043_trace_8299_http---www.amazon.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/043_trace_8299_http---www.amazon.com_640",
+      "start_pointer": 47,
+      "sha256": "a0be588a83e4c03abcf18d32f9f78f6311d7e4bbc3d7ada321c9814def526b0c",
+      "samples": 65,
+      "key": "fcc_ad3258de76430bcc"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "044_trace_8747_http---www.amazon.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/044_trace_8747_http---www.amazon.com_320",
+      "start_pointer": 20,
+      "sha256": "5947e87049530afa3d1b42790af746d92fdbf3d0db1f64c1a79a425e46c1833d",
+      "samples": 65,
+      "key": "fcc_65dac0835ad0ad14"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "045_test_fcc_trace_27175_http---www.amazon.com_240_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/045_test_fcc_trace_27175_http---www.amazon.com_240_0",
+      "start_pointer": 172,
+      "sha256": "d8329551a1698abb63ac532e9234a65c17f2b5311d70480d60f83ed5a01c2238",
+      "samples": 319,
+      "key": "fcc_95bb0611985f9e71"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "046_trace_7190_http---www.yahoo.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/046_trace_7190_http---www.yahoo.com_1280",
+      "start_pointer": 32,
+      "sha256": "1404e74ac5af0ba1596607470db462292a129958ac43bfb9fbed8d6e52c975d6",
+      "samples": 65,
+      "key": "fcc_eb6a48e034708c54"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "047_trace_8299_http---www.amazon.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/047_trace_8299_http---www.amazon.com_0",
+      "start_pointer": 26,
+      "sha256": "749400074b8049e5212e01a209c922bf5ac90db52e7b44ea39d379dfca0c90cc",
+      "samples": 65,
+      "key": "fcc_49d270bb89af2f91"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "048_trace_806172_http---www.amazon.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/048_trace_806172_http---www.amazon.com_1280",
+      "start_pointer": 49,
+      "sha256": "f4f3918ae435d6db9714ab187cf0f4a2828a6c674094c6fc73d800cbe473dcae",
+      "samples": 65,
+      "key": "fcc_852fb889c6e33f58"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "049_trace_665208_http---www.yahoo.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/049_trace_665208_http---www.yahoo.com_0",
+      "start_pointer": 35,
+      "sha256": "24d6f8587437c85e11c1489c6820adae09d71986702048f1fe50b6be088fe841",
+      "samples": 65,
+      "key": "fcc_fdf375d4b2fc8a22"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "050_trace_207336_http---www.amazon.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/050_trace_207336_http---www.amazon.com_1280",
+      "start_pointer": 59,
+      "sha256": "ff261f479ea94a3a00f3efe70512e40fdf50ae0322ecc6ea02e53bfbee773764",
+      "samples": 65,
+      "key": "fcc_c44ea59e6b3722a9"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "051_test_fcc_trace_805712_http---www.facebook.com_1500_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/051_test_fcc_trace_805712_http---www.facebook.com_1500_0",
+      "start_pointer": 144,
+      "sha256": "18429f0abc1e48f58c677edd793f8dd1aba04756c3e729c3504fe8fe2a5d75f8",
+      "samples": 320,
+      "key": "fcc_676e7b9305f95abf"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "052_test_fcc_trace_14731_http---www.facebook.com_420_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/052_test_fcc_trace_14731_http---www.facebook.com_420_0",
+      "start_pointer": 275,
+      "sha256": "c827538fbe9dd8fe5c0468dfc914be9147fa19fc1923dc4436b5b597dccec6eb",
+      "samples": 320,
+      "key": "fcc_348b785ef6318242"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "053_trace_8299_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/053_trace_8299_http---www.amazon.com_960",
+      "start_pointer": 30,
+      "sha256": "cfc300893a03871bdff881749d0d1fef565d4b95d327d6fda3817f8952de8fcb",
+      "samples": 65,
+      "key": "fcc_99c6bebd6a4cc43a"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "054_test_fcc_trace_805712_http---www.facebook.com_360_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/054_test_fcc_trace_805712_http---www.facebook.com_360_0",
+      "start_pointer": 64,
+      "sha256": "8228cc7a26a5b197b44d6c5dc6c949085f390c7ab7fba222b2f796beadb044d0",
+      "samples": 320,
+      "key": "fcc_671263b9145dd4c0"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "055_trace_806172_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/055_trace_806172_http---www.amazon.com_960",
+      "start_pointer": 5,
+      "sha256": "61a8920f12c0be4a42e4713a0c2267e123960592aa59aad1de2fa555ddb4e9a7",
+      "samples": 65,
+      "key": "fcc_39fac3bad03f6470"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "056_test_fcc_trace_27175_http---www.amazon.com_600_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/056_test_fcc_trace_27175_http---www.amazon.com_600_0",
+      "start_pointer": 15,
+      "sha256": "b89e8ae3f07e418e99287730bcd6490a180e0e3ffff7610bb163d070de0b859f",
+      "samples": 320,
+      "key": "fcc_973c569369306e31"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "057_test_fcc_trace_14731_http---www.facebook.com_1320_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/057_test_fcc_trace_14731_http---www.facebook.com_1320_0",
+      "start_pointer": 263,
+      "sha256": "5df9eaa5cfd11766bf4bbccb3b8330ba010712617302c49b8579896c728dbed9",
+      "samples": 320,
+      "key": "fcc_2cb065a25e7137f1"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "058_trace_797700_http---www.yahoo.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/058_trace_797700_http---www.yahoo.com_960",
+      "start_pointer": 19,
+      "sha256": "944e0781e78972fa413f2f6095fb8470e63350ff94abbea852949a5d88fcb464",
+      "samples": 65,
+      "key": "fcc_1b6665f6b56da291"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "059_trace_941752_http---www.facebook.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/059_trace_941752_http---www.facebook.com_0",
+      "start_pointer": 54,
+      "sha256": "fbdf6b3554e8cfbd0a26f7d965a084759aa1c66cdbb5a04950ce4b6da4e4d6a7",
+      "samples": 65,
+      "key": "fcc_3202327df7d9fe4f"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "060_test_fcc_trace_215364_http---www.ebay.com_1140_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/060_test_fcc_trace_215364_http---www.ebay.com_1140_0",
+      "start_pointer": 28,
+      "sha256": "a3cfbd086dc91befc111c38de2dad6263e1ba77be01a6512c4d5f92f0b5adc2c",
+      "samples": 320,
+      "key": "fcc_c5696f6319b246c2"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "061_trace_806172_http---www.amazon.com_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/061_trace_806172_http---www.amazon.com_0",
+      "start_pointer": 35,
+      "sha256": "8c9236a717950f62329f7bbce22ad6597b6d00762f83d15b8b6e80a3f868a0a0",
+      "samples": 65,
+      "key": "fcc_802c1865c496e2b6"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "062_trace_797700_http---www.yahoo.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/062_trace_797700_http---www.yahoo.com_320",
+      "start_pointer": 56,
+      "sha256": "656b7422b9c22a4f247ba86a92a4453be3f66fb9fc0983ebf8612062507309c2",
+      "samples": 65,
+      "key": "fcc_ce6108acfab3863e"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "063_trace_799296_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/063_trace_799296_http---www.amazon.com_960",
+      "start_pointer": 62,
+      "sha256": "6453b10f78f6738b322f617b5f53d36a3abd388440ea516fa677970a8c56ec96",
+      "samples": 65,
+      "key": "fcc_a1b27779739094b0"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "064_trace_10730_http---www.facebook.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/064_trace_10730_http---www.facebook.com_1280",
+      "start_pointer": 41,
+      "sha256": "954b856325b2635e68add5151dde269b6b5ae50d64881c1022166416909b9c0d",
+      "samples": 65,
+      "key": "fcc_d5db07f48ea9ca02"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "065_trace_799448_http---www.facebook.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/065_trace_799448_http---www.facebook.com_320",
+      "start_pointer": 43,
+      "sha256": "60d33540250dfd41742618b9e6353f55800d7b5a9cd95907958e9a29d394848c",
+      "samples": 65,
+      "key": "fcc_e39e1b9ad5f5d748"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "066_test_fcc_trace_805712_http---www.facebook.com_1140_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/066_test_fcc_trace_805712_http---www.facebook.com_1140_0",
+      "start_pointer": 165,
+      "sha256": "a18af3f91744db09926809ea44e0000b2dc140ebd40dc2a7c0a68dd54c987161",
+      "samples": 320,
+      "key": "fcc_7217bb96eca4caab"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "067_test_fcc_trace_27175_http---www.amazon.com_1320_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/067_test_fcc_trace_27175_http---www.amazon.com_1320_0",
+      "start_pointer": 210,
+      "sha256": "441d88b88d18b34f0c63404d3d1db3ecbd34b9a1161282af9e865b725f83c2b3",
+      "samples": 320,
+      "key": "fcc_e0efe8aeb3da7803"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "068_trace_901648_http---www.amazon.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/068_trace_901648_http---www.amazon.com_640",
+      "start_pointer": 50,
+      "sha256": "7ecf4384418e69e41011fcd5cc13c144d03a3ba9d74393781ecde9a264f93c92",
+      "samples": 65,
+      "key": "fcc_935761f84cc99707"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "069_trace_939618_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/069_trace_939618_http---www.amazon.com_960",
+      "start_pointer": 54,
+      "sha256": "d3ddb9c39266c2738bac0d77b9c174d7fe4cc2849107597c7c97730c36130a03",
+      "samples": 65,
+      "key": "fcc_317084e2a7cf5d70"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "070_test_fcc_trace_14731_http---www.facebook.com_720_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/070_test_fcc_trace_14731_http---www.facebook.com_720_0",
+      "start_pointer": 28,
+      "sha256": "86650a0f615d6973b722afc9250f26b5b3565bb72e7ca80209bda5d0013dbc8d",
+      "samples": 319,
+      "key": "fcc_ab222eae256a5a5d"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "071_trace_7256_http---www.facebook.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/071_trace_7256_http---www.facebook.com_960",
+      "start_pointer": 5,
+      "sha256": "4247dad6a3c9e7d15a1633db2a6fc655d249ff4fc698d041a0b215f8098d6627",
+      "samples": 65,
+      "key": "fcc_571416cb6c1a86e7"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "072_test_fcc_trace_216810_http---www.facebook.com_1440_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/072_test_fcc_trace_216810_http---www.facebook.com_1440_0",
+      "start_pointer": 171,
+      "sha256": "577f42eefd0772ed9f9e833c5df61c9ac8d7e175b46f131f3c4eb103d6e0beba",
+      "samples": 319,
+      "key": "fcc_5ba3e9b83a8fc14f"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "073_test_fcc_trace_5554_http---www.amazon.com_720_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/073_test_fcc_trace_5554_http---www.amazon.com_720_0",
+      "start_pointer": 288,
+      "sha256": "b1e8557bbbcdc9280899b870443e3993bd9640e71cb491487a501c5dcc9221a7",
+      "samples": 320,
+      "key": "fcc_1b2cbcce0ab57b48"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "074_test_fcc_trace_27175_http---www.amazon.com_1140_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/074_test_fcc_trace_27175_http---www.amazon.com_1140_0",
+      "start_pointer": 55,
+      "sha256": "c4b3e3338cb68bd0007d32ea03b3b8adb1f912bf4a02070e19d83a74ef8c5980",
+      "samples": 319,
+      "key": "fcc_50db141188bf9807"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "075_trace_7451_http---www.yahoo.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/075_trace_7451_http---www.yahoo.com_640",
+      "start_pointer": 9,
+      "sha256": "28c1965032a0a301d32f4d4ed08dcef715bd83dd539626a743f714fa5936b21c",
+      "samples": 65,
+      "key": "fcc_6df9ae4b4153b7db"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "076_trace_805936_http---www.youtube.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/076_trace_805936_http---www.youtube.com_640",
+      "start_pointer": 44,
+      "sha256": "a757dc7d9ee7cc2ac39bdff78ed67373be98a74dadfda899515b255a8c019516",
+      "samples": 65,
+      "key": "fcc_60f446defdd151ea"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "077_trace_665208_http---www.yahoo.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/077_trace_665208_http---www.yahoo.com_640",
+      "start_pointer": 47,
+      "sha256": "4c9405c7d3a0949443c240dfea467d3d62ddc00ced92ce29311d095b22b73286",
+      "samples": 65,
+      "key": "fcc_b3adce42342262dc"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "078_trace_8747_http---www.amazon.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/078_trace_8747_http---www.amazon.com_960",
+      "start_pointer": 54,
+      "sha256": "4885a44d62d2fe45f15b82459835b5561c897d906e1e58b5a2a0a9f95a5ae13a",
+      "samples": 65,
+      "key": "fcc_c7cb67683ab44e07"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "079_test_fcc_trace_14731_http---www.facebook.com_1380_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/079_test_fcc_trace_14731_http---www.facebook.com_1380_0",
+      "start_pointer": 281,
+      "sha256": "2bd8a9079fa6bc5559cbdbe9a33d409bd4dcc522f8cace91b94e818bc20324b9",
+      "samples": 319,
+      "key": "fcc_eb3fab17ddd34463"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "080_test_fcc_trace_215364_http---www.ebay.com_420_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/080_test_fcc_trace_215364_http---www.ebay.com_420_0",
+      "start_pointer": 272,
+      "sha256": "b7e451dddd29a6371e419a0b42da9ed988091247b252a801159298ebdaa5c84e",
+      "samples": 320,
+      "key": "fcc_9f0bfc4a4f68e3a9"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "081_test_fcc_trace_14731_http---www.facebook.com_360_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/081_test_fcc_trace_14731_http---www.facebook.com_360_0",
+      "start_pointer": 215,
+      "sha256": "0d19c47b46ec0e323067ed1b728dcd596782cffcf27b99d4dc040d4f087ff439",
+      "samples": 320,
+      "key": "fcc_5002953b4b493bca"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "082_trace_26689_http---www.amazon.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/082_trace_26689_http---www.amazon.com_640",
+      "start_pointer": 64,
+      "sha256": "1d6b5b0f40c1c83da9df56f73e54fa9828a7e68bd030365ca670268c8384cea1",
+      "samples": 65,
+      "key": "fcc_54117be25e105229"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "083_test_fcc_trace_216810_http---www.facebook.com_300_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/083_test_fcc_trace_216810_http---www.facebook.com_300_0",
+      "start_pointer": 277,
+      "sha256": "07ba0c34557d38e20d3dedc8a8351d3decc49f814df6f9789d7db72baa1af627",
+      "samples": 319,
+      "key": "fcc_0c0c5ecb63ad9bfc"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "084_trace_849842_http---www.facebook.com_1280",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/084_trace_849842_http---www.facebook.com_1280",
+      "start_pointer": 61,
+      "sha256": "891fc4f8ffe7bf0a24b4fa6ae9f3e766f561b9fae09591c2a1261e72bb8245a1",
+      "samples": 65,
+      "key": "fcc_5251a61708e1e7dd"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "085_test_fcc_trace_27175_http---www.amazon.com_840_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/085_test_fcc_trace_27175_http---www.amazon.com_840_0",
+      "start_pointer": 114,
+      "sha256": "9cd2efb4fb63419e6fd7d4144d2e61912353520de0257c930b9d3a6b975e08ca",
+      "samples": 320,
+      "key": "fcc_c9a94edad05110c0"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "086_trace_941778_http---www.youtube.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/086_trace_941778_http---www.youtube.com_320",
+      "start_pointer": 13,
+      "sha256": "3257f233260fd72583780819d47eac6464539d71398f5c5f2f4d9bada9e41631",
+      "samples": 65,
+      "key": "fcc_c8f44b3e5e27e8b5"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "087_test_fcc_trace_27175_http---www.amazon.com_780_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/087_test_fcc_trace_27175_http---www.amazon.com_780_0",
+      "start_pointer": 196,
+      "sha256": "4ee467e3f8c9a75a30d54bb83236720ce245272493c095cc167b2b372b66dcbb",
+      "samples": 319,
+      "key": "fcc_3e64bd7eed6f20d1"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "088_trace_10322_http---edition.cnn.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/088_trace_10322_http---edition.cnn.com_960",
+      "start_pointer": 40,
+      "sha256": "20c1adb1683bd0f7d6224f57210ef5f340ad89f01d0af5944f12feb43cadd6d5",
+      "samples": 65,
+      "key": "fcc_77f4bd0ea1c4587e"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "089_test_fcc_trace_215364_http---www.ebay.com_60_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/089_test_fcc_trace_215364_http---www.ebay.com_60_0",
+      "start_pointer": 158,
+      "sha256": "b2205a71f96ee89c595b2ae2c48fc2baf754b76a213f9fc151ab886faa105b69",
+      "samples": 320,
+      "key": "fcc_3fcce2c42bbe10e4"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "090_trace_663494_http---www.facebook.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/090_trace_663494_http---www.facebook.com_640",
+      "start_pointer": 16,
+      "sha256": "ef6ce4ece9d123acfe535a581fd146a721aca140f176a0f2581398c04749606f",
+      "samples": 65,
+      "key": "fcc_dfce213c19118e0b"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "091_trace_11332_http---www.facebook.com_960",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/091_trace_11332_http---www.facebook.com_960",
+      "start_pointer": 23,
+      "sha256": "1a49ce462a7e740fb819c882558a103c2f60fe2d30de5f0721dbba3b6e6d0368",
+      "samples": 65,
+      "key": "fcc_1c930c4e5ebf99c6"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "092_test_fcc_trace_216810_http---www.facebook.com_780_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/092_test_fcc_trace_216810_http---www.facebook.com_780_0",
+      "start_pointer": 143,
+      "sha256": "d4a3a0f3a27955f1e43eea524d7ec94640d38483709d695322d2f6acbba6049e",
+      "samples": 319,
+      "key": "fcc_c7512ec0ddf5769e"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "093_test_fcc_trace_27175_http---www.amazon.com_720_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/093_test_fcc_trace_27175_http---www.amazon.com_720_0",
+      "start_pointer": 303,
+      "sha256": "bfee8f0a3fffa44531e219a5dca9e7b628d61fe03a264369f0560e03fe700a53",
+      "samples": 320,
+      "key": "fcc_e876fa933db61c03"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "094_test_fcc_trace_14731_http---www.facebook.com_1020_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/094_test_fcc_trace_14731_http---www.facebook.com_1020_0",
+      "start_pointer": 224,
+      "sha256": "43828e3173016f63cf7684d9655567efe2ad7e7a5a18bb70718411b8720851f3",
+      "samples": 320,
+      "key": "fcc_8eebef0ab5c9bd5a"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "095_trace_8996_http---www.facebook.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/095_trace_8996_http---www.facebook.com_320",
+      "start_pointer": 29,
+      "sha256": "72733a62e84b817e254417d6e608b5ddf2492e92d5b4ef2afb0a52e1ac959a2c",
+      "samples": 65,
+      "key": "fcc_cb3418fa35fcb6a4"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "096_trace_925806_http---www.amazon.com_640",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/096_trace_925806_http---www.amazon.com_640",
+      "start_pointer": 26,
+      "sha256": "392c055d1af1d9148936425cb38de85e0e46f9046c6dc2fca537d81f8b055f24",
+      "samples": 65,
+      "key": "fcc_a4b50e434fd54244"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "097_test_fcc_trace_805712_http---www.facebook.com_1200_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/097_test_fcc_trace_805712_http---www.facebook.com_1200_0",
+      "start_pointer": 205,
+      "sha256": "0c32d828f59c2e1ff522ae336b82de2ced64b252d21b6e8341d6517972efce7b",
+      "samples": 320,
+      "key": "fcc_c20ed3a389d04343"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "098_trace_939562_http---www.google.com-mobile-_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/098_trace_939562_http---www.google.com-mobile-_320",
+      "start_pointer": 55,
+      "sha256": "f5ca694f8846cd60c32ae5fdd7916702f21675f12f69b9af937af2f9f4a67d19",
+      "samples": 65,
+      "key": "fcc_dbef4ac3e2503c26"
+    },
+    {
+      "dataset": "fcc",
+      "trace": "099_trace_925800_http---www.ebay.com_320",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/NetLLM/adaptive_bitrate_streaming/data/traces/test/fcc-test/099_trace_925800_http---www.ebay.com_320",
+      "start_pointer": 3,
+      "sha256": "53cd33b2717f3aff080333bf4663da0909410c53a0894f85ad82852eaabce90f",
+      "samples": 65,
+      "key": "fcc_affd6f6e80045721"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470329.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470329.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 116,
+      "sha256": "e395fdcbd8660411efc9634090b50a15d84e80d51fd411a99678903f75a27c90",
+      "samples": 183,
+      "key": "hsr_355b871943eff7cd"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470329.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470329.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 222,
+      "sha256": "12b302a81242c42e111ec9d581c929cc49cfc4f349648b53305448cfbcddc5a6",
+      "samples": 297,
+      "key": "hsr_ff7832ff27a64253"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470544.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470544.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 4,
+      "sha256": "a833b75f07c9e11c9fda692d33dd915a85e693bebfc7ecb3c77d831b2fdf2ef0",
+      "samples": 252,
+      "key": "hsr_23b2a82c839957f3"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470544.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470544.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 103,
+      "sha256": "423fa7e2a3e7fb3f8d507fdf3e58f41aabaa1691bb6dbab06206bb0db47f985c",
+      "samples": 297,
+      "key": "hsr_4942476579617fa1"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470664.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470664.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 43,
+      "sha256": "ecb6f7f5d286f8c43588e9e00100f10bcbb046ee38becabdc5987c736c472d89",
+      "samples": 129,
+      "key": "hsr_b6d877aa79919e0e"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470664.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470664.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 89,
+      "sha256": "972cdcbe2566235ea46c2298d08465e7436b1c4b1614a075284c9fb4761e92a8",
+      "samples": 300,
+      "key": "hsr_c4b01608b35d557f"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470787.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470787.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 206,
+      "sha256": "1d6898691322692e638f67c19dc9f9d96baacefcbbe0d7ca494f93a1380b374d",
+      "samples": 300,
+      "key": "hsr_69c1ea2edfb0e9b1"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470787.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470787.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 63,
+      "sha256": "c530504107dae3b1f68cad11201792832f7c9faa7e3dfcf2f3c94f50170e92d8",
+      "samples": 291,
+      "key": "hsr_3a3033fe68ea2ddf"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470904.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470904.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 25,
+      "sha256": "0f12a276585d89fda4364a7ab2be49b35d03e2826db16237812afeea734fc7f8",
+      "samples": 300,
+      "key": "hsr_1cbdbbc3eab45a91"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529470904.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529470904.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 222,
+      "sha256": "177b66852267cd1262c7e688767c562434b20820522eaa65476ccab19f549f88",
+      "samples": 294,
+      "key": "hsr_8068344a9c734cc7"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471025.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471025.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 6,
+      "sha256": "26b0e72f91bfa5fb62b1d6ac6270be7b862fac4ec3e06d985d9d243a37ef7c69",
+      "samples": 297,
+      "key": "hsr_899de73c9fc1bc33"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471025.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471025.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 35,
+      "sha256": "9f8da5719319c7979c2266415f26c36cca8f7f8a4d5c59a39cc4d30b23304c0d",
+      "samples": 297,
+      "key": "hsr_8fb8fa5a7b8783c8"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471145.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471145.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 210,
+      "sha256": "56d682c48dee08d86463881ee1ba7643e0d84efa66cfd93deb7fead273c6d2b2",
+      "samples": 267,
+      "key": "hsr_6e74e82b46204b53"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471145.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471145.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 228,
+      "sha256": "40278bc44f7fe54ad2ce30c6e60ee5cb4e6b48057c432d28b461cf492854a5f7",
+      "samples": 297,
+      "key": "hsr_4e1ed55fdd0269c3"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471271.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471271.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 179,
+      "sha256": "c1d823b8c21e34ecae7ba751e7069429b49e342535a0cb1147c46b6dbc42c100",
+      "samples": 297,
+      "key": "hsr_ad3ff0efa714922d"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471271.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471271.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 77,
+      "sha256": "5fefb09772521dc1f79406dd59fc94b45982001c563ec3428e8d680c851b2105",
+      "samples": 297,
+      "key": "hsr_4ba623a1e0a50d4a"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471386.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471386.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 42,
+      "sha256": "d1aee12220339e8167b3cff07208184987330e3b50dcd9e7b9412127692b9f16",
+      "samples": 300,
+      "key": "hsr_c8e5c494c56ae2be"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471386.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471386.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 21,
+      "sha256": "87d1aa739728c8702160a0a4780d923a4f3da34684140a3a405a323747b8421c",
+      "samples": 297,
+      "key": "hsr_300aaf2c8c59bf8a"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471507.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471507.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 261,
+      "sha256": "4eb442b572095feda043f00570e5685214a5dd3f407ec00c70e3a62080d9b913",
+      "samples": 294,
+      "key": "hsr_9a7a542472a9d373"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471507.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471507.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 157,
+      "sha256": "59bb899999de7063ebccf1ae6e140bd6417af6d86bb6764ddd49dbf3d43258d3",
+      "samples": 297,
+      "key": "hsr_4dee3f44e49e2ea1"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471624.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471624.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 44,
+      "sha256": "2ec22e8fe50320ba69e3bfa47e240750fcf08b4f5773f3bfe1a1650613050f67",
+      "samples": 279,
+      "key": "hsr_6997d505e0c30e4b"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471624.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471624.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 119,
+      "sha256": "3855acc5c89259c697457ece90223eb7ed89df8424afc7ccf2fa466c9f8d4b2f",
+      "samples": 297,
+      "key": "hsr_e0d0ac1ece39fa45"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471744.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471744.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 215,
+      "sha256": "8427013a88bfe55353379185414aeffd41ee5e74e9ebe32ec01f3d431567c676",
+      "samples": 297,
+      "key": "hsr_61cf21d17249f28c"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471744.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471744.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 206,
+      "sha256": "a91206ec0a9897e08068f45be85131ffb46e2b7132a36ffd1ac46697352575b9",
+      "samples": 297,
+      "key": "hsr_52ba8444f43aed01"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471864.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471864.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 36,
+      "sha256": "a924c503424369500ccde00e487157224c8519a029ac6c7b8c718635423b0926",
+      "samples": 285,
+      "key": "hsr_8f6204489a361108"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471864.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471864.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 98,
+      "sha256": "2bc0ddfde873d7c28175b98719ce0c4acd29fa6fa92cd14f56dcf916e07087f8",
+      "samples": 267,
+      "key": "hsr_ef7fb4f89282498b"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471984.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471984.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 247,
+      "sha256": "a4df374d788990b00982d58b45205eeb7491760fcee8e91547ec0a6b30aaf818",
+      "samples": 279,
+      "key": "hsr_77d98562671f1fe2"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529471984.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529471984.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 70,
+      "sha256": "41ae90fc64e41e15632b4bafe85adfb4687451b81d18b373c13afc4c84652f98",
+      "samples": 297,
+      "key": "hsr_35d367b7a6bed69c"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529472104.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529472104.olia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 94,
+      "sha256": "d38e77ff67de8d39ea75f5fd62ae2a235fc4a57077b0fb06f4f55befd3615ea8",
+      "samples": 297,
+      "key": "hsr_d00127464163d480"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529472104.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529472104.olia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 77,
+      "sha256": "d349b60d5e9400bd383668cf8c5443431b67e434669ba8e3f556911115cbc1d8",
+      "samples": 297,
+      "key": "hsr_c837f090804ca398"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529472224.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529472224.lia.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 195,
+      "sha256": "0f1e9c59ff04586b23a52e5bac348a811ca7adf39923e207ffef9b5b7069fc1e",
+      "samples": 291,
+      "key": "hsr_01e5c6842fc2d5a7"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529472224.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529472224.lia.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 232,
+      "sha256": "7cc4aaa66eef3b93138bbf4b1749e8786bd4ef5275f009eecb2951c67aef33f0",
+      "samples": 294,
+      "key": "hsr_2733fbe9916f98fb"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529472344.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529472344.reno.laptop#3.M.F100.wlan16.U4.pitree-trace",
+      "start_pointer": 33,
+      "sha256": "5257180f70ea07d73c0051888aa7baa2e08cf40f3739eb8eb602e7414ee7fcd2",
+      "samples": 285,
+      "key": "hsr_96360f886cbc9a31"
+    },
+    {
+      "dataset": "hsr",
+      "trace": "client.1529472344.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/HSR/client.1529472344.reno.laptop#3.M.F100.wlan3.M3.pitree-trace",
+      "start_pointer": 99,
+      "sha256": "49660c0fe7c796f63dda7b8809dcf4365013ed1f7c16371d94627bc00206c29c",
+      "samples": 297,
+      "key": "hsr_bed4aa0b2a8c6775"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_100.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_100.txt",
+      "start_pointer": 22,
+      "sha256": "af4bb85fb4ae58b4d23c91df1c65460c45f4379be41f5028ec2d1581526b00eb",
+      "samples": 98,
+      "key": "oboe_e104bdc412e7d8c1"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_109.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_109.txt",
+      "start_pointer": 75,
+      "sha256": "b88cb19b8d75868374f64fb3bbe354039a0cb579891b8f8c39dab617c68c3001",
+      "samples": 98,
+      "key": "oboe_daa116a301c7eb46"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_11.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_11.txt",
+      "start_pointer": 83,
+      "sha256": "29a2083724b015b39addadf195b2cff2c2c208a57ca2e78782eeba9c91d58e9d",
+      "samples": 98,
+      "key": "oboe_cf05aba0c5ec68ad"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_111.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_111.txt",
+      "start_pointer": 87,
+      "sha256": "fd20cb1dc3cfab77be5d50d9da4be67dbf813ad0edbfd8dca858652338be9995",
+      "samples": 98,
+      "key": "oboe_0bd2d4c71011249c"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_112.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_112.txt",
+      "start_pointer": 37,
+      "sha256": "9b7752266fb2b3a720001f8d8f15e38e5bb17e68b4fe6d3a4af494269ee5591f",
+      "samples": 98,
+      "key": "oboe_a0294c61f5711b76"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_118.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_118.txt",
+      "start_pointer": 81,
+      "sha256": "1efd88d1d37801dc662b1a630304730cdc4f1fbe126cd2a6d37728bf4cf711f6",
+      "samples": 98,
+      "key": "oboe_948043ed0d9da2a0"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_119.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_119.txt",
+      "start_pointer": 39,
+      "sha256": "3d808411c9fe3b5bd96c6ff77238a766cb0fd45250b572bcfad3d2aab510a243",
+      "samples": 98,
+      "key": "oboe_45f9241d6000d04f"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_13.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_13.txt",
+      "start_pointer": 57,
+      "sha256": "76a946c292314330a7e6cb309b988745b6668bb6a6f22e0bc4cc70f25161bfe5",
+      "samples": 98,
+      "key": "oboe_c45bd466b18c3fa6"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_130.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_130.txt",
+      "start_pointer": 93,
+      "sha256": "fef82fc01b1495404123f35d4d651a7f8e80d15487d07fd78cbfb9fa83f997ba",
+      "samples": 98,
+      "key": "oboe_0490a53a1b6564e8"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_134.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_134.txt",
+      "start_pointer": 77,
+      "sha256": "7740f7c5be34eaa06d00fb603a34efb395c218ffbe20b3151577e8e262dd7c51",
+      "samples": 98,
+      "key": "oboe_899b4a0f0b086566"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_138.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_138.txt",
+      "start_pointer": 13,
+      "sha256": "1f53b19421d08ae232d9fc0c196d0aabb0699e1282b639c259f1d98876c4155f",
+      "samples": 98,
+      "key": "oboe_1091088c34c2030b"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_140.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_140.txt",
+      "start_pointer": 50,
+      "sha256": "9a44c88685c847650da52f9e19d6c9f87951830cb9924188595ef82653e0b121",
+      "samples": 98,
+      "key": "oboe_71377d4eed521281"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_142.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_142.txt",
+      "start_pointer": 14,
+      "sha256": "aacbea14e9efb84e744acb8ae541e229bb2cd40efca3a55ea9acb840156ff39f",
+      "samples": 98,
+      "key": "oboe_95e93ab356a87480"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_144.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_144.txt",
+      "start_pointer": 15,
+      "sha256": "4899ad58b58b861774bcad7241391bbac8846222bfd41f405f82b98d9bfb1cbb",
+      "samples": 98,
+      "key": "oboe_0fa29534e53f7e2c"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_145.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_145.txt",
+      "start_pointer": 41,
+      "sha256": "59c64a0455014d4e89841f2bc46cc34dad74d582537a08793e1209d7aee4839f",
+      "samples": 98,
+      "key": "oboe_480a148928caf3f5"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_15.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_15.txt",
+      "start_pointer": 89,
+      "sha256": "ed9f5d43b3df67bd7dfb3d4fc35d26aa230aadbd3d60546d0e5e0bad03388369",
+      "samples": 98,
+      "key": "oboe_fcc69b2b80eebc40"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_155.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_155.txt",
+      "start_pointer": 61,
+      "sha256": "ecf99bd71b80e7cd02d38bac3b3765f55118601602b52bcf2bc1946ab70bbf13",
+      "samples": 98,
+      "key": "oboe_4443a0699f462218"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_162.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_162.txt",
+      "start_pointer": 34,
+      "sha256": "e9d875c0fd4e3573f9e8a0c75be1cef167cc5a1a326597835b57386a7d87eba7",
+      "samples": 98,
+      "key": "oboe_d7eef4de89862beb"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_17.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_17.txt",
+      "start_pointer": 85,
+      "sha256": "13e90365e9713ac056f8adce2e796d47bdbc480dc460ad2fb3a26dc060db81c2",
+      "samples": 98,
+      "key": "oboe_e05721db4e3ec10d"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_171.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_171.txt",
+      "start_pointer": 11,
+      "sha256": "379867882dbe198b2d78c44980bb515a3f8e73d8b610ebef3e6225abb10d8a38",
+      "samples": 98,
+      "key": "oboe_2718b9cc25ed89f4"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_173.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_173.txt",
+      "start_pointer": 89,
+      "sha256": "4e1ac1f2493dcd751a668ac51bb2a39a0cec53925ad2ebfb9e7328122fc87ec7",
+      "samples": 98,
+      "key": "oboe_551ef580213e93cb"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_177.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_177.txt",
+      "start_pointer": 5,
+      "sha256": "c9fa20e1f5d17a525b4f1ed0fca739fa0dd2472b1711a334f530b27d5c8eeebb",
+      "samples": 98,
+      "key": "oboe_c3bef3d1852feace"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_187.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_187.txt",
+      "start_pointer": 9,
+      "sha256": "630781738a5d1eeeee18cfae3746edf30292403373abfe728dde867857a46066",
+      "samples": 98,
+      "key": "oboe_1c151ae3eba702f5"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_19.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_19.txt",
+      "start_pointer": 72,
+      "sha256": "797422ce4033649249c4b207d3a24dcea258fc4b55358d98b3d77333353e7ef6",
+      "samples": 98,
+      "key": "oboe_df028aee257977c5"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_195.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_195.txt",
+      "start_pointer": 71,
+      "sha256": "23e838b232a1793645c5897b59efea111db979550f1d8fdb46c90039bae26e7b",
+      "samples": 98,
+      "key": "oboe_09d012ac550ff3f4"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_198.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_198.txt",
+      "start_pointer": 22,
+      "sha256": "cae573367485ab8385e7bf5909dca2d25311d79bf08a609a58f526458b919196",
+      "samples": 98,
+      "key": "oboe_d7142c99dcad7ec2"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_199.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_199.txt",
+      "start_pointer": 17,
+      "sha256": "d44129db4af8352a4acc19293de10e96f88e8ff6c3859b056545909928f4c5f4",
+      "samples": 98,
+      "key": "oboe_66990653b77b8e5e"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_2.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_2.txt",
+      "start_pointer": 37,
+      "sha256": "e7860fd7033c11bf1c84822780ce7bf65b0b1b76a3a20fcb48901fd2385dea78",
+      "samples": 98,
+      "key": "oboe_976ac674f5971442"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_200.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_200.txt",
+      "start_pointer": 42,
+      "sha256": "97e4236592df7b3aa5df92647b4f1ac313aa21398cd0d363d0e7e86f3caafab6",
+      "samples": 98,
+      "key": "oboe_8fdda9872ea815bb"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_202.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_202.txt",
+      "start_pointer": 12,
+      "sha256": "5760bafc5e2d0f31fa397490753bd32b4b2522e9b614c136481863d1fdfe3110",
+      "samples": 98,
+      "key": "oboe_22779f78ff5e877b"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_205.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_205.txt",
+      "start_pointer": 7,
+      "sha256": "ed9b4ee1bda4124eeab081cb56c497c460fcafb61a80190181a91f96f84be2e5",
+      "samples": 98,
+      "key": "oboe_ec25ab7a446525d8"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_210.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_210.txt",
+      "start_pointer": 92,
+      "sha256": "c5e52fa7827a201f9aee6d2abfd70b2ae9b89eeab8685a523e09f2e0c9c809b0",
+      "samples": 98,
+      "key": "oboe_1377fda98135f887"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_22.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_22.txt",
+      "start_pointer": 81,
+      "sha256": "2138e6387cae86b1645e139cb040533d9082aabec3d124272cf9dcaf9cb45b31",
+      "samples": 98,
+      "key": "oboe_892a3c18c4046f0e"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_220.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_220.txt",
+      "start_pointer": 50,
+      "sha256": "de07e628c0a80e1a91be24fe53c6bdf2e7f619308683d1f7d56a02f7df9654b1",
+      "samples": 98,
+      "key": "oboe_140b371990e343a5"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_222.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_222.txt",
+      "start_pointer": 71,
+      "sha256": "afb34383a64f19f488029669b48e5c3d4866af2aede6b711358505fb049e4785",
+      "samples": 98,
+      "key": "oboe_c47bedce8c48f362"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_224.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_224.txt",
+      "start_pointer": 8,
+      "sha256": "79ebfff7967035c6854f9941ba6a71c1a7ca0aea6d9c8c67b49defe4bb987a35",
+      "samples": 98,
+      "key": "oboe_16c9ea63b4bb6633"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_226.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_226.txt",
+      "start_pointer": 66,
+      "sha256": "e64944802f976b86c1d536f42bf9a18ebb35f0f2afa453d8ffa8bd635186bbc8",
+      "samples": 98,
+      "key": "oboe_0663f7654c1247ed"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_231.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_231.txt",
+      "start_pointer": 21,
+      "sha256": "afe2aff21af3994f94d57c29eee35f658324d43418841d65d38a127ca106555d",
+      "samples": 98,
+      "key": "oboe_26e95aa728363116"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_233.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_233.txt",
+      "start_pointer": 33,
+      "sha256": "e959d784ffb025d8411a343ee57ac7815f0c2ac6228eb78ef83a343d4c5894eb",
+      "samples": 98,
+      "key": "oboe_73590a5e53dbe65c"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_253.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_253.txt",
+      "start_pointer": 32,
+      "sha256": "bc152508ab8d5f872f00bee2e28343efeea500cd865de318a1b115975020174e",
+      "samples": 98,
+      "key": "oboe_0c7680ef55a20fd8"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_255.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_255.txt",
+      "start_pointer": 76,
+      "sha256": "79bf9d1d4c25bd7b77903d0f88090d06f5599098f7b5be37826538701fae295b",
+      "samples": 98,
+      "key": "oboe_d97742e2398386e8"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_257.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_257.txt",
+      "start_pointer": 72,
+      "sha256": "bb4ced6b848fd831bdc3794b07ae5989b17cb400225c6a35a529cf83cd8f5df6",
+      "samples": 98,
+      "key": "oboe_00db7d2eb90022ee"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_261.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_261.txt",
+      "start_pointer": 8,
+      "sha256": "a6a418d7b93cdbbf0288950854cfa99d24b79ad86d22c82a40099435392003d3",
+      "samples": 98,
+      "key": "oboe_94d794446cf3f2b1"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_263.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_263.txt",
+      "start_pointer": 92,
+      "sha256": "42cc30cfdca98feff82f778ab5ca7c2bf5295ef0bc1aff580428647e34281759",
+      "samples": 98,
+      "key": "oboe_d715380213928536"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_265.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_265.txt",
+      "start_pointer": 57,
+      "sha256": "52d0dd96d80aeee67f882d22c7a125417f9154341beb23f30da70236bc1af325",
+      "samples": 98,
+      "key": "oboe_073ac2140ba259b1"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_266.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_266.txt",
+      "start_pointer": 73,
+      "sha256": "4ae2fde5c0fd01fd168fc0a1dea3161dc371d549f999bb3c56e75f47ea7afd55",
+      "samples": 98,
+      "key": "oboe_4dad5d790bb8b8ed"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_269.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_269.txt",
+      "start_pointer": 71,
+      "sha256": "3213c2f8e46e2f57a1ae2f3370574d8110ac36177229c6b09ab856f249ff972e",
+      "samples": 98,
+      "key": "oboe_e49a38a5088a71eb"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_272.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_272.txt",
+      "start_pointer": 90,
+      "sha256": "61b8bb0bca647fdbaaa25ce565dec2384f0656e33f8a27634c5b58f1903fb0a8",
+      "samples": 98,
+      "key": "oboe_5f5e2953996b9c32"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_273.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_273.txt",
+      "start_pointer": 18,
+      "sha256": "6f2193672b8f3e3a1fb46fc0b17b151e68c78ba547fa04aabae628fa3e4976b1",
+      "samples": 98,
+      "key": "oboe_cb93bf4493054a52"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_291.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_291.txt",
+      "start_pointer": 11,
+      "sha256": "448d27190a29e927d00e55b8e99b9a1f8f4b058b10e9bf024a40441daf2ba98d",
+      "samples": 98,
+      "key": "oboe_d8da83647b801436"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_293.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_293.txt",
+      "start_pointer": 33,
+      "sha256": "321c9cb0fee013566d5c9a933b72650fea9c6ab26785c5744cbb31d9a5ab7c27",
+      "samples": 98,
+      "key": "oboe_cae36bd9a94dafe2"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_304.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_304.txt",
+      "start_pointer": 19,
+      "sha256": "c472737de1837f92f319a3ab5468d1cbf6b2cb2294cdfbcfcd7924a75f216cf0",
+      "samples": 98,
+      "key": "oboe_7711c1b3c6377d52"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_307.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_307.txt",
+      "start_pointer": 8,
+      "sha256": "112918b60450efab212851d52f7b5293e2ac0cb88812726da4b38e8420239d68",
+      "samples": 98,
+      "key": "oboe_1b59bd236754f542"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_31.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_31.txt",
+      "start_pointer": 68,
+      "sha256": "b6c6af649ab488ea71e830461dfb098a52f51211dc91159f1b3391d61518daf9",
+      "samples": 98,
+      "key": "oboe_455eb663c873c6bc"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_310.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_310.txt",
+      "start_pointer": 9,
+      "sha256": "00dede046533ac92ecf03434c87c75aa961ffea28354953faf0d12f53977d325",
+      "samples": 98,
+      "key": "oboe_e405118f1e7a81f2"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_330.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_330.txt",
+      "start_pointer": 80,
+      "sha256": "c0fc795e4d2ad712849bcecc69eadfa6784d2939979bef8b34f60a42f3243e70",
+      "samples": 98,
+      "key": "oboe_127a604abb54d44f"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_344.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_344.txt",
+      "start_pointer": 94,
+      "sha256": "537dce5b781c7890db8c8fca11b6cd817254dbe6ada2b7c0ea7df244b526f0b7",
+      "samples": 98,
+      "key": "oboe_85a69d21cefd752b"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_345.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_345.txt",
+      "start_pointer": 27,
+      "sha256": "5a77c9c68405ab4ce4a63b7df3f635cba738d1e3a09c4c0a9d2dcb4681c236e6",
+      "samples": 98,
+      "key": "oboe_5f8c86c14391b3ef"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_35.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_35.txt",
+      "start_pointer": 59,
+      "sha256": "af3c07d8815d46fc43707986ea05a936c2c8bdada5861223a7abf5b7a13f006a",
+      "samples": 98,
+      "key": "oboe_d128ee3afaf28cbd"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_352.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_352.txt",
+      "start_pointer": 44,
+      "sha256": "a0295c43dbd884667d18e1fb04091780bc3ba6b7dde47bc778cd4c223a7278e6",
+      "samples": 98,
+      "key": "oboe_b029615b081ef06e"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_355.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_355.txt",
+      "start_pointer": 76,
+      "sha256": "c79a415fca11e8415f17f9d93f7122ee324068e8f4ab7d6e6127a5b35ed01885",
+      "samples": 98,
+      "key": "oboe_d8a99e55a30b0bc7"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_357.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_357.txt",
+      "start_pointer": 73,
+      "sha256": "dc690f4c1aa700034997e3f2141de497aa9fe13ceac7bcebd162be26fa350714",
+      "samples": 98,
+      "key": "oboe_51261e2b05553ffc"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_364.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_364.txt",
+      "start_pointer": 61,
+      "sha256": "430508ef822b39565c92296710e463fdda50856dcde7bb9b3330773005e47677",
+      "samples": 98,
+      "key": "oboe_e7577c3b1d39c658"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_37.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_37.txt",
+      "start_pointer": 8,
+      "sha256": "f9de2cdb79a8bb30bcdfb6f8abe08370dcb5bc2f7cb2b2763f42be9be7199006",
+      "samples": 98,
+      "key": "oboe_0890fb81d1d34a6f"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_370.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_370.txt",
+      "start_pointer": 8,
+      "sha256": "e5515ff00c7f0f8948ace873ca8ff7b263d6d52ce7d8eb73206716a8e671bded",
+      "samples": 98,
+      "key": "oboe_6288c80504135d9f"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_376.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_376.txt",
+      "start_pointer": 14,
+      "sha256": "bf7a0e59027f80df335e64494176c94a2bdbb3e7ec103edde14f1472fd0e35e9",
+      "samples": 98,
+      "key": "oboe_811e9bec112014f3"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_377.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_377.txt",
+      "start_pointer": 30,
+      "sha256": "0141c2d11b546feba6dc7c7138e6d5786dd5ac3cdac403293adaaa2509b973e9",
+      "samples": 98,
+      "key": "oboe_02c7fb437e1d5d02"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_379.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_379.txt",
+      "start_pointer": 42,
+      "sha256": "9207c4ed8dfd84d7a03026cf5c64c88e6c670c678247851db09f1fa1b7e2d7f6",
+      "samples": 98,
+      "key": "oboe_69b6ce188df9f0ff"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_383.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_383.txt",
+      "start_pointer": 80,
+      "sha256": "c98e774e19ebac0f1b4b32261d3dd53ef3f22223bc698694ebcff63a41ca8880",
+      "samples": 98,
+      "key": "oboe_e09e0e0ef16043c8"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_388.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_388.txt",
+      "start_pointer": 96,
+      "sha256": "ab481e6a0b228d247c3fc105b89453f7caefef795cedb7fb19a3c145577def02",
+      "samples": 98,
+      "key": "oboe_dc950b8c49729cc4"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_391.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_391.txt",
+      "start_pointer": 82,
+      "sha256": "8b551465dd4f0c8feb25ca11b22319af0895d2976e4282ff35a37196b3f49aa7",
+      "samples": 98,
+      "key": "oboe_3e9b75755159e619"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_393.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_393.txt",
+      "start_pointer": 16,
+      "sha256": "5ac68b33680572320f6babf1ca38a724c7a5e5a4b9c290193c3466dde41a824c",
+      "samples": 98,
+      "key": "oboe_0f451969a932392a"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_397.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_397.txt",
+      "start_pointer": 62,
+      "sha256": "e78e6a74e5dce1b924cdc479daf1c84ed0b99f65cc6015ed2e7b0e3847d7370b",
+      "samples": 98,
+      "key": "oboe_3a7cbf7e09946ab8"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_398.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_398.txt",
+      "start_pointer": 2,
+      "sha256": "7944711ab96ef7909c8c386010bec22fd0d30c6c2142992d71b27a6b06fc0776",
+      "samples": 98,
+      "key": "oboe_8bf6046700309d5d"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_402.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_402.txt",
+      "start_pointer": 84,
+      "sha256": "162b6faaf8df7edd194031a78ff0a5566a14d4bae1726b8ecd406ab50087bc88",
+      "samples": 98,
+      "key": "oboe_14f7d3e5bd4fa863"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_41.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_41.txt",
+      "start_pointer": 49,
+      "sha256": "5543a5910d7005ac73f0626b236ccdac76a55c1e0a4ba57e175a466fd3c09dc6",
+      "samples": 98,
+      "key": "oboe_50ab778888c01e6b"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_411.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_411.txt",
+      "start_pointer": 88,
+      "sha256": "2fb03a47e001b69b7cf1d6ed23b4716fcd3af5234f91c08258ad9e424657a047",
+      "samples": 98,
+      "key": "oboe_7641bce9444b84ef"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_414.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_414.txt",
+      "start_pointer": 69,
+      "sha256": "a0f68b68eafb06bce01ad02d3336a726664f904440d3921e88b98bdae54c8c0e",
+      "samples": 98,
+      "key": "oboe_ca625f4cd21b5ebb"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_42.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_42.txt",
+      "start_pointer": 87,
+      "sha256": "f2d508cfe9c52484bdd28d75d553c34b3a2c728dd4e3cbad827d6fc666eebfd7",
+      "samples": 98,
+      "key": "oboe_695e16d27b5a0f86"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_421.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_421.txt",
+      "start_pointer": 16,
+      "sha256": "f0a579df2bb5f30b1ff2ea456c14d81c0b0844f78977420811948915f468de5a",
+      "samples": 98,
+      "key": "oboe_2006997feba08c9f"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_422.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_422.txt",
+      "start_pointer": 35,
+      "sha256": "2c233ceb5a9ba1ed7a1e90251a19445a9e7ee9e6a7bbfc94ecf4050aa4a48301",
+      "samples": 98,
+      "key": "oboe_fe6737b4f14bf6de"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_43.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_43.txt",
+      "start_pointer": 73,
+      "sha256": "1a640e56989fe4501904a2e741f3275525636c77851a14c098988c8cd2aa07b1",
+      "samples": 98,
+      "key": "oboe_2a0e67314bbc9b89"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_45.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_45.txt",
+      "start_pointer": 80,
+      "sha256": "800ad2bcb197d3e53c92dbcf9e0083a6d5b40d84405dfd7be7df9f6042272a19",
+      "samples": 98,
+      "key": "oboe_682ebebff954faad"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_5.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_5.txt",
+      "start_pointer": 3,
+      "sha256": "b2e268881c85c4aadbcd28eb84500ddb05795154cbe82559cf68b7aeeff63be2",
+      "samples": 98,
+      "key": "oboe_6246d039dccca4e0"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_53.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_53.txt",
+      "start_pointer": 55,
+      "sha256": "9e1518b3dc41449f24f9dcdcae3ca09712f537fa5ee5f1870e7df741e207cdc3",
+      "samples": 98,
+      "key": "oboe_d6a6ef248388db83"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_55.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_55.txt",
+      "start_pointer": 8,
+      "sha256": "53fde2aab8b48bb2fd6aa8e84d58f74369c364414c58c734e845aeb8c219dc8c",
+      "samples": 98,
+      "key": "oboe_9b08d6afe8f5fa55"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_56.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_56.txt",
+      "start_pointer": 79,
+      "sha256": "088bb944db9fc4242c086f0c5a4171d6d0a8b103fd574b0a4039a6e548dadc67",
+      "samples": 98,
+      "key": "oboe_0dcad81d79c615b6"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_61.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_61.txt",
+      "start_pointer": 36,
+      "sha256": "c4c7fdd86dbc993bccfc74e0836a0ce7323bd9f89ed52e68ba1bf1f5afe60f25",
+      "samples": 98,
+      "key": "oboe_3ec93a7a6a1a9cc5"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_63.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_63.txt",
+      "start_pointer": 63,
+      "sha256": "67693c75272e178d608e852e78aafd99faa1a552a9c3e7e2f0f286aed83aff27",
+      "samples": 98,
+      "key": "oboe_d99b13792f4c1814"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_68.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_68.txt",
+      "start_pointer": 92,
+      "sha256": "08ae39b3e812b237a710af7476a78804abcd23857bcd4846dbc82321056ab5f5",
+      "samples": 98,
+      "key": "oboe_41f7a727c1e05f33"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_70.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_70.txt",
+      "start_pointer": 35,
+      "sha256": "1c212fb36f78978dd59c562d501583424c6b3aba011159e295f62acd2da79d5d",
+      "samples": 98,
+      "key": "oboe_647bcde5bcc4419d"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_80.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_80.txt",
+      "start_pointer": 11,
+      "sha256": "720ea9de420834c5bb7401adaed9969974e16d64b180591432e0313fcb78b987",
+      "samples": 98,
+      "key": "oboe_904ded1399e71edc"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_82.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_82.txt",
+      "start_pointer": 13,
+      "sha256": "ae8a012eca968740240effc2c59950e81a82df6f8d87fa44263e2242d057347f",
+      "samples": 98,
+      "key": "oboe_f7be63f222b1cc78"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_85.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_85.txt",
+      "start_pointer": 90,
+      "sha256": "bd7ff4bede7a95a0f4121959b62be6a380c493e4c9c63c7db7f75894597d178f",
+      "samples": 98,
+      "key": "oboe_7e0a69798df751c4"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_88.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_88.txt",
+      "start_pointer": 93,
+      "sha256": "b419e37a8d98e3ed488f3d73b9e73d4559937682552576c30d0b3e318b954840",
+      "samples": 98,
+      "key": "oboe_3af9f2ad761ce661"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_9.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_9.txt",
+      "start_pointer": 12,
+      "sha256": "5568a31a8ccda1ea9d56a751b7d1321d3717cc79fa9ed0afb464b722c726c406",
+      "samples": 98,
+      "key": "oboe_c33a948d56457172"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_90.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_90.txt",
+      "start_pointer": 97,
+      "sha256": "0a5e69d612ef6abf27b910d1b496fcababd5a55861dc95ed5c6c8119d45096ec",
+      "samples": 98,
+      "key": "oboe_3dfae9e52d1fe49e"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_94.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_94.txt",
+      "start_pointer": 3,
+      "sha256": "ba2f4a7a6d6a79cf9d8c76d94c6d0738ce84ce5e04f29a569441779141a687f6",
+      "samples": 98,
+      "key": "oboe_18dca3966b86dea3"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_96.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_96.txt",
+      "start_pointer": 26,
+      "sha256": "dee2920de5efff3aa214bbff32add28a7673ff56f47600966f6ab156f4006ea5",
+      "samples": 98,
+      "key": "oboe_a5251c06a7330662"
+    },
+    {
+      "dataset": "oboe",
+      "trace": "trace_99.txt",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-3G/Oboe/test/trace_99.txt",
+      "start_pointer": 62,
+      "sha256": "8929cbd6fe76a3475f6427c79846bc38f37cdcb391038443cebfbbd1c47a79d9",
+      "samples": 98,
+      "key": "oboe_f33f84f7534bfc6e"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_0",
+      "start_pointer": 2451,
+      "sha256": "a16f9b7e21acdeeef4a9eeab3cc975caec7e7674605def27f3f246b386218bc0",
+      "samples": 3093,
+      "key": "norway3g_60686bd3b4135c3c"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_240",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_240",
+      "start_pointer": 391,
+      "sha256": "453ab0e3c7217b39af7fd5a15e320516a6f8ab5ba4fa1545f0db3d5135a5e5de",
+      "samples": 3070,
+      "key": "norway3g_9c318982bbbc07fe"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_300",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_300",
+      "start_pointer": 843,
+      "sha256": "b0b2a59c207860a1342e1f3354efb43155a33a3814d3ce95197b69607abeec27",
+      "samples": 3056,
+      "key": "norway3g_6658afdf8ae58948"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_420",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_420",
+      "start_pointer": 2778,
+      "sha256": "4859033f8c732d8e85d9a7a1bd3cab971e482fc3b8e0637fc7d873291720217f",
+      "samples": 3066,
+      "key": "norway3g_b00e1a30c40a469d"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_660",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_0852CEST.log_660",
+      "start_pointer": 543,
+      "sha256": "f70988ce51bf4301f72a74392b0ad1c0d8cbbd4379e682e6c9be8dac6f604572",
+      "samples": 3120,
+      "key": "norway3g_305beef72c551ccd"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_1622CEST.log_180",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_1622CEST.log_180",
+      "start_pointer": 592,
+      "sha256": "9f653cd6993a1a83af7bca211fa238cef55e288a0c5be4512ceec0cd122779be",
+      "samples": 3046,
+      "key": "norway3g_f2554b098b07df12"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_1622CEST.log_240",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_1622CEST.log_240",
+      "start_pointer": 959,
+      "sha256": "6f63459fd31475f397e5a68c7d9fcb5fc5ee5d2b34d3d77ab1002a6ece4acdad",
+      "samples": 3039,
+      "key": "norway3g_7297ca8bf765a6df"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-09-29_1622CEST.log_660",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-09-29_1622CEST.log_660",
+      "start_pointer": 341,
+      "sha256": "e9e5c8ecaaaa1beb5cd2deb7cd8ede1462cac12c47f101284ee7f9c085d4dd78",
+      "samples": 3057,
+      "key": "norway3g_1e4abecccbd851c6"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_0",
+      "start_pointer": 228,
+      "sha256": "20d151cc94c3931779a23406ab986ce2bb80302dda49f166395b9248230a47ae",
+      "samples": 3085,
+      "key": "norway3g_6c061eddb1dba53f"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_120",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_120",
+      "start_pointer": 1239,
+      "sha256": "0a1f2cbdb41f58516ab42fe6be3e6adc373b8d34cdd56fb07330378b55f8ec9a",
+      "samples": 3064,
+      "key": "norway3g_2f7074346c0cf96f"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_180",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_180",
+      "start_pointer": 2011,
+      "sha256": "27e0a3deb2dffc45ba0524afd601370fa9a4a92f36370027be4810b17e591339",
+      "samples": 3056,
+      "key": "norway3g_9a4eec3bd7771ac8"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_240",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2010-11-10_1424CET.log_240",
+      "start_pointer": 1725,
+      "sha256": "e2ef424cdf6e0de7ddd0a55b27fbb1c8ae74998dd1fa4e2be0071d3a1f207326",
+      "samples": 3060,
+      "key": "norway3g_26ca180c5ea81bce"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus.ljansbakken-oslo-report.2011-01-29_1125CET.log_240",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus.ljansbakken-oslo-report.2011-01-29_1125CET.log_240",
+      "start_pointer": 2944,
+      "sha256": "d9ccd89b3ebac6c05254744a0b4230a84ff63344b64d71705746acc2dee932a5",
+      "samples": 3038,
+      "key": "norway3g_b7a819a6daeaa03d"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus_14",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus_14",
+      "start_pointer": 110,
+      "sha256": "ec8eaa0d511254daaa3d708647e345d3ebf89a37f3ec4383159ca106ccade605",
+      "samples": 266,
+      "key": "norway3g_5e2a48c4d00cf10c"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus_23",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus_23",
+      "start_pointer": 173,
+      "sha256": "81f347cf3af4732a62ebfa323cb77568a0ad075aaca727d1fc9aa9afc868a663",
+      "samples": 243,
+      "key": "norway3g_16a8bf60867e8416"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus_3",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus_3",
+      "start_pointer": 212,
+      "sha256": "2df03e7cf0b0975e0d2d1a06fbadd869c2dd73ff6ac3e7d0db2ce27e98834f01",
+      "samples": 265,
+      "key": "norway3g_c6fe9616bd564f01"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_bus_6",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_bus_6",
+      "start_pointer": 258,
+      "sha256": "9d2e3e1f57c79df4c244a835b7360b1cfb777fbfafd7aa33d76f012394a7a059",
+      "samples": 266,
+      "key": "norway3g_ab9c5cee4f85445e"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_120",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_120",
+      "start_pointer": 992,
+      "sha256": "954efefc287dc8222ff37d32096d3ad921b2c23e719f8de8677d343e60ba8e65",
+      "samples": 3040,
+      "key": "norway3g_1e66d40b3e34dfd7"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_240",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_240",
+      "start_pointer": 1412,
+      "sha256": "b25e5e4f7659ae87a72fd75be67ea9dc3125765acfefe8e64cdd432b440f3da4",
+      "samples": 3034,
+      "key": "norway3g_8034c851c8e3877a"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_3720",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_3720",
+      "start_pointer": 2591,
+      "sha256": "db51652f6a4f12c4fc998c2d156f73324b875b2cb7a8eb4f574b1e53d8078ac7",
+      "samples": 2996,
+      "key": "norway3g_6a0944bda1179c3e"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_60",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car.oslo-grimstad-report.2011-04-21_1135CEST.log_60",
+      "start_pointer": 1478,
+      "sha256": "0f694e90ba2ef68720e34246dfa8b1ba6c31bd234b23229fa888e3403a2dc714",
+      "samples": 3051,
+      "key": "norway3g_70c2e13817b0921c"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car.snaroya-smestad-report.2011-02-14_2108CET.log_0",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car.snaroya-smestad-report.2011-02-14_2108CET.log_0",
+      "start_pointer": 1346,
+      "sha256": "c95b0c72e6904ed12e93ef6decd1803ce97836805ea1d1c28171fe45ba17f549",
+      "samples": 3076,
+      "key": "norway3g_f478fc71cbe767a1"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car_12",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car_12",
+      "start_pointer": 91,
+      "sha256": "cab5ec1ddc3c8037c112590afbc15501e0c0791c8fc4f2a3f2c501ac2ea87e95",
+      "samples": 266,
+      "key": "norway3g_5c86091975b409f6"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_car_4",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_car_4",
+      "start_pointer": 192,
+      "sha256": "39b0fc450f99f1445dc94b2b4d721d9af3bde25b7b0cacf1fe3f20b8ff1b992f",
+      "samples": 265,
+      "key": "norway3g_2f3b7479f27852cd"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_ferry.nesoddtangen-oslo-report.2010-09-21_1735CEST.log_540",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_ferry.nesoddtangen-oslo-report.2010-09-21_1735CEST.log_540",
+      "start_pointer": 2341,
+      "sha256": "18dba1ed25ab08ef6661541e536c7f9bd79a0b42f59ea7a9bca8f975a3ff4a3a",
+      "samples": 3063,
+      "key": "norway3g_269f1fe553527035"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_ferry_1",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_ferry_1",
+      "start_pointer": 214,
+      "sha256": "9d9750b3504908f061635b1a234bb675ceccab37849359e9a00fa4433894f6f7",
+      "samples": 256,
+      "key": "norway3g_fd157edfabd23dc5"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_ferry_12",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_ferry_12",
+      "start_pointer": 112,
+      "sha256": "f960b0c8f9b4fe50105f75f12e9cc96a00f0965afaefab88983d952be70ca3c0",
+      "samples": 265,
+      "key": "norway3g_6ec52f5dca680f66"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_ferry_14",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_ferry_14",
+      "start_pointer": 53,
+      "sha256": "c043334aed1435bea594c58b99a94ebd566efe60e7f63bda3b5256bd307b503a",
+      "samples": 65,
+      "key": "norway3g_f193aa37b2a39be5"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_ferry_19",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_ferry_19",
+      "start_pointer": 16,
+      "sha256": "42e79ba53f5ea936d2581db8d40c90eda6b9a4fb011033847ec786b52d55fc13",
+      "samples": 203,
+      "key": "norway3g_d94abcf1fd4d0d1e"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_ferry_5",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_ferry_5",
+      "start_pointer": 15,
+      "sha256": "1ef147600726e2f3b8567aada0374372dd7b6bf3150350acfa853de8b299f8f4",
+      "samples": 265,
+      "key": "norway3g_da1c0217426480f1"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_metro_1",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_metro_1",
+      "start_pointer": 12,
+      "sha256": "610bfb769058d0145ab6b70032e5a3da7d172df9fd1bbb3f9f5eb21ee1082374",
+      "samples": 265,
+      "key": "norway3g_40cfbb23b1e37de7"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train.vestby-oslo-report.2011-02-11_1729CET.log_360",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train.vestby-oslo-report.2011-02-11_1729CET.log_360",
+      "start_pointer": 1460,
+      "sha256": "cae388cbf99ecc5892858f12ca7a298c827304f26d7f04ca46f49882a3fb6f91",
+      "samples": 3026,
+      "key": "norway3g_9be48f89a79ed876"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train_10",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train_10",
+      "start_pointer": 218,
+      "sha256": "aa39b47ccfad551685663692968ddb5ee69d4dc36c1323895cae67fab207a3fb",
+      "samples": 265,
+      "key": "norway3g_7aece13aaed8f86d"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train_15",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train_15",
+      "start_pointer": 216,
+      "sha256": "71496e269d2ace4c9f5ba52578949e529a0313c1f162e05db61bcb5c6132f0b8",
+      "samples": 266,
+      "key": "norway3g_ab2b840ca3ba6652"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train_17",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train_17",
+      "start_pointer": 235,
+      "sha256": "c3e79342fcbe87c17d073cd39c9f8867fbd3120c1ed99420905812547ae0e44b",
+      "samples": 266,
+      "key": "norway3g_4ae61a7283285668"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train_18",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train_18",
+      "start_pointer": 50,
+      "sha256": "b5528133cc0b5a6ec293b235d1941dbfdb5be9cd5f8124fdaf43faacca60ee5e",
+      "samples": 265,
+      "key": "norway3g_bb192808e2aca001"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train_19",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train_19",
+      "start_pointer": 40,
+      "sha256": "36de580393e7709edac127432e824ddbf7506124aaa14edfba0c0810f6b3a3da",
+      "samples": 265,
+      "key": "norway3g_cb41b9b3cb24a55f"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_train_20",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_train_20",
+      "start_pointer": 211,
+      "sha256": "90f6b04919bdb52782f7956296e836185563210e9f131166f7aaacb0d58ee2aa",
+      "samples": 266,
+      "key": "norway3g_31b9892cf23db747"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_tram.ljabru-jernbanetorget-report.2011-01-31_2032CET.log_600",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_tram.ljabru-jernbanetorget-report.2011-01-31_2032CET.log_600",
+      "start_pointer": 899,
+      "sha256": "b319396008ddc5bd6072d94485ab08bda875ad9b60e86889e9a252b761c14090",
+      "samples": 3036,
+      "key": "norway3g_815ad98a1ac0c2cb"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_tram.ljabru-jernbanetorget-report.2011-01-31_2032CET.log_660",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_tram.ljabru-jernbanetorget-report.2011-01-31_2032CET.log_660",
+      "start_pointer": 567,
+      "sha256": "3c7ee3215d4faa977bc43bc8647b9dd3b1e6951313aeb06606f3504d66f2fd5b",
+      "samples": 3029,
+      "key": "norway3g_55d7a5bcf8ed913f"
+    },
+    {
+      "dataset": "norway3g",
+      "trace": "norway_tram_55",
+      "path": "/home/amora/wxh/jev/abr_eval/vendor/ABRBench/trace/ABRBench-4G+/Norway3G/test/norway_tram_55",
+      "start_pointer": 141,
+      "sha256": "8cfbf91070ff2c52c50d74471d21410880693094e42b1c0a55fdc167bc415309",
+      "samples": 265,
+      "key": "norway3g_f9d1a13605edf417"
+    }
+  ],
+  "video_sha256": {
+    "video_size_0": "a9b2bd16b7f13327b5dae7a70bce6d086ff46cc0a18783c7a0e152a2bf604be0",
+    "video_size_1": "bd8b1edad5c4970da82c83fd4cdf65637b1d177b55b74868d2c7b1aec170a7ad",
+    "video_size_2": "bd20fb941f28473ed863064c87091dadb4dfd5d6f06d3dff4a9a9015d8448b0b",
+    "video_size_3": "6ff70f5356417df616005339980fc5a230726b52ce7f72fc3ef92aa02ed49970",
+    "video_size_4": "60635fedb2fec8d1ca27369b5f6e8143acddbe6c8ec1c3e60fc76d7687efdf5c",
+    "video_size_5": "f62b156795d47cb6faf34df6ac7d4b996bf9f6bc7390d29795ebc211514a675d"
+  },
+  "model_deployment": {
+    "checkpoint_path": "/home/amora/wxh/jev/abr_llama/checkpoints/llama_abr_v1/epoch_04",
+    "base": "/home/amora/wxh/jev/models/Llama-3.2-1B",
+    "base_revision": null,
+    "temperature": 1.0
+  },
+  "model_files_sha256": {
+    "adapter_model.safetensors": "210a5c611127e0bd28d1081ec4cb622c72bca926ae64c6e0969beb4100e93b4b",
+    "head.pt": "05f6cb3ec3a568660f3d93eb4235aaed108a2ee61a311a0c62aba5b76b047d34",
+    "adapter_config.json": "63d733a85f7eea316ba7f02f34157529affb83bef8eebe09497e03ccb10226f9"
+  },
+  "data_manifest_sha256": "fe5e22f3fd7408d5b4030216377fb6bcd03f36e1fdfb971469bac3618ada13ee",
+  "source_sha256": {
+    "evaluate.py": "971917272a5b8e853800b743dcf21e58ef1eea33abe30a9c85878073ae8ca66a",
+    "runtime.py": "4c413dce0d0ffc24aa7d5c68b94ed1613601afe59d9c274f7161983253842b65",
+    "summarize.py": "658030e92024fcdce43fcb0508e4ea3f239d0039b70967c3d5ce1a9b3c89c0e7",
+    "benchmark.py": "16191db0ab3752aa9e117eef050f67950ed8e488a0a9e7803135eb37312c61c9"
+  },
+  "service": {
+    "device": "cuda",
+    "backend": "torch",
+    "dtype": "bfloat16",
+    "temperature": 1.0,
+    "run": "/home/amora/wxh/jev/abr_llama/checkpoints/llama_abr_v1/epoch_04"
+  },
+  "fingerprint": "8c59c4869296eabd9bdffde2589bf1d873db12489c781ffe508612129963d5e7"
+}

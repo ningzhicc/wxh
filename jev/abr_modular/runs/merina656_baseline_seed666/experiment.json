@@ -1,0 +1,65 @@
+{
+  "settings": {
+    "candidate_cost": 0,
+    "regret_loss": 0,
+    "data_dir": "/home/amora/wxh/jev/abr_modular/data/merina656_v1",
+    "out": "/home/amora/wxh/jev/abr_modular/runs/merina656_baseline_seed666",
+    "epochs": 8,
+    "batch": 2,
+    "accum": 8,
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "regret_weight": 0.2,
+    "regret_scale": 4.3,
+    "regret_clip": 20,
+    "seed": 666,
+    "max_state": 512,
+    "variant": "baseline"
+  },
+  "data_fingerprint": "467c01d486fda5a1bf61d48774e20f536216aa607bbf9d91bd932b2f6782b2ad",
+  "data_file": "/home/amora/wxh/jev/abr_modular/data/merina656_v1/base.jsonl",
+  "data_sha256": "32cd771b0889a36631af5b62786a4a352678af03d3191704718d3234d4975d02",
+  "preflight_fingerprint": "3a995aeec0d7a8edd53eb2c9c86f68fd287be1b31d7c3c5f1026160769c2f3c3",
+  "records_per_epoch": 30832,
+  "regret_eligible_records": 30176,
+  "effective_batch": 16,
+  "steps_per_epoch": 1927,
+  "optimizer_steps": 15416,
+  "requested_records": 246656,
+  "base": "Qwen/Qwen3.5-4B-Base",
+  "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+  "base_local_path": "/home/amora/wxh/jev/.cache/huggingface/hub/models--Qwen--Qwen3.5-4B-Base/snapshots/1001bb4d826a52d1f399e183466143f4da7b741b",
+  "init_checkpoint": "/home/amora/wxh/jev/.cache/huggingface/hub/models--jaredpalmer--kev-4b/snapshots/6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+  "init_sha256": {
+    "adapter_model.safetensors": "90e817356246e7f18bfa7ca3d31794cd4fbeb3332a66a84cb51d9ceae925f2b2",
+    "adapter_config.json": "8a05dfd6c5e7f61a62e6db5d8de8093a8dbbd105aa7ee7b5e7b73f6249f45617",
+    "head.pt": "dd633435998ecc751ac538717a3742e32149500fabf7d7276287dbf0693f347c"
+  },
+  "architecture": {
+    "lora": 16,
+    "lora_targets": "all",
+    "head_dim": 256,
+    "weights_dtype": "fp32",
+    "dtype": "bf16"
+  },
+  "objective": "hard_action_CE + enabled * weight * expected_clipped_one_step_proxy_regret / scale",
+  "validation": "Save every epoch; select checkpoints later using the same FCC validation protocol. No test-based selection.",
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "5.17.0",
+    "peft": "0.21.0"
+  },
+  "python": "3.12.7",
+  "runtime_code_sha256": {
+    "abr_modular/train.py": "c02988be16b880bef7b9002a0a1f98e2c5e1fb29eaf8c17399a57e7a2424e82a",
+    "abr_modular/losses.py": "ffcf397a77b17742003ff2e9bc9916d5351400d3376e9a195e0e3323a1713da5",
+    "abr_modular/checkpoints.py": "97fca382431d280312ae13a52bc1d1bc138d7ff8133e1369948cc816ff05e3d4",
+    "abr_modular/io_utils.py": "71152f9888677fd2855f8791eef8b75510032c7d983ce8339a05f7bb38e43ba3",
+    "kev/kev/model.py": "2ff3b2e67c048e3bc5a0d1a32aafe50804ed315a5564fce06bb4b95697c5271c",
+    "kev/kev/checkpoint.py": "02062399977ee0da316dd52e03a79fa5e10134aa49c0b5ed801598c52042dc32",
+    "kev/kev/data.py": "e77a2fffeb8ee7e05b118893be8e38b8358aef97c3ca2e143cdce208201b92f9",
+    "kev/kev/api.py": "a6f53af5354f8ea17915abc78360fdf291a5108ce39a53a2d9135d48c603ae58",
+    "kev/kev/device.py": "bb882f59df46eae633d3b29ff0a939c000aa60a7d6d04ae73829b336f9bc9711"
+  },
+  "fingerprint": "f56f82914d61acfd253931fdbe7e592b91f288bbe9ce78b21e6d38a6a1b4b0d5"
+}

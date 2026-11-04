@@ -1,0 +1,36 @@
+{
+  "reviewer_type": "assistant",
+  "human_verified": false,
+  "findings": {
+    "dev10_04": {
+      "status": "candidate_regions_found",
+      "notes": "前五个采样帧框到显卡名称区域；4.8秒发生镜头切换，侧面暗字框需单独核验。首帧问题只使用首帧作答案证据。"
+    },
+    "dev10_05": {
+      "status": "visually_supported",
+      "notes": "前四帧未出现橙子价签，返回空；4和4.8秒框到1.49价签，没有框衣服文字。"
+    },
+    "dev10_06": {
+      "status": "localization_failure",
+      "notes": "存在主体关联错误：0和1秒框到其他球员；4秒框到袖标而非号码；4.8秒框过大，覆盖整名球员。3秒框到目标球员短裤号码。六个非空结果不等于六次成功。原始框保留，暂不纳入首轮编码。"
+    },
+    "dev10_07": {
+      "status": "visually_supported",
+      "notes": "六帧均定位固定右下角计时器。后续倒计时不是首帧答案；适合固定区域编码基线。"
+    },
+    "dev10_08": {
+      "status": "visually_supported",
+      "notes": "六帧均定位中央黄色出租车车牌，未框车顶标识。适合固定区域编码基线。"
+    },
+    "dev10_09": {
+      "status": "needs_temporal_association_review",
+      "notes": "0和1秒定位限高牌；4秒又输出远处小标牌框，不能直接当作同一个已通过天桥的证据。需要对象和时间关联核验。"
+    },
+    "dev10_10": {
+      "status": "visually_supported",
+      "notes": "0和1秒定位案板上小标签；后续镜头已切到人物或奶酪包装，返回空。"
+    }
+  },
+  "source": "Seven six-frame overlay contact sheets; not full continuous-time annotation",
+  "no_boxes_corrected": true
+}
